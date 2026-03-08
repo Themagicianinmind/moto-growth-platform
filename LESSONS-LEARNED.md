@@ -245,5 +245,71 @@ Each `npm run build` after each step is non-negotiable.
 
 ---
 
+## Phase 2.1 Findings (Session: March 8, 2026)
+
+### What Was Built
+- Complete restructure of exam-data.ts with a new, cleaner Question interface
+- 50 original bilingual Quebec SAAQ questions (10 per category × 5 categories)
+- Updated QuizEngine.tsx and ScoreDisplay.tsx to match new field names
+- /exam bundle: 22.7 kB (right-sized baseline for 50 questions)
+
+### New Question Interface (Phase 2 format)
+```typescript
+interface Question {
+  id: number;
+  province: Province;          // 'qc' | 'on'
+  category: Category;          // 5 string literals (see below)
+  q: string;                   // French question
+  qEN: string;                 // English question
+  options: string[];           // 4 French answer options
+  optionsEN: string[];         // 4 English answer options
+  answer: number;              // correct index 0–3
+  explanation: string;         // "FR text / EN text" — split on ' / '
+}
+```
+
+### Category Values (Phase 2)
+- `'Road Rules'` → FR label: "Règles de la route"
+- `'Road Signs'` → FR label: "Signalisation routière"
+- `'Motorcycle Safety'` → FR label: "Sécurité et technique"
+- `'Quebec Law'` → FR label: "Loi québécoise et SAAQ"
+- `'Riding Scenarios'` → FR label: "Scénarios de conduite"
+- ScoreDisplay.tsx categoryLabels must match these exact strings as keys
+
+### Explanation Format
+- Single string: `"FR explanation text / EN explanation text"`
+- Separator: ` / ` (space-slash-space)
+- Split in QuizEngine: `const [expFr, expEn] = q.explanation.split(' / ')`
+- Fallback: `expFr ?? q.explanation` and `expEn ?? q.explanation`
+- Keep explanations to 2–3 short sentences each (TTS-friendly)
+
+### Audio-Friendly Writing Rules (confirmed)
+- Max 20 words per sentence — TTS reads long sentences without pause
+- Concrete scenarios beat abstract rules: "You see gravel..." beats "When gravel..."
+- Explanations must make sense heard cold by a 16-year-old on first listen
+- French Canadian syntax, not European French — local register matters
+
+### QuizEngine Bug Fixed
+- Old code: `correct: correctCount + (selectedIdx === q.correctIndex ? 0 : 0)` — always added 0
+- Fixed: `correct: correctCount + (selectedIdx === q.answer ? 1 : 0)` — correctly adds last Q
+
+### Git Remote Status
+- Repo is LOCAL ONLY — no remote configured
+- To add GitHub remote: `git remote add origin https://github.com/YOUR_ORG/moto-growth-platform.git`
+- Then: `git push -u origin main`
+- Vercel deployment is independent of git remote — uses local build
+
+### Question ID Convention (Phase 2)
+- QC questions: numeric IDs 1–150 (planned), province: 'qc'
+- ON questions: numeric IDs 201–350 (planned), province: 'on'
+- Gap (151–200) reserved as buffer between QC and ON ranges
+
+### Deployment Notes
+- Deploy command: `cd ~/projects/moto-growth-platform && npx vercel --prod --scope themagicianinminds-projects`
+- No git push required — Vercel builds from local project config (`.vercel/` folder)
+- Phase 2.1 live: https://moto-growth-platform.vercel.app
+
+---
+
 *Seeded March 2026 from 18 phases of Sovereign Self™ Portal development*
 *Update after every session and every phase completion*
