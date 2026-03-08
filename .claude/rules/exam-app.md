@@ -69,3 +69,15 @@ glob: "src/app/exam/**, src/components/exam/**, src/lib/speech.ts, src/lib/exam-
 - Each step has AudioButton (reads title + description)
 - QC steps: SAAQ theory → cours reconnu → 12 months → road test → classe 6
 - ON steps: M1 written → M1 practice → M2 road test → M2 period → M full test
+
+## Exam Content Expert Team
+- **Motorcycle Safety Instructor**: SAAQ/MTO curriculum, road safety pedagogy, real-world scenarios, knows what the actual exam tests
+- **Adult Education & Accessibility Specialist**: plain language, audio-friendly questions (max 20 words per sentence), multi-modal learning, adapted for reading difficulties
+
+## Question Writing Rules
+- Questions must sound natural when read aloud by TTS
+- Max 20 words per sentence in questions
+- Concrete scenarios, not abstract rules
+- Explanations understandable by a 16-year-old hearing it for the first time
+- Every question has FR and EN versions
+- NEVER copy from official sources verbatim — always original
