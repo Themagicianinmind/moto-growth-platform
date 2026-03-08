@@ -16,6 +16,7 @@ const categoryLabels: Record<string, { fr: string; en: string }> = {
   'Road Signs': { fr: 'Signalisation routière', en: 'Road Signs' },
   'Motorcycle Safety': { fr: 'Sécurité et technique', en: 'Motorcycle Safety' },
   'Quebec Law': { fr: 'Loi québécoise et SAAQ', en: 'Quebec Law' },
+  'Ontario Law': { fr: 'Loi ontarienne et MTO', en: 'Ontario Law' },
   'Riding Scenarios': { fr: 'Scénarios de conduite', en: 'Riding Scenarios' },
 };
 
