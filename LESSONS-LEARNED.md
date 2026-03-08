@@ -294,10 +294,11 @@ interface Question {
 - Fixed: `correct: correctCount + (selectedIdx === q.answer ? 1 : 0)` — correctly adds last Q
 
 ### Git Remote Status
-- Repo is LOCAL ONLY — no remote configured
-- To add GitHub remote: `git remote add origin https://github.com/YOUR_ORG/moto-growth-platform.git`
-- Then: `git push -u origin main`
-- Vercel deployment is independent of git remote — uses local build
+- GitHub repo: https://github.com/Themagicianinmind/moto-growth-platform (public)
+- Remote configured: `origin` → GitHub
+- Created with: `gh repo create moto-growth-platform --public --source=. --remote=origin --push`
+- Future pushes: `git push` from ~/projects/moto-growth-platform
+- Vercel deployment is independent of git remote — uses local build via `.vercel/` config
 
 ### Question ID Convention (Phase 2)
 - QC questions: numeric IDs 1–150 (planned), province: 'qc'
