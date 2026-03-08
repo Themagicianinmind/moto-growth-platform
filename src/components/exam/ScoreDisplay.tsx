@@ -12,12 +12,11 @@ interface ScoreDisplayProps {
 }
 
 const categoryLabels: Record<string, { fr: string; en: string }> = {
-  rules: { fr: 'Règles de conduite', en: 'Road Rules' },
-  safety: { fr: 'Sécurité', en: 'Safety' },
-  gear: { fr: 'Équipement', en: 'Gear' },
-  skills: { fr: 'Techniques de conduite', en: 'Riding Skills' },
-  signs: { fr: 'Signalisation', en: 'Road Signs' },
-  licensing: { fr: 'Permis et licences', en: 'Licensing' },
+  'Road Rules': { fr: 'Règles de la route', en: 'Road Rules' },
+  'Road Signs': { fr: 'Signalisation routière', en: 'Road Signs' },
+  'Motorcycle Safety': { fr: 'Sécurité et technique', en: 'Motorcycle Safety' },
+  'Quebec Law': { fr: 'Loi québécoise et SAAQ', en: 'Quebec Law' },
+  'Riding Scenarios': { fr: 'Scénarios de conduite', en: 'Riding Scenarios' },
 };
 
 export default function ScoreDisplay({ correct, total, weakCategories, lang, onRestart }: ScoreDisplayProps) {

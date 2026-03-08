@@ -28,7 +28,7 @@ export default function QuizEngine({ questions, lang, audioEnabled, onComplete }
     if (answered) return;
     setSelectedIdx(idx);
     setAnswered(true);
-    if (idx === q.correctIndex) {
+    if (idx === q.answer) {
       setCorrectCount((c) => c + 1);
     } else {
       setWrongCategories((prev) => [...prev, q.category]);
@@ -39,7 +39,7 @@ export default function QuizEngine({ questions, lang, audioEnabled, onComplete }
     if (isLast) {
       const uniqueWeak = Array.from(new Set(wrongCategories));
       onComplete({
-        correct: correctCount + (selectedIdx === q.correctIndex ? 0 : 0),
+        correct: correctCount + (selectedIdx === q.answer ? 1 : 0),
         total: questions.length,
         weakCategories: uniqueWeak,
       });
@@ -50,8 +50,9 @@ export default function QuizEngine({ questions, lang, audioEnabled, onComplete }
     }
   };
 
-  const questionText = lang === 'fr' ? q.questionFr : q.questionEn;
-  const explanationText = lang === 'fr' ? q.explanationFr : q.explanationEn;
+  const questionText = lang === 'fr' ? q.q : q.qEN;
+  const [expFr, expEn] = q.explanation.split(' / ');
+  const explanationText = lang === 'fr' ? (expFr ?? q.explanation) : (expEn ?? q.explanation);
 
   return (
     <section style={{ padding: '24px 20px' }}>
@@ -92,17 +93,17 @@ export default function QuizEngine({ questions, lang, audioEnabled, onComplete }
         {/* Options */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 20 }}>
           {q.options.map((opt, i) => {
-            const optText = lang === 'fr' ? opt.fr : opt.en;
+            const optText = lang === 'fr' ? opt : q.optionsEN[i];
             let bg = '#0f0f1a';
             let border = '#1e1e35';
             let color = '#a0a0b8';
 
             if (answered) {
-              if (i === q.correctIndex) {
+              if (i === q.answer) {
                 bg = '#16a34a15';
                 border = '#16a34a80';
                 color = '#16a34a';
-              } else if (i === selectedIdx && selectedIdx !== q.correctIndex) {
+              } else if (i === selectedIdx && selectedIdx !== q.answer) {
                 bg = '#dc262615';
                 border = '#dc262680';
                 color = '#dc2626';
@@ -161,8 +162,8 @@ export default function QuizEngine({ questions, lang, audioEnabled, onComplete }
         {answered && (
           <div
             style={{
-              background: selectedIdx === q.correctIndex ? '#16a34a10' : '#dc262610',
-              border: `1px solid ${selectedIdx === q.correctIndex ? '#16a34a40' : '#dc262640'}`,
+              background: selectedIdx === q.answer ? '#16a34a10' : '#dc262610',
+              border: `1px solid ${selectedIdx === q.answer ? '#16a34a40' : '#dc262640'}`,
               borderRadius: 8,
               padding: 16,
               marginBottom: 20,
@@ -170,8 +171,8 @@ export default function QuizEngine({ questions, lang, audioEnabled, onComplete }
           >
             <div style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
               <div style={{ flex: 1 }}>
-                <p style={{ fontSize: 13, fontWeight: 700, color: selectedIdx === q.correctIndex ? '#16a34a' : '#dc2626', marginBottom: 6 }}>
-                  {selectedIdx === q.correctIndex ? tr('correct', lang) : tr('incorrect', lang)}
+                <p style={{ fontSize: 13, fontWeight: 700, color: selectedIdx === q.answer ? '#16a34a' : '#dc2626', marginBottom: 6 }}>
+                  {selectedIdx === q.answer ? tr('correct', lang) : tr('incorrect', lang)}
                 </p>
                 <p style={{ fontSize: 12, color: '#a0a0b8', lineHeight: 1.6 }}>
                   <strong style={{ color: '#e8e8f0' }}>{tr('explanation', lang)}</strong>{' '}
