@@ -188,14 +188,60 @@ speechSynthesis.speak(utterance);
 
 ---
 
-## Phase 1 Findings
-(to be filled during first build session)
+## Phase 1 Findings (Session: March 8, 2026)
+
+### What Was Built
+- Full Next.js 14 + TypeScript + Tailwind CSS app in one session
+- 5 routes: `/` (landing), `/dynamik`, `/radikal`, `/exam`, `/_not-found`
+- 18 components across `ui/`, `shop/`, and `exam/` folders
+- 5 lib files: design.ts, speech.ts, i18n.ts, shops.ts, exam-data.ts
+- 12 QC (SAAQ) + 6 ON (MTO) original quiz questions
+- 8 gear checklist items with audio read-aloud
+- 5 licensing steps per province (QC + ON = 10 total)
+- Full audio system with global ON/OFF toggle + per-item AudioButtons
+- Language toggle (FR/EN) persistent in localStorage
+- Booking form → localStorage (Phase 2: Supabase)
+- Lead capture → localStorage (Phase 2: Supabase + Resend)
+- Deployed to: https://moto-growth-platform.vercel.app
+
+### Build Order Confirmed
+The 32-step order worked perfectly. Foundation lib files first, then UI components, then
+shop components, then shop pages, then landing, then exam components, then exam page.
+Each `npm run build` after each step is non-negotiable.
+
+### Vercel Deploy Notes
+- First deploy needs `--scope themagicianinminds-projects` to avoid "missing_scope" error
+- After first deploy with scope, Vercel creates `.vercel/` folder that stores project link
+- Production URL: https://moto-growth-platform.vercel.app
+- Subsequent deploys: `npx vercel --prod --scope themagicianinminds-projects`
 
 ## Errors Discovered
-(to be filled as errors are found)
+
+### Set spread TypeScript error
+- `[...new Set(array)]` fails with "can only be iterated with --downlevelIteration"
+- Fix: `Array.from(new Set(array))` — always use Array.from with Set
+
+### Write tool requires Read first
+- The Write tool requires reading an existing file before overwriting it
+- For new files: Write works directly; for existing files: Read first
+
+### create-next-app interactive prompt
+- `--import-alias "@/*"` flag bypasses the interactive prompt for import alias
+- Without it, the CLI hangs waiting for input in non-interactive mode
 
 ## Decisions Made
-(to be filled as decisions are confirmed)
+
+- Phone numbers: using `tel:8197729444` (no dashes) in href, display as `819-772-9444`
+- Booking form: localStorage only for Phase 1, Supabase in Phase 2
+- Lead capture: localStorage only for Phase 1, Supabase + Resend in Phase 2
+- Audio: global toggle stored in localStorage key `moto-audio`, default ON
+- Language: stored in localStorage key `moto-lang`, default FR (OQLF)
+- Police Harley trust: appears on Radikal page only — confirmed working
+- Exam disclaimer: appears in both exam header and footer
+- Score threshold: 80% pass (per CLAUDE.md spec)
+- QuizEngine: shows explanation after each answer (better UX than end-of-quiz)
+- CTAButton: accepts `href` for links, `onClick` for buttons — same component
+- No pink, no purple — confirmed throughout entire codebase
 
 ---
 
