@@ -10,7 +10,7 @@ interface ReviewCardsProps {
 
 export default function ReviewCards({ shop, lang }: ReviewCardsProps) {
   return (
-    <section style={{ padding: '48px 20px', background: '#0a0a15' }}>
+    <section id="avis" style={{ padding: '48px 20px', background: '#0a0a15' }}>
       <SectionHeader
         label={tr('reviewsLabel', lang)}
         heading={tr('reviewsHeading', lang)}

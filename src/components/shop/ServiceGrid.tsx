@@ -10,7 +10,7 @@ interface ServiceGridProps {
 
 export default function ServiceGrid({ shop, lang }: ServiceGridProps) {
   return (
-    <section style={{ padding: '48px 20px' }}>
+    <section id="services" style={{ padding: '48px 20px' }}>
       <SectionHeader
         label={tr('ourServices', lang)}
         heading={tr('whatWeOffer', lang)}

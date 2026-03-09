@@ -27,6 +27,7 @@ export default function ExamPage() {
   const [view, setView] = useState<ExamView>('province');
   const [audioEnabled, setAudioEnabled] = useState(true);
   const [result, setResult] = useState<QuizResult | null>(null);
+  const [referralSource, setReferralSource] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     // Restore language preference
@@ -36,6 +37,11 @@ export default function ExamPage() {
     // Restore audio preference
     const savedAudio = localStorage.getItem('moto-audio');
     if (savedAudio === 'false') setAudioEnabled(false);
+
+    // Read ?ref= URL param for school referral tracking
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    if (ref) setReferralSource(ref);
 
     // Preload voices async (Web Speech API)
     preloadVoices();
@@ -192,7 +198,7 @@ export default function ExamPage() {
               lang={lang}
               onRestart={handleRestart}
             />
-            <LeadCapture lang={lang} />
+            <LeadCapture lang={lang} referralSource={referralSource} />
           </>
         )}
 

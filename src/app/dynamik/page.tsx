@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { shops } from '@/lib/shops';
 import { Lang } from '@/lib/i18n';
-import LanguageToggle from '@/components/ui/LanguageToggle';
+import ShopNavbar from '@/components/shop/ShopNavbar';
 import HeroSection from '@/components/shop/HeroSection';
 import ServiceGrid from '@/components/shop/ServiceGrid';
 import ReviewCards from '@/components/shop/ReviewCards';
@@ -21,13 +21,14 @@ export default function DynamikPage() {
     if (saved === 'en') setLang('en');
   }, []);
 
+  const handleLangToggle = (l: Lang) => {
+    setLang(l);
+    localStorage.setItem('moto-lang', l);
+  };
+
   return (
     <div style={{ minHeight: '100vh', background: '#0f0f1a' }}>
-      {/* Language toggle — top right */}
-      <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 100 }}>
-        <LanguageToggle lang={lang} onToggle={setLang} />
-      </div>
-
+      <ShopNavbar shop={shop} lang={lang} onToggleLang={handleLangToggle} />
       <HeroSection shop={shop} lang={lang} />
       <ServiceGrid shop={shop} lang={lang} />
       <ReviewCards shop={shop} lang={lang} />

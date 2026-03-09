@@ -16,7 +16,7 @@ export default function AboutOwner({ shop, lang }: AboutOwnerProps) {
     .join('');
 
   return (
-    <section style={{ padding: '48px 20px' }}>
+    <section id="proprietaire" style={{ padding: '48px 20px' }}>
       <SectionHeader
         label={tr('aboutLabel', lang)}
         heading={tr('aboutHeading', lang)}

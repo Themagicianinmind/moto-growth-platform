@@ -8,9 +8,10 @@ import CTAButton from '@/components/ui/CTAButton';
 
 interface LeadCaptureProps {
   lang: Lang;
+  referralSource?: string; // e.g. "ecole-radikal" from ?ref= URL param
 }
 
-export default function LeadCapture({ lang }: LeadCaptureProps) {
+export default function LeadCapture({ lang, referralSource }: LeadCaptureProps) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -18,10 +19,13 @@ export default function LeadCapture({ lang }: LeadCaptureProps) {
     e.preventDefault();
     if (!email.trim() || !email.includes('@')) return;
     try {
+      const source = referralSource
+        ? `exam-${referralSource}`
+        : 'exam-lead-capture';
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim(), lang, source: 'exam-lead-capture' }),
+        body: JSON.stringify({ email: email.trim(), lang, source }),
       });
       if (!res.ok) throw new Error('API error');
     } catch {

@@ -25,3 +25,18 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Shop navbar: hide mobile sub-row on desktop, hide desktop links on mobile */
+.shop-nav-links { display: flex; }
+.shop-nav-mobile { display: flex; }
+
+@media (min-width: 620px) {
+  .shop-nav-mobile { display: none; }
+}
+@media (max-width: 619px) {
+  .shop-nav-links { display: none; }
+}
+
+/* Smooth scroll + offset for fixed nav */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 72px; }
