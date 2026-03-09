@@ -81,6 +81,13 @@
 - For Resend: `RESEND_API_KEY` (server-side only, no NEXT_PUBLIC_ prefix)
 - After adding env vars, redeploy: `npx vercel --prod`
 
+### GitHub Auto-Deploy (Connected March 8, 2026)
+- moto-growth-platform GitHub repo is now connected to Vercel
+- Every `git push` to main triggers a production deploy automatically
+- No more `npx vercel --prod` needed — just `git push`
+- Connect via: Vercel dashboard → Project → Settings → Git → Connect Git Repository
+- Cannot connect via API/CLI alone — requires one-time OAuth click in Vercel dashboard
+
 ### Common Vercel Issues
 - "Module not found" — usually case-sensitive import (macOS ignores case, Linux doesn't)
 - "Page changed from static to dynamic" — add `export const dynamic = 'force-dynamic'`
