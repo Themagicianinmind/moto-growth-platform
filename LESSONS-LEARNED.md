@@ -319,5 +319,56 @@ interface Question {
 
 ---
 
+## Phase 2.2 Findings (Session: March 8, 2026)
+
+### What Was Built
+- 50 more Quebec SAAQ questions (IDs 51–100), same 5 categories, 10 per category
+- Topics: pre-ride inspection (TBOLC), tire pressure, chain tension/lubrication, parking on hills,
+  railway crossings, school zones, construction zones, freeway on-ramps, lane changes,
+  hand signals, night visibility, fatigue signs, group riding formation, gravel shoulders, deer crossings
+- No duplicates with IDs 1–50 — always list existing topics before generating new ones
+- /exam bundle grew proportionally — no performance concerns
+
+### Duplicate Prevention Pattern
+- Before generating new questions, grep for `q:` lines in existing province/category block
+- List all existing question topics explicitly — then generate non-overlapping ones
+- This is essential at 50+ questions per province where topic overlap becomes likely
+
+---
+
+## Phase 2.5 Findings (Session: March 8, 2026)
+
+### What Was Built
+- 50 Ontario M1/M2/M questions (IDs 251–300), 10 per category × 5 categories
+- Added `'Ontario Law'` to Category type in exam-data.ts (was QC-only before)
+- Added `'Ontario Law': { fr: 'Loi ontarienne et MTO', en: 'Ontario Law' }` to ScoreDisplay.tsx
+- Topics: lane positioning, 400-series highway merging, cargo securing, M1/M2/M passenger rules,
+  $200K liability insurance, stunt driving penalties, distracted driving, construction zone double fines,
+  winter storage (fill tank + stabilizer, remove battery), motorcycle inspection standards
+
+### Ontario vs Quebec Law — Key Differences
+- Ontario: M1 → M2 → M (3-level graduated); Quebec: 6R → 6A (2-level)
+- Ontario: M1 no passengers, no 400-series, no night riding
+- Ontario: M2 passengers allowed if bike has seat + footrests
+- Ontario: stunt driving = 50+ km/h over limit → immediate 30-day suspension + 14-day seizure
+- Ontario: insurance minimum $200,000 liability (Quebec: $50,000)
+- Ontario: lane splitting illegal (same as Quebec)
+- Ontario: zero tolerance alcohol for M1/M2; 0.08 for full M
+
+### Adding a New Category — Checklist
+1. Add to `Category` type union in exam-data.ts
+2. Add label to `categoryLabels` in ScoreDisplay.tsx
+3. Use the exact string as `category:` value in question objects
+4. Run `npm run build` to confirm TypeScript accepts the new type
+
+### Vercel Auto-Deploy Connected (March 8, 2026)
+- GitHub repo connected to Vercel project via dashboard OAuth
+- Every `git push` to main now triggers automatic production deploy
+- Cannot connect via API/CLI alone — requires one-time OAuth click in Vercel UI
+- Path: Vercel dashboard → Project → Settings → Git → Connect Git Repository
+- After connection: `git push` = deploy, no more `npx vercel --prod` needed
+
+---
+
 *Seeded March 2026 from 18 phases of Sovereign Self™ Portal development*
 *Update after every session and every phase completion*
