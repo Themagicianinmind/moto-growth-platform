@@ -24,22 +24,24 @@ export default function BookingForm({ shop, lang }: BookingFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.service) {
       setError(true);
       return;
     }
-    // Phase 1: save to localStorage (Phase 2: Supabase)
-    const bookings = JSON.parse(localStorage.getItem('moto-bookings') ?? '[]');
-    bookings.push({
-      ...form,
-      shopId: shop.id,
-      timestamp: new Date().toISOString(),
-    });
-    localStorage.setItem('moto-bookings', JSON.stringify(bookings));
-    setSubmitted(true);
-    setError(false);
+    try {
+      const res = await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, shopId: shop.id }),
+      });
+      if (!res.ok) throw new Error('API error');
+      setSubmitted(true);
+      setError(false);
+    } catch {
+      setError(true);
+    }
   };
 
   if (submitted) {

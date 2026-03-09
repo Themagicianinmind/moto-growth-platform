@@ -14,14 +14,19 @@ export default function LeadCapture({ lang }: LeadCaptureProps) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!email.trim() || !email.includes('@')) return;
-
-    // Phase 1: localStorage (Phase 2: Supabase + Resend)
-    const leads = JSON.parse(localStorage.getItem('moto-leads') ?? '[]');
-    leads.push({ email, lang, timestamp: new Date().toISOString(), source: 'exam-lead-capture' });
-    localStorage.setItem('moto-leads', JSON.stringify(leads));
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim(), lang, source: 'exam-lead-capture' }),
+      });
+      if (!res.ok) throw new Error('API error');
+    } catch {
+      // Fail silently — still show success to avoid friction
+    }
     setSubmitted(true);
   };
 
