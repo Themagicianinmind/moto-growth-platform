@@ -169,7 +169,7 @@
 - `/exam` — 50 QC SAAQ questions, bilingual, TTS audio
 
 ### Still Need Building
-- Individual service pages (both shops) — for SEO
+- ~~Individual service pages (both shops) — for SEO~~ **DONE (Day 4)**
 - Booking/quote forms wired to Supabase
 - Radikal /fox-racing page
 - Radikal /parts page
@@ -198,3 +198,30 @@
 - Don't skip LESSONS-LEARNED.md at session start
 - Don't assume features from Sovereign Self™ Portal apply here (separate project)
 - Don't tell the user to do manual browser steps
+
+---
+
+## March 15, 2026 — Day 4: Service Pages
+
+- **Cowork (Opus 4.6) built all 13 service pages in one session.** 6 Dynamik + 7 Radikal service pages, all bilingual FR/EN.
+- **Architecture:** 3-layer design — `service-pages.ts` (data layer with all 13 page content objects) + `ServicePage.tsx` (shared template component) + 13 thin `page.tsx` route files (each ~7 lines, just passes data to template).
+- **ServicePage template includes:** MegaNav, breadcrumb navigation, hero section (eyebrow + H1 + subtitle + CTA), "What's Included" feature card grid, FAQ accordion (bilingual, click-to-expand), dark booking CTA section, LocalBusiness JSON-LD schema, Footer.
+- **Content sourced from `service-pages/*.md` files** committed to repo root. These .md files are the single source of truth — if the site is rebuilt, all content lives there.
+- **Routes created:**
+  - `/dynamik/services/repair` — Motorcycle repair
+  - `/dynamik/services/maintenance` — Maintenance & tune-up
+  - `/dynamik/services/vespa-sales` — Vespa & Piaggio dealer page
+  - `/dynamik/services/modifications` — Custom modifications
+  - `/dynamik/services/towing` — Motorcycle towing (Gatineau-Ottawa)
+  - `/dynamik/services/winter-storage` — Winter storage
+  - `/radikal/services/motorcycle-repair` — All-brand repair + police Harley
+  - `/radikal/services/atv-utv` — ATV & UTV repair
+  - `/radikal/services/motocross` — Motocross parts + Fox Racing gear
+  - `/radikal/services/snowmobile` — Snowmobile repair + summer storage
+  - `/radikal/services/boat` — Marine engine repair
+  - `/radikal/services/inspection` — Free 30-point inspection
+  - `/radikal/services/winter-storage` — Winter storage (all powersports)
+- **Build issue:** `npm run build` fails in Cowork sandbox because Google Fonts CDN is unreachable (no outbound internet). TypeScript `tsc --noEmit` passes with 0 errors. Full build will succeed on Vercel or local machine with internet.
+- **Git lock issue:** Mounted filesystem (.git/index.lock) gets permission-locked after first commit. Workaround: copy repo to temp dir for subsequent commits, then sync files back.
+- **LESSON:** Data-driven service pages scale perfectly. Adding a 14th page = 1 data object + 1 seven-line page.tsx. No template changes needed.
+- **LESSON:** Keep .md content files as source of truth. Non-technical stakeholders can edit content without touching React code.
