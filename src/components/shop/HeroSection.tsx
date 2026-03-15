@@ -11,7 +11,6 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
   const name = lang === 'fr' ? shop.nameFr : shop.nameEn;
   const tagline = lang === 'fr' ? shop.taglineFr : shop.taglineEn;
 
-  // Extract founding year from tagline for "Since" badge
   const sinceYear = shop.taglineFr.match(/\d{4}/)?.[0] ?? null;
   const yearsInBusiness = sinceYear ? new Date().getFullYear() - parseInt(sinceYear) : null;
 
@@ -19,29 +18,29 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
     <section
       id="hero"
       style={{
-        background: `linear-gradient(155deg, #07070f 0%, ${shop.accentColor}1a 50%, #0f0f1a 100%)`,
-        padding: 'clamp(88px, 14vw, 120px) 20px 64px',
+        background: 'linear-gradient(160deg, #f5f4f0 0%, #fafaf8 60%, #f0ede6 100%)',
+        padding: 'clamp(88px, 14vw, 120px) 20px 72px',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Subtle radial glow behind content */}
+      {/* Subtle warm radial wash */}
       <div
         style={{
           position: 'absolute',
-          top: '50%',
+          top: '40%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: 600,
+          width: 700,
           height: 400,
           borderRadius: '50%',
-          background: `radial-gradient(ellipse, ${shop.accentColor}0a 0%, transparent 70%)`,
+          background: `radial-gradient(ellipse, ${shop.accentColor}0d 0%, transparent 70%)`,
           pointerEvents: 'none',
         }}
       />
 
-      {/* Trust + years badges */}
+      {/* Trust badges */}
       <div
         style={{
           display: 'flex',
@@ -56,7 +55,7 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
           <span
             key={badge}
             style={{
-              background: `${shop.accentColor}15`,
+              background: `${shop.accentColor}10`,
               border: `1px solid ${shop.accentColor}40`,
               borderRadius: 20,
               padding: '4px 14px',
@@ -72,13 +71,13 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
         {yearsInBusiness && (
           <span
             style={{
-              background: '#1e1e3580',
-              border: '1px solid #2a2a45',
+              background: '#f0ede6',
+              border: '1px solid #ddd8cc',
               borderRadius: 20,
               padding: '4px 14px',
               fontSize: 12,
               fontWeight: 700,
-              color: '#a0a0b8',
+              color: '#888',
             }}
           >
             {lang === 'fr' ? `${yearsInBusiness} ans de confiance` : `${yearsInBusiness} years trusted`}
@@ -86,49 +85,62 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
         )}
       </div>
 
-      {/* Shop name */}
+      {/* Shop name — Cormorant Garamond serif */}
       <h1
         style={{
-          fontSize: 'clamp(30px, 8vw, 54px)',
-          fontWeight: 900,
-          color: '#f0f0fc',
-          marginBottom: 14,
+          fontSize: 'clamp(36px, 9vw, 64px)',
+          fontWeight: 300,
+          color: '#0a0a0a',
+          marginBottom: 16,
           lineHeight: 1.05,
-          letterSpacing: '-0.03em',
+          letterSpacing: '-0.01em',
+          fontFamily: 'var(--font-cormorant), Georgia, serif',
           position: 'relative',
         }}
       >
         {name}
       </h1>
 
+      {/* Accent rule */}
+      <div
+        style={{
+          width: 48,
+          height: 1,
+          background: shop.accentColor,
+          margin: '0 auto 20px',
+          position: 'relative',
+        }}
+      />
+
       {/* Tagline */}
       <p
         style={{
-          fontSize: 'clamp(15px, 3.5vw, 20px)',
-          color: '#a0a0b8',
-          maxWidth: 520,
+          fontSize: 'clamp(14px, 3vw, 18px)',
+          color: '#555',
+          maxWidth: 480,
           margin: '0 auto 16px',
-          lineHeight: 1.5,
+          lineHeight: 1.6,
           position: 'relative',
+          letterSpacing: '0.01em',
         }}
       >
         {tagline}
       </p>
 
-      {/* 5-star rating row */}
+      {/* 5-star rating */}
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           gap: 8,
-          marginBottom: 36,
+          marginBottom: 40,
           position: 'relative',
         }}
       >
-        <span style={{ color: '#D4AF37', fontSize: 16, letterSpacing: 2 }}>★★★★★</span>
-        <span style={{ fontSize: 13, color: '#6b6b80', fontWeight: 600 }}>
-          {lang === 'fr' ? '5.0 · Google' : '5.0 · Google'}
+        <span style={{ color: '#9e8a5a', fontSize: 16, letterSpacing: 2 }}>★★★★★</span>
+        <span style={{ fontSize: 13, color: '#888', fontWeight: 600 }}>
+          5.0 · Google
         </span>
       </div>
 
@@ -154,7 +166,12 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
         <CTAButton variant="secondary" accentColor={shop.accentColor} fullWidth href="#booking">
           📅 {tr('bookService', lang)}
         </CTAButton>
-        <CTAButton variant="outline" fullWidth href={shop.mapsUrl}>
+        <CTAButton
+          variant="outline"
+          fullWidth
+          href={shop.mapsUrl}
+          style={{ border: '1px solid #ccc', color: '#555' }}
+        >
           📍 {tr('getDirections', lang)}
         </CTAButton>
       </div>
@@ -166,12 +183,12 @@ export default function HeroSection({ shop, lang }: HeroSectionProps) {
           flexWrap: 'wrap',
           justifyContent: 'center',
           gap: '4px 24px',
-          marginTop: 28,
+          marginTop: 32,
           position: 'relative',
         }}
       >
-        <span style={{ fontSize: 12, color: '#6b6b80' }}>📍 {shop.address}</span>
-        <span style={{ fontSize: 12, color: '#6b6b80' }}>
+        <span style={{ fontSize: 12, color: '#888' }}>📍 {shop.address}</span>
+        <span style={{ fontSize: 12, color: '#888' }}>
           🕐 {lang === 'fr' ? 'Lun–Ven 8h–17h · Sam 9h–14h' : 'Mon–Fri 8am–5pm · Sat 9am–2pm'}
         </span>
       </div>
