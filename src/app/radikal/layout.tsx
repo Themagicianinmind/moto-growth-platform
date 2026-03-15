@@ -20,6 +20,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MotorcycleRepair',
+  name: 'Radikal Motosport',
+  description: 'R\u00e9paration et pi\u00e8ces powersports \u00e0 Gatineau. Concessionnaire Fox Racing. Partenaire exclusif Harley-Davidson flotte polici\u00e8re.',
+  telephone: '+18195616686',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '156 De Varennes',
+    addressLocality: 'Gatineau',
+    addressRegion: 'QC',
+    postalCode: 'J8T 8G4',
+    addressCountry: 'CA',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 45.4707,
+    longitude: -75.7272,
+  },
+  url: 'https://moto-growth-platform.vercel.app/radikal',
+  sameAs: ['https://radikalmotosport.com'],
+  priceRange: '$$',
+  openingHours: ['Mo-Fr 08:00-17:00', 'Sa 09:00-14:00'],
+  hasMap: 'https://maps.google.com/?q=156+De+Varennes+Gatineau+QC+J8T+8G4',
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: { '@type': 'GeoCoordinates', latitude: 45.4707, longitude: -75.7272 },
+    geoRadius: '75000',
+  },
+};
+
 export default function RadikalLayout({ children }: { children: React.ReactNode }) {
-  return <div className={cormorant.variable}>{children}</div>;
+  return (
+    <div className={cormorant.variable}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </div>
+  );
 }
