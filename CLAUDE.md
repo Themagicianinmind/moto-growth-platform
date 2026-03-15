@@ -95,15 +95,15 @@
 # - NOT on shop pages (shops don't need audio)
 
 # ============================================================
-# RULE 6: DESIGN SYSTEM
+# RULE 6: DESIGN SYSTEM — TWO THEMES
 # ============================================================
-# Background: #0f0f1a
-# Card: #161625 with 1px solid #1e1e35, border-radius 12px
-# Gold CTA: bg-[#D4AF37] text-[#1a1a2e] font-extrabold
-# Section headers: 11px uppercase tracking-wide #6b6b80 ABOVE bold #e8e8f0 heading
-# Service cards: 3-col grid, colored icon bg squares
-# Font: DM Sans (Google Fonts)
-# Mobile-first: 375px minimum
+# SHOP SITES (Dynamik + Radikal) — Luxury White/Cream (March 2026 update)
+# Background: #ffffff / #fafaf8 / #f5f4f0 · Text: #0a0a0a / #1a1a1a / #555
+# Dynamik accent: #2563eb · Radikal accent: #9e8a5a (muted gold, NOT #D4AF37)
+# Serif headings: Cormorant Garamond weight 300 (--font-cormorant CSS var)
+# Cards: white #ffffff · border #e8e3d8 · shadow 0 1px 4px rgba(0,0,0,0.05)
+# EXAM APP — stays dark navy #0f0f1a (study-mode visual boundary)
+# See .claude/rules/design-system.md for full token table + section order
 
 # ============================================================
 # RULE 7: NEVER DO THESE THINGS
