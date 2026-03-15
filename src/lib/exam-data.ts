@@ -8573,6 +8573,1127 @@ export const questions: Question[] = [
     explanation: 'La nuit, le principal risque pour les motocyclistes est d\'être invisible aux autres conducteurs. Les mesures les plus efficaces pour améliorer la visibilité : veste ou dossard réfléchissant (renvoi de lumière des phares), bandes réfléchissantes sur le casque, les sacoches et les jambes, et des feux additionnels (auxiliary lights, LED running lights) sur la moto. Les couleurs fluorescentes sont efficaces de jour mais peu utiles la nuit — c\'est le matériau réfléchissant qui compte. / At night, the main risk for motorcyclists is being invisible to other drivers. The most effective measures to improve visibility: reflective jacket or vest (reflects headlight beams), reflective strips on helmet, saddlebags and legs, and additional lights (auxiliary lights, LED running lights) on the motorcycle. Fluorescent colours are effective in daylight but not useful at night — it is the reflective material that matters.',
   },
 
+
+  // ============================================================
+  // QUEBEC SAAQ — PRE-RIDE CHECK / Vérification pré-départ — 401–403
+  // ============================================================
+
+  {
+    id: 401,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Dans quel ordre effectuez-vous votre inspection pré-départ selon la méthode T-CLOCS ?',
+    qEN: 'In what order do you perform your pre-ride inspection using the T-CLOCS method?',
+    options: [
+      'Pneus, Commandes, Lumières, Huile, Cadre, Béquille',
+      'Huile, Lumières, Pneus, Freins, Cadre, Béquille',
+      'Lumières, Pneus, Huile, Commandes, Freins, Béquille',
+      'Cadre, Pneus, Huile, Lumières, Commandes, Béquille',
+    ],
+    optionsEN: [
+      'Tires, Controls, Lights, Oil, Chassis, Stands',
+      'Oil, Lights, Tires, Brakes, Chassis, Stands',
+      'Lights, Tires, Oil, Controls, Brakes, Stands',
+      'Chassis, Tires, Oil, Lights, Controls, Stands',
+    ],
+    answer: 0,
+    explanation: 'T-CLOCS est la méthode d\'inspection recommandée : Pneus (Tires), Commandes (Controls), Lumières (Lights), Huile (Oil & fluids), Cadre (Chassis), Béquille (Stands). Chaque lettre rappelle une zone critique à inspecter avant chaque départ. / T-CLOCS is the recommended inspection method: Tires, Controls, Lights, Oil & fluids, Chassis, Stands. Each letter reminds you of a critical area to inspect before every ride.',
+  },
+  {
+    id: 402,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Lors de votre inspection, vous remarquez une tache d\'huile sous le moteur. Que faites-vous ?',
+    qEN: 'During your inspection, you notice an oil stain under the engine. What do you do?',
+    options: [
+      'Roulez quand même — une petite fuite est normale sur les vieilles motos',
+      'Vérifiez le niveau d\'huile. Si la fuite est active, ne partez pas avant réparation',
+      'Ajoutez de l\'huile et partez',
+      'Couvrez la tache avec du sable et partez',
+    ],
+    optionsEN: [
+      'Ride anyway — a small leak is normal on older bikes',
+      'Check the oil level. If the leak is active, do not leave before repair',
+      'Add oil and leave',
+      'Cover the stain with sand and leave',
+    ],
+    answer: 1,
+    explanation: 'Une fuite d\'huile active peut vider le moteur en cours de route et causer une panne grave. Vérifiez le niveau. Si la fuite est active ou si le niveau est insuffisant, faites réparer avant de rouler. Une petite tache résiduelle d\'une vieille fuite réparée est acceptable. / An active oil leak can drain the engine while riding and cause serious failure. Check the level. If the leak is active or the level is insufficient, repair before riding. A small residual stain from an old repaired leak is acceptable.',
+  },
+  {
+    id: 403,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous appuyez sur le levier de frein avant et il se sent mou. Quelle en est la cause probable ?',
+    qEN: 'You press the front brake lever and it feels spongy. What is the likely cause?',
+    options: [
+      'Le frein est trop chaud — c\'est normal après un long trajet',
+      'Il y a de l\'air dans le circuit hydraulique ou le liquide de frein est bas',
+      'La plaquette est neuve — elle doit se roder',
+      'La température extérieure est froide et raidit le levier',
+    ],
+    optionsEN: [
+      'The brake is too hot — normal after a long ride',
+      'There is air in the hydraulic circuit or brake fluid is low',
+      'The pad is new — it needs to break in',
+      'Cold outside temperature stiffens the lever',
+    ],
+    answer: 1,
+    explanation: 'Un levier de frein mou ou spongieux indique de l\'air dans le circuit hydraulique ou un niveau de liquide trop bas. C\'est dangereux : la puissance de freinage est réduite. Ne partez pas — faites purger le circuit et vérifier le niveau de liquide. / A spongy brake lever indicates air in the hydraulic circuit or low fluid level. This is dangerous: braking power is reduced. Do not leave — have the circuit bled and the fluid level checked.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — TIRE PRESSURE / Pression des pneus — 404–406
+  // ============================================================
+
+  {
+    id: 404,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quand devez-vous vérifier la pression de vos pneus de moto ?',
+    qEN: 'When should you check your motorcycle tire pressure?',
+    options: [
+      'Une fois par mois suffit si les pneus ont l\'air gonflés',
+      'Avant chaque départ, quand les pneus sont froids',
+      'Après avoir roulé quelques kilomètres pour chauffer les pneus',
+      'Seulement si vous sentez une vibration anormale',
+    ],
+    optionsEN: [
+      'Once a month is enough if the tires look inflated',
+      'Before every ride, when the tires are cold',
+      'After riding a few kilometres to warm the tires',
+      'Only if you feel an abnormal vibration',
+    ],
+    answer: 1,
+    explanation: 'La pression doit toujours être vérifiée à froid, avant de rouler. La chaleur générée par la route augmente la pression de 20 à 30 kPa — une mesure à chaud sera faussée. Vérifiez chaque matin ou avant tout trajet. / Pressure must always be checked cold, before riding. Heat generated by the road increases pressure by 20 to 30 kPa — a hot reading will be inaccurate. Check every morning or before any trip.',
+  },
+  {
+    id: 405,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Votre pneu arrière est sous-gonflé de 30 %. Quel est le principal danger ?',
+    qEN: 'Your rear tire is under-inflated by 30%. What is the main danger?',
+    options: [
+      'La moto consomme plus d\'essence',
+      'L\'adhérence est réduite et le pneu risque de surchauffer ou de se déformer',
+      'Le pneu durera moins longtemps mais la conduite est normale',
+      'La vitesse maximale est légèrement réduite',
+    ],
+    optionsEN: [
+      'The bike consumes more fuel',
+      'Grip is reduced and the tire risks overheating or deforming',
+      'The tire will wear faster but handling is normal',
+      'Maximum speed is slightly reduced',
+    ],
+    answer: 1,
+    explanation: 'Un pneu sous-gonflé déforme sa structure à chaque rotation. Cela réduit l\'adhérence, surchauffe la gomme, augmente le risque de crevaison subite et rend la moto instable dans les virages. Un écart de 30 % est critique — gonflez immédiatement à la pression recommandée par le fabricant. / An under-inflated tire deforms its structure with every rotation. This reduces grip, overheats the rubber, increases the risk of sudden blowout and makes the bike unstable in corners. A 30% difference is critical — inflate immediately to the manufacturer\'s recommended pressure.',
+  },
+  {
+    id: 406,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'À mi-chemin d\'un long trajet, votre moto devient difficile à diriger. Que suspectez-vous ?',
+    qEN: 'Halfway through a long trip, your bike becomes hard to steer. What do you suspect?',
+    options: [
+      'La fatigue du pilote affecte le contrôle',
+      'Un pneu qui perd de la pression — immobilisez-vous prudemment pour vérifier',
+      'Le vent latéral — maintenez cap et accélérez légèrement',
+      'La route est mauvaise — ralentissez et continuez',
+    ],
+    optionsEN: [
+      'Rider fatigue affecting control',
+      'A tire losing pressure — pull over safely to check',
+      'Side wind — hold course and accelerate slightly',
+      'Bad road surface — slow down and continue',
+    ],
+    answer: 1,
+    explanation: 'Une moto qui devient difficile à diriger en ligne droite est souvent le signe d\'une perte de pression dans un pneu. Immobilisez-vous calmement sur le côté droit de la route, sans freiner brusquement. Inspectez les deux pneus. N\'essayez pas de continuer avec un pneu à plat. / A bike that becomes hard to steer in a straight line is often a sign of a tire losing pressure. Pull over calmly to the right side of the road without braking suddenly. Inspect both tires. Do not try to continue with a flat tire.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — CHAIN / Chaîne — 407–409
+  // ============================================================
+
+  {
+    id: 407,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Comment vérifiez-vous le jeu correct de votre chaîne de transmission ?',
+    qEN: 'How do you check the correct slack in your drive chain?',
+    options: [
+      'Tirez la chaîne vers le haut et vérifiez qu\'elle ne touche pas le bras oscillant',
+      'Poussez la chaîne vers le haut au milieu du brin inférieur — le jeu recommandé est de 20 à 30 mm',
+      'Faites tourner la roue arrière — la chaîne doit claquer légèrement',
+      'Vérifiez que la chaîne est bien tendue et ne bouge pas du tout',
+    ],
+    optionsEN: [
+      'Pull the chain upward and check it does not touch the swing arm',
+      'Push the chain upward at the middle of the lower run — recommended slack is 20 to 30 mm',
+      'Spin the rear wheel — the chain should clatter slightly',
+      'Check that the chain is very tight and does not move at all',
+    ],
+    answer: 1,
+    explanation: 'Pour vérifier le jeu, poussez la chaîne vers le haut au milieu du brin inférieur. Le jeu recommandé est généralement de 20 à 30 mm, mais consultez le manuel de votre moto. Une chaîne trop tendue usera les roulements de roue. Trop lâche, elle peut sauter. / To check slack, push the chain upward at the middle of the lower run. Recommended slack is usually 20 to 30 mm, but consult your bike\'s manual. A chain too tight will wear wheel bearings. Too loose, and it can jump off.',
+  },
+  {
+    id: 408,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'À quelle fréquence devez-vous lubrifier la chaîne de votre moto ?',
+    qEN: 'How often should you lubricate your motorcycle chain?',
+    options: [
+      'Une fois par saison suffit si vous utilisez un bon lubrifiant',
+      'Tous les 500 à 1 000 km, ou après chaque trajet sous la pluie',
+      'Seulement quand la chaîne fait du bruit',
+      'Jamais — les chaînes modernes sont auto-lubrifiantes',
+    ],
+    optionsEN: [
+      'Once per season is enough with a good lubricant',
+      'Every 500 to 1 000 km, or after every ride in the rain',
+      'Only when the chain is noisy',
+      'Never — modern chains are self-lubricating',
+    ],
+    answer: 1,
+    explanation: 'La chaîne doit être lubrifiée tous les 500 à 1 000 km, ou après chaque trajet sous la pluie (l\'eau chasse le lubrifiant). Appliquez la lubrifiant sur la chaîne chaude, sur le brin intérieur, et faites tourner la roue. Une chaîne sèche s\'use rapidement et peut casser. / The chain should be lubricated every 500 to 1 000 km, or after every ride in the rain (water washes out lubricant). Apply lubricant to a warm chain, on the inner run, while spinning the wheel. A dry chain wears quickly and can break.',
+  },
+  {
+    id: 409,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'En accélérant à basse vitesse, vous sentez des à-coups saccadés venant de la transmission. Que vérifiez-vous en premier ?',
+    qEN: 'Accelerating at low speed, you feel jerky surging from the drivetrain. What do you check first?',
+    options: [
+      'Le carburateur — il y a probablement de l\'eau dans l\'essence',
+      'La chaîne — elle est peut-être trop tendue ou présente des maillons raides',
+      'La boîte de vitesses — elle doit être remplacée',
+      'Les amortisseurs — un rebond excessif cause des à-coups',
+    ],
+    optionsEN: [
+      'The carburetor — there is probably water in the fuel',
+      'The chain — it may be too tight or have stiff links',
+      'The gearbox — it must be replaced',
+      'The shock absorbers — excessive rebound causes jerks',
+    ],
+    answer: 1,
+    explanation: 'Des à-coups à basse vitesse pointent souvent vers la chaîne. Des maillons raides ou une tension inégale créent exactement ce symptôme. Inspectez toute la longueur de la chaîne en faisant tourner lentement la roue — cherchez les maillons qui ne plient pas facilement. / Jerky surging at low speed often points to the chain. Stiff links or uneven tension create exactly this symptom. Inspect the full length of the chain by slowly spinning the wheel — look for links that do not flex easily.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — PARKING ON HILLS / Stationnement en pente — 410–412
+  // ============================================================
+
+  {
+    id: 410,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Vous stationnez votre moto en montée avec une bordure de trottoir à droite. Comment orientez-vous la roue avant ?',
+    qEN: 'You park your bike facing uphill with a curb on the right. How do you angle the front wheel?',
+    options: [
+      'Vers la gauche — vers le centre de la route',
+      'Vers la droite — vers la bordure du trottoir',
+      'Droit devant — la béquille suffit à stabiliser',
+      'La direction de la roue n\'a pas d\'importance',
+    ],
+    optionsEN: [
+      'To the left — toward the centre of the road',
+      'To the right — toward the curb',
+      'Straight ahead — the kickstand is enough to stabilize',
+      'Wheel direction does not matter',
+    ],
+    answer: 1,
+    explanation: 'En montée avec une bordure, tournez la roue vers la droite (vers le trottoir). Si la moto glisse en avant, la roue bute contre la bordure et immobilise la moto. En montée sans bordure ou en descente, tournez la roue vers la gauche. / Facing uphill with a curb, turn the wheel to the right (toward the curb). If the bike rolls forward, the wheel catches on the curb and stops the bike. Facing uphill without a curb, or facing downhill, turn the wheel to the left.',
+  },
+  {
+    id: 411,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Vous stationnez votre moto en descente. Dans quel sens tournez-vous la roue avant ?',
+    qEN: 'You are parking your bike facing downhill. Which way do you turn the front wheel?',
+    options: [
+      'Vers la droite — vers la bordure',
+      'Vers la gauche — vers le centre de la route',
+      'Droit devant pour faciliter le départ',
+      'Aucune rotation nécessaire sur une pente douce',
+    ],
+    optionsEN: [
+      'To the right — toward the curb',
+      'To the left — toward the centre of the road',
+      'Straight ahead to make leaving easier',
+      'No rotation needed on a gentle slope',
+    ],
+    answer: 1,
+    explanation: 'En descente, tournez la roue vers la gauche. Si la moto bouge vers l\'avant (vers le bas), la roue pivote vers la bordure et s\'y appuie. Cette technique fonctionne avec ou sans bordure. Combinez avec la première vitesse enclenchée et la béquille latérale. / Facing downhill, turn the wheel to the left. If the bike moves forward (downhill), the wheel pivots toward the curb and braces against it. This technique works with or without a curb. Combine with first gear engaged and the side stand deployed.',
+  },
+  {
+    id: 412,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Est-il légal de stationner une moto dans un stationnement ordinaire en appuyant uniquement sur la béquille latérale ?',
+    qEN: 'Is it legal to park a motorcycle in a regular parking spot using only the side kickstand?',
+    options: [
+      'Non — la loi exige que la moto soit attachée à un support fixe',
+      'Oui — la béquille latérale est un moyen de stationnement accepté',
+      'Seulement si la surface est plane et en asphalte',
+      'Seulement pendant moins de 2 heures',
+    ],
+    optionsEN: [
+      'No — the law requires the bike to be secured to a fixed support',
+      'Yes — the side kickstand is an accepted means of parking',
+      'Only if the surface is flat and asphalt',
+      'Only for less than 2 hours',
+    ],
+    answer: 1,
+    explanation: 'La béquille latérale est un moyen légal de stationnement pour une moto. Il n\'y a pas d\'obligation légale de l\'attacher à un support fixe dans un stationnement ordinaire. Placez toutefois la béquille sur une surface dure et stable — l\'asphalte chaud peut céder et la moto tomber. / The side kickstand is a legal means of parking for a motorcycle. There is no legal requirement to secure it to a fixed support in a regular parking spot. However, place the kickstand on a hard, stable surface — hot asphalt can sink and the bike can fall.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — RAILWAY CROSSINGS / Passages à niveau — 413–416
+  // ============================================================
+
+  {
+    id: 413,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Comment franchissez-vous des rails de chemin de fer en toute sécurité avec une moto ?',
+    qEN: 'How do you safely cross railway tracks on a motorcycle?',
+    options: [
+      'Ralentissez et traversez en diagonale pour éviter les rails',
+      'Traversez perpendiculairement aux rails, à une vitesse stable, en position assise droite',
+      'Accélérez pour passer rapidement et réduire le temps de contact avec les rails',
+      'Traversez lentement à pas d\'homme pour maintenir le contrôle',
+    ],
+    optionsEN: [
+      'Slow down and cross diagonally to avoid the rails',
+      'Cross perpendicular to the tracks, at a steady speed, sitting upright',
+      'Accelerate to cross quickly and reduce contact time with the rails',
+      'Cross very slowly to maintain control',
+    ],
+    answer: 1,
+    explanation: 'Traversez les rails à angle droit (90 degrés), mains légèrement relâchées sur le guidon pour absorber les chocs, assis bien droit, à vitesse stable. Un angle diagonal risque de faire glisser la roue dans la rainure du rail et de faire tomber la moto. / Cross tracks at a right angle (90 degrees), hands slightly relaxed on the bars to absorb shocks, sitting upright, at a steady speed. A diagonal angle risks sliding the tire into the rail groove and dropping the bike.',
+  },
+  {
+    id: 414,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous approchez d\'un passage à niveau. Les feux clignotent mais les barrières ne sont pas encore baissées. Que faites-vous ?',
+    qEN: 'You approach a level crossing. The lights are flashing but the barriers are not down yet. What do you do?',
+    options: [
+      'Accélérez pour passer avant que les barrières descendent',
+      'Arrêtez-vous et attendez que le train soit passé et que les signaux s\'éteignent',
+      'Ralentissez et traversez lentement si vous ne voyez pas de train',
+      'Klaxonnez et traversez avec prudence',
+    ],
+    optionsEN: [
+      'Accelerate to cross before the barriers come down',
+      'Stop and wait for the train to pass and the signals to stop',
+      'Slow down and cross slowly if you cannot see a train',
+      'Honk and cross carefully',
+    ],
+    answer: 1,
+    explanation: 'Dès que les feux clignotent, arrêtez-vous. Un train peut arriver à grande vitesse sans être visible immédiatement. Attendez que le train soit complètement passé et que tous les signaux lumineux s\'éteignent avant de traverser — même si les barrières ne sont pas encore descendues. / As soon as the lights flash, stop. A train can arrive at high speed without being immediately visible. Wait for the train to completely pass and all warning lights to stop before crossing — even if the barriers have not come down yet.',
+  },
+  {
+    id: 415,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Dans quelle situation est-il légal de contourner une barrière de passage à niveau abaissée ?',
+    qEN: 'In which situation is it legal to go around a lowered level crossing barrier?',
+    options: [
+      'Si vous voyez clairement qu\'aucun train n\'est en approche',
+      'Jamais — contourner une barrière abaissée est toujours illégal',
+      'Si la barrière est défectueuse et ne remonte pas après 5 minutes',
+      'Si un agent de sécurité ou un policier vous fait signe de passer',
+    ],
+    optionsEN: [
+      'If you can clearly see no train is approaching',
+      'Never — going around a lowered barrier is always illegal',
+      'If the barrier is defective and has not risen after 5 minutes',
+      'If a security officer or police officer signals you to pass',
+    ],
+    answer: 3,
+    explanation: 'Contourner une barrière abaissée est toujours illégal — sauf si un agent de la paix ou un agent de chemin de fer vous fait expressément signe de passer. Le Code de la sécurité routière interdit de franchir le passage quand un signal d\'arrêt est activé. L\'infraction est grave et la pénalité est élevée. / Going around a lowered barrier is always illegal — unless a peace officer or railway employee expressly signals you to pass. The Highway Safety Code prohibits crossing when a stop signal is activated. The offence is serious and the penalty is high.',
+  },
+  {
+    id: 416,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'À quelle distance d\'un passage à niveau sans barrière devez-vous pouvoir vous arrêter ?',
+    qEN: 'At what distance from an unguarded level crossing must you be able to stop?',
+    options: [
+      'Vous devez pouvoir vous arrêter à 5 mètres du rail',
+      'Vous devez pouvoir vous arrêter avant la ligne d\'arrêt ou à 5 mètres du rail le plus proche',
+      'Vous devez pouvoir vous arrêter à 15 mètres du rail',
+      'Il n\'y a pas de distance minimale si vous regardez des deux côtés',
+    ],
+    optionsEN: [
+      'You must be able to stop 5 metres from the rail',
+      'You must be able to stop before the stop line or 5 metres from the nearest rail',
+      'You must be able to stop 15 metres from the rail',
+      'There is no minimum distance if you look both ways',
+    ],
+    answer: 1,
+    explanation: 'Le Code de la sécurité routière exige que vous puissiez vous immobiliser avant la ligne d\'arrêt peinte, ou à défaut, à au moins 5 mètres du rail le plus proche. Approchez lentement, regardez des deux côtés, et n\'amorcez la traversée que si la voie est libre. / The Highway Safety Code requires you to be able to stop before the painted stop line, or failing that, at least 5 metres from the nearest rail. Approach slowly, look both ways, and only begin crossing if the way is clear.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — SCHOOL ZONES / Zones scolaires — 417–419
+  // ============================================================
+
+  {
+    id: 417,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quelle est la limite de vitesse dans une zone scolaire au Québec quand les panneaux sont actifs ?',
+    qEN: 'What is the speed limit in a school zone in Quebec when the signs are active?',
+    options: [
+      '40 km/h',
+      '30 km/h',
+      '50 km/h',
+      '25 km/h',
+    ],
+    optionsEN: [
+      '40 km/h',
+      '30 km/h',
+      '50 km/h',
+      '25 km/h',
+    ],
+    answer: 1,
+    explanation: 'La limite de vitesse dans les zones scolaires au Québec est de 30 km/h quand les panneaux de zone scolaire sont actifs (généralement jours de classe, de 7 h à 17 h). Certaines municipalités peuvent afficher 40 km/h, mais suivez toujours le panneau affiché. / The speed limit in school zones in Quebec is 30 km/h when the school zone signs are active (usually school days, 7 a.m. to 5 p.m.). Some municipalities may post 40 km/h, but always follow the posted sign.',
+  },
+  {
+    id: 418,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous approchez d\'une zone scolaire. Des enfants jouent sur le trottoir. Que faites-vous en plus de respecter la limite de vitesse ?',
+    qEN: 'You approach a school zone. Children are playing on the sidewalk. What do you do beyond respecting the speed limit?',
+    options: [
+      'Klaxonnez pour avertir les enfants de votre présence',
+      'Réduisez encore votre vitesse, augmentez votre distance de sécurité et soyez prêt à freiner',
+      'Accélérez pour traverser la zone rapidement',
+      'Changez de voie vers le centre pour vous éloigner du trottoir',
+    ],
+    optionsEN: [
+      'Honk to warn the children of your presence',
+      'Reduce speed further, increase your safety margin and be ready to brake',
+      'Accelerate to cross the zone quickly',
+      'Change to the centre lane to move away from the sidewalk',
+    ],
+    answer: 1,
+    explanation: 'Les enfants sont imprévisibles — ils peuvent traverser la rue sans regarder. Ralentissez au-delà de la limite affichée si les conditions l\'exigent, laissez plus d\'espace de chaque côté, gardez le pied sur le frein et soyez prêt à vous arrêter immédiatement. / Children are unpredictable — they can cross the street without looking. Slow below the posted limit if conditions require it, leave more space on each side, keep your foot over the brake, and be ready to stop immediately.',
+  },
+  {
+    id: 419,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Vous passez devant une école à 16 h un samedi. Les panneaux de zone scolaire sont visibles. Quelle vitesse appliquez-vous ?',
+    qEN: 'You pass a school at 4 p.m. on a Saturday. School zone signs are visible. What speed applies?',
+    options: [
+      '30 km/h — les panneaux sont toujours actifs près d\'une école',
+      'La limite régulière — les zones scolaires ne s\'appliquent généralement pas le week-end',
+      '40 km/h — une vitesse intermédiaire de précaution',
+      '50 km/h — c\'est la limite par défaut au Québec',
+    ],
+    optionsEN: [
+      '30 km/h — the signs are always active near a school',
+      'The regular limit — school zones generally do not apply on weekends',
+      '40 km/h — a cautious intermediate speed',
+      '50 km/h — the default limit in Quebec',
+    ],
+    answer: 1,
+    explanation: 'Les zones scolaires au Québec sont généralement actives les jours de classe seulement. Un samedi ou pendant les vacances scolaires, la limite régulière s\'applique à moins qu\'un panneau indique des heures différentes. Vérifiez toujours les heures affichées sous le panneau de zone scolaire. / School zones in Quebec are generally active on school days only. On a Saturday or during school holidays, the regular limit applies unless a sign indicates different hours. Always check the hours posted under the school zone sign.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — CONSTRUCTION ZONES / Zones de travaux — 420–423
+  // ============================================================
+
+  {
+    id: 420,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quelle est la limite de vitesse habituelle dans une zone de travaux sur une route ordinaire au Québec ?',
+    qEN: 'What is the usual speed limit in a construction zone on a regular road in Quebec?',
+    options: [
+      '60 km/h',
+      '50 km/h',
+      '70 km/h',
+      'La même que la route — seulement si des travailleurs sont présents',
+    ],
+    optionsEN: [
+      '60 km/h',
+      '50 km/h',
+      '70 km/h',
+      'The same as the road — only if workers are present',
+    ],
+    answer: 0,
+    explanation: 'Dans la plupart des zones de travaux au Québec, la limite est réduite à 60 km/h sur les routes ordinaires. Sur les autoroutes, elle est souvent réduite à 70 km/h. Respectez toujours les panneaux affichés — ils peuvent varier selon le chantier et la configuration. / In most Quebec construction zones, the limit is reduced to 60 km/h on regular roads. On highways, it is often reduced to 70 km/h. Always follow the posted signs — they can vary depending on the worksite and configuration.',
+  },
+  {
+    id: 421,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Que risque un conducteur pris en excès de vitesse dans une zone de travaux en présence de travailleurs au Québec ?',
+    qEN: 'What does a driver risk if caught speeding in a construction zone with workers present in Quebec?',
+    options: [
+      'Une amende régulière — aucune majoration dans les zones de travaux',
+      'Des amendes doublées et des points d\'inaptitude supplémentaires',
+      'Une suspension automatique du permis de 30 jours',
+      'Une amende fixe de 500 dollars peu importe l\'excès',
+    ],
+    optionsEN: [
+      'A regular fine — no increase in construction zones',
+      'Doubled fines and additional demerit points',
+      'An automatic licence suspension of 30 days',
+      'A fixed fine of 500 dollars regardless of the excess',
+    ],
+    answer: 1,
+    explanation: 'Au Québec, les amendes pour excès de vitesse dans une zone de travaux en présence de travailleurs sont doublées. Les points d\'inaptitude s\'appliquent comme pour toute infraction à la vitesse. Cette règle vise à protéger les travailleurs exposés sur la chaussée. / In Quebec, fines for speeding in a construction zone with workers present are doubled. Demerit points apply as for any speeding offence. This rule aims to protect workers exposed on the roadway.',
+  },
+  {
+    id: 422,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous entrez dans une zone de travaux et vous remarquez du gravier éparpillé sur la chaussée. Quelle est votre priorité ?',
+    qEN: 'You enter a construction zone and notice gravel scattered on the road. What is your priority?',
+    options: [
+      'Accélérez pour passer rapidement sur le gravier',
+      'Réduisez la vitesse, évitez les freinages brusques et traversez le gravier en ligne droite',
+      'Roulez sur les lignes peintes pour éviter le gravier',
+      'Changez de file pour trouver une section plus propre',
+    ],
+    optionsEN: [
+      'Accelerate to pass quickly over the gravel',
+      'Reduce speed, avoid hard braking and cross the gravel in a straight line',
+      'Ride on the painted lines to avoid the gravel',
+      'Change lanes to find a cleaner section',
+    ],
+    answer: 1,
+    explanation: 'Le gravier réduit drastiquement l\'adhérence des pneus. Ralentissez avant d\'y entrer, maintenez le cap droit, n\'accélérez pas brusquement et évitez de freiner fort dans le gravier. Passez en ligne droite, mains légèrement relâchées pour absorber les irrégularités. / Gravel drastically reduces tire grip. Slow down before entering it, hold a straight course, do not accelerate sharply and avoid hard braking in the gravel. Pass in a straight line, hands slightly relaxed to absorb irregularities.',
+  },
+  {
+    id: 423,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Dans une zone de travaux avec voies réduites, quelle distance de sécurité minimale gardez-vous derrière le véhicule devant vous ?',
+    qEN: 'In a construction zone with reduced lanes, what minimum following distance do you keep behind the vehicle ahead?',
+    options: [
+      'La même qu\'en circulation normale — 2 secondes',
+      'Au moins 3 à 4 secondes — davantage si la chaussée est dégradée',
+      '1 seconde — les vitesses sont plus basses donc les distances sont plus courtes',
+      '10 mètres fixes, peu importe la vitesse',
+    ],
+    optionsEN: [
+      'The same as in normal traffic — 2 seconds',
+      'At least 3 to 4 seconds — more if the road surface is poor',
+      '1 second — speeds are lower so distances are shorter',
+      '10 metres fixed, regardless of speed',
+    ],
+    answer: 1,
+    explanation: 'Dans les zones de travaux, augmentez votre distance de sécurité à 3-4 secondes. La chaussée peut être dégradée, inégale ou glissante. Les arrêts sont plus fréquents et souvent brusques. Une plus grande distance vous donne le temps de réagir aux imprévus des travailleurs et de la signalisation. / In construction zones, increase your following distance to 3-4 seconds. The road surface may be degraded, uneven or slippery. Stops are more frequent and often sudden. A greater distance gives you time to react to the unexpected actions of workers and signage.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — FREEWAY ON-RAMPS / Bretelles d\'accès autoroutier — 424–427
+  // ============================================================
+
+  {
+    id: 424,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Sur une bretelle d\'accès à l\'autoroute, à quel moment commencez-vous à accélérer ?',
+    qEN: 'On a highway on-ramp, when do you start accelerating?',
+    options: [
+      'Une fois sur l\'autoroute, quand vous êtes dans la voie de droite',
+      'Dès le début de la bretelle, pour atteindre la vitesse de l\'autoroute avant de fusionner',
+      'Seulement si la bretelle est longue — sur une courte bretelle, maintenez la vitesse actuelle',
+      'Après avoir vérifié le miroir une fois',
+    ],
+    optionsEN: [
+      'Once on the highway, when you are in the right lane',
+      'From the start of the ramp, to reach highway speed before merging',
+      'Only if the ramp is long — on a short ramp, maintain current speed',
+      'After checking the mirror once',
+    ],
+    answer: 1,
+    explanation: 'La bretelle sert à accélérer pour atteindre la vitesse du trafic autoroutier avant de fusionner. Commencez à accélérer dès le début de la bretelle. Arrivez à la vitesse de fusion avant la fin de la bretelle — ne ralentissez pas le trafic en entrant lentement sur l\'autoroute. / The ramp is used to accelerate to highway traffic speed before merging. Begin accelerating from the start of the ramp. Reach merging speed before the end of the ramp — do not slow down traffic by entering the highway slowly.',
+  },
+  {
+    id: 425,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'La bretelle d\'accès est courte et le trafic autoroutier roule à 110 km/h. Vous n\'avez pas atteint la vitesse de fusion. Que faites-vous ?',
+    qEN: 'The on-ramp is short and highway traffic is moving at 110 km/h. You have not reached merging speed. What do you do?',
+    options: [
+      'Entrez quand même — les véhicules sur l\'autoroute doivent vous céder le passage',
+      'Accélérez au maximum sur la bretelle et trouvez le moindre espace libre pour fusionner',
+      'Arrêtez-vous à la fin de la bretelle et attendez un espace suffisant',
+      'Rebroussez chemin et prenez un autre accès',
+    ],
+    optionsEN: [
+      'Enter anyway — highway vehicles must yield to you',
+      'Accelerate as much as possible on the ramp and find the smallest gap to merge',
+      'Stop at the end of the ramp and wait for a sufficient gap',
+      'Turn back and take another entrance',
+    ],
+    answer: 1,
+    explanation: 'Sur une courte bretelle, accélérez autant que possible et cherchez le premier espace sûr pour fusionner. Une moto peut accélérer rapidement — profitez-en. S\'il est impossible de fusionner en toute sécurité, l\'arrêt à la fin de la bretelle est permis, mais dangereux. Évitez cette situation en planifiant la fusion tôt. / On a short ramp, accelerate as much as possible and find the first safe gap to merge. A motorcycle can accelerate quickly — use that advantage. If merging safely is impossible, stopping at the end of the ramp is permitted but dangerous. Avoid this by planning the merge early.',
+  },
+  {
+    id: 426,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Vous venez de fusionner sur l\'autoroute. Quelle voie devez-vous occuper en premier ?',
+    qEN: 'You have just merged onto the highway. Which lane should you occupy first?',
+    options: [
+      'La voie du centre — pour éviter les bretelles de sortie',
+      'La voie de droite — et n\'en changer que si nécessaire',
+      'La voie de gauche — pour vous éloigner rapidement du trafic de bretelle',
+      'N\'importe quelle voie libre — c\'est à votre discrétion',
+    ],
+    optionsEN: [
+      'The centre lane — to avoid exit ramps',
+      'The right lane — and change only when necessary',
+      'The left lane — to quickly move away from ramp traffic',
+      'Any free lane — it is your discretion',
+    ],
+    answer: 1,
+    explanation: 'Après la fusion, occupez la voie de droite et stabilisez-vous. Ne changez de voie que lorsque c\'est sécuritaire et nécessaire. La voie de gauche sur les autoroutes québécoises est réservée au dépassement — ne pas y rouler inutilement est une obligation légale. / After merging, occupy the right lane and stabilize. Change lanes only when it is safe and necessary. The left lane on Quebec highways is reserved for passing — not driving there unnecessarily is a legal requirement.',
+  },
+  {
+    id: 427,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'En fusionnant sur l\'autoroute, un camion dans la voie de droite ne ralentit pas pour vous laisser de l\'espace. Que faites-vous ?',
+    qEN: 'Merging onto the highway, a truck in the right lane does not slow to give you space. What do you do?',
+    options: [
+      'Accélérez pour vous insérer devant le camion',
+      'Ajustez votre vitesse pour trouver un espace devant ou derrière le camion',
+      'Klaxonnez pour signaler que vous avez la priorité',
+      'Freinez et attendez sur la bretelle',
+    ],
+    optionsEN: [
+      'Accelerate to insert ahead of the truck',
+      'Adjust your speed to find a gap ahead of or behind the truck',
+      'Honk to signal that you have priority',
+      'Brake and wait on the ramp',
+    ],
+    answer: 1,
+    explanation: 'Sur une bretelle, c\'est vous qui devez vous adapter au trafic autoroutier — pas l\'inverse. Si un camion ne vous laisse pas d\'espace, accélérez pour passer devant ou ralentissez pour vous insérer derrière. Ne forcez jamais l\'entrée face à un véhicule lourd. / On a ramp, you are the one who must adapt to highway traffic — not the other way around. If a truck does not leave you space, accelerate to pass in front or slow down to insert behind. Never force your way in front of a heavy vehicle.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — HAND SIGNALS / Signaux manuels — 428–430
+  // ============================================================
+
+  {
+    id: 428,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Quel est le signal manuel pour indiquer un virage à gauche ?',
+    qEN: 'What is the hand signal for a left turn?',
+    options: [
+      'Bras droit tendu horizontalement à droite',
+      'Bras gauche tendu horizontalement à gauche',
+      'Bras gauche levé verticalement, coude à 90 degrés',
+      'Bras gauche pointé vers le bas',
+    ],
+    optionsEN: [
+      'Right arm extended horizontally to the right',
+      'Left arm extended horizontally to the left',
+      'Left arm raised vertically, elbow at 90 degrees',
+      'Left arm pointing downward',
+    ],
+    answer: 1,
+    explanation: 'Pour signaler un virage à gauche, étendez le bras gauche horizontalement, paume vers le bas. Ce signal est universellement reconnu au Canada. Utilisez-le si votre clignotant est défectueux ou pour renforcer un signal dans une intersection complexe. / To signal a left turn, extend the left arm horizontally, palm facing down. This signal is universally recognized in Canada. Use it if your turn signal is defective or to reinforce a signal at a complex intersection.',
+  },
+  {
+    id: 429,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Quel signal manuel indique un virage à droite ?',
+    qEN: 'Which hand signal indicates a right turn?',
+    options: [
+      'Bras gauche levé verticalement avec le coude plié à 90 degrés, avant-bras pointant vers le haut',
+      'Bras droit tendu horizontalement à droite',
+      'Bras gauche tendu horizontalement à gauche',
+      'Main droite levée, paume vers l\'avant',
+    ],
+    optionsEN: [
+      'Left arm raised vertically with elbow bent at 90 degrees, forearm pointing upward',
+      'Right arm extended horizontally to the right',
+      'Left arm extended horizontally to the left',
+      'Right hand raised, palm facing forward',
+    ],
+    answer: 0,
+    explanation: 'Le signal pour un virage à droite : bras gauche levé, coude plié à 90 degrés, avant-bras pointant vers le haut et main ouverte. On utilise le bras gauche car le bras droit est trop difficile à voir depuis derrière. Ce signal est reconnu par le Code de la sécurité routière du Québec. / The signal for a right turn: left arm raised, elbow bent at 90 degrees, forearm pointing upward, hand open. The left arm is used because the right arm is too hard to see from behind. This signal is recognized by the Quebec Highway Safety Code.',
+  },
+  {
+    id: 430,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Comment signalez-vous manuellement un arrêt ou un ralentissement sur une moto ?',
+    qEN: 'How do you manually signal a stop or slowdown on a motorcycle?',
+    options: [
+      'Bras gauche tendu horizontalement, paume vers le haut',
+      'Bras gauche abaissé vers le bas, avant-bras et main pointant vers le bas, paume vers l\'arrière',
+      'Bras droit levé verticalement, paume vers l\'avant',
+      'Les deux bras levés au-dessus de la tête',
+    ],
+    optionsEN: [
+      'Left arm extended horizontally, palm facing up',
+      'Left arm lowered downward, forearm and hand pointing down, palm facing rearward',
+      'Right arm raised vertically, palm facing forward',
+      'Both arms raised above the head',
+    ],
+    answer: 1,
+    explanation: 'Pour signaler un arrêt ou ralentissement, abaissez le bras gauche vers le bas, avant-bras pointant vers le sol, paume tournée vers l\'arrière. Ce signal avertit les véhicules derrière que vous ralentissez — utile si votre feu de frein est défectueux. / To signal a stop or slowdown, lower the left arm downward, forearm pointing toward the ground, palm turned rearward. This signal warns vehicles behind that you are slowing — useful if your brake light is defective.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — NIGHT VISIBILITY / Visibilité nocturne — 431–434
+  // ============================================================
+
+  {
+    id: 431,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'De nuit, quand devez-vous passer des feux de route aux feux de croisement ?',
+    qEN: 'At night, when must you switch from high beams to low beams?',
+    options: [
+      'À 300 mètres d\'un véhicule venant en sens inverse ou d\'un véhicule devant vous',
+      'Seulement quand l\'autre conducteur vous fait des appels de phares',
+      'Dans toutes les rues éclairées par des lampadaires',
+      'À 150 mètres d\'un véhicule en sens inverse',
+    ],
+    optionsEN: [
+      'Within 300 metres of an oncoming vehicle or a vehicle ahead of you',
+      'Only when the other driver flashes their lights at you',
+      'On all streets lit by streetlights',
+      'Within 150 metres of an oncoming vehicle',
+    ],
+    answer: 0,
+    explanation: 'Au Québec, vous devez passer aux feux de croisement à 300 mètres d\'un véhicule venant en sens inverse, et lorsque vous suivez un autre véhicule. Les feux de route éblouissent les conducteurs et réduisent leur visibilité — c\'est une infraction de ne pas les baisser. / In Quebec, you must switch to low beams within 300 metres of an oncoming vehicle, and when following another vehicle. High beams blind other drivers and reduce their visibility — failing to switch is an offence.',
+  },
+  {
+    id: 432,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Un véhicule venant en sens inverse vous éblouit avec ses phares. Que faites-vous ?',
+    qEN: 'An oncoming vehicle blinds you with its headlights. What do you do?',
+    options: [
+      'Fixez les phares pour vous aider à estimer la distance du véhicule',
+      'Regardez vers la droite de la route, ralentissez et gardez votre voie',
+      'Allumez vos feux de route pour que l\'autre conducteur baisse les siens',
+      'Freinez brusquement et arrêtez-vous sur l\'accotement',
+    ],
+    optionsEN: [
+      'Stare at the headlights to help you estimate the distance of the vehicle',
+      'Look toward the right edge of the road, slow down and hold your lane',
+      'Switch to high beams so the other driver lowers theirs',
+      'Brake suddenly and stop on the shoulder',
+    ],
+    answer: 1,
+    explanation: 'Quand vous êtes ébloui, regardez vers la bordure droite de la route — la ligne blanche ou la bordure vous guide sans regarder les phares. Ralentissez légèrement et maintenez votre cap. Ne regardez jamais directement les phares — cela aggrave l\'éblouissement et réduit votre vision résiduelle. / When blinded, look toward the right edge of the road — the white line or curb guides you without looking at the headlights. Slow down slightly and hold your course. Never look directly at headlights — this worsens glare and reduces your residual vision.',
+  },
+  {
+    id: 433,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quelle couleur de vêtement de moto est la plus visible la nuit pour les autres conducteurs ?',
+    qEN: 'Which colour of motorcycle gear is most visible to other drivers at night?',
+    options: [
+      'Jaune fluorescent — il est visible dans toutes les conditions',
+      'Blanc ou couleurs réfléchissantes — elles renvoient la lumière des phares',
+      'Noir — il est standard et les conducteurs s\'y attendent',
+      'Orange — la même couleur que les cônes de chantier',
+    ],
+    optionsEN: [
+      'Fluorescent yellow — it is visible in all conditions',
+      'White or reflective colours — they reflect headlight beams',
+      'Black — it is standard and drivers expect it',
+      'Orange — the same colour as construction cones',
+    ],
+    answer: 1,
+    explanation: 'La nuit, les couleurs fluorescentes ne servent à rien — elles nécessitent la lumière du soleil pour briller. Ce qui compte la nuit, c\'est le matériau réfléchissant : il renvoie la lumière des phares des autres conducteurs directement vers eux. Portez un gilet ou une veste avec bandes réfléchissantes. / At night, fluorescent colours are useless — they need sunlight to glow. What matters at night is reflective material: it bounces other drivers\' headlight beams directly back to them. Wear a vest or jacket with reflective strips.',
+  },
+  {
+    id: 434,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'De nuit, votre phare éclaire environ 60 mètres devant vous. Quelle vitesse maximale est prudente ?',
+    qEN: 'At night, your headlight illuminates about 60 metres ahead. What is a prudent maximum speed?',
+    options: [
+      '90 km/h — la limite est la limite, peu importe la nuit',
+      'Une vitesse qui vous permettrait de vous arrêter dans les 60 mètres éclairés',
+      '70 km/h — une réduction standard pour la conduite nocturne',
+      '110 km/h si la route est droite et sèche',
+    ],
+    optionsEN: [
+      '90 km/h — the limit is the limit, regardless of night',
+      'A speed that would allow you to stop within the 60 illuminated metres',
+      '70 km/h — a standard reduction for night driving',
+      '110 km/h if the road is straight and dry',
+    ],
+    answer: 1,
+    explanation: 'La règle d\'or : ne jamais dépasser votre distance d\'éclairage. Si vous ne pouvez vous arrêter dans la portion éclairée, vous conduisez à l\'aveugle au-delà. À 60 km/h, la distance d\'arrêt est d\'environ 45-55 mètres — ce qui correspond bien à 60 m d\'éclairage avec une marge. / The golden rule: never outrun your headlights. If you cannot stop within the illuminated portion, you are driving blind beyond it. At 60 km/h, stopping distance is about 45-55 metres — which fits well within 60 m of illumination with a margin.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — FATIGUE / Fatigue — 435–438
+  // ============================================================
+
+  {
+    id: 435,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Lequel de ces signes indique que vous êtes trop fatigué pour continuer à rouler ?',
+    qEN: 'Which of these signs indicates you are too fatigued to keep riding?',
+    options: [
+      'Vous avez soif et cherchez un arrêt pour de l\'eau',
+      'Vous ne vous souvenez pas des derniers kilomètres parcourus',
+      'Vos bras commencent à peser après 2 heures de route',
+      'Le soleil est bas et vous éblouit légèrement',
+    ],
+    optionsEN: [
+      'You are thirsty and looking for a stop for water',
+      'You do not remember the last few kilometres you rode',
+      'Your arms start to feel heavy after 2 hours of riding',
+      'The sun is low and slightly blinding you',
+    ],
+    answer: 1,
+    explanation: 'Ne plus se souvenir des derniers kilomètres est un signe de conduite en mode automatique — un état de micro-sommeil. C\'est extrêmement dangereux. Arrêtez-vous immédiatement en lieu sûr. Votre cerveau a déjà décroché de la conduite. / Not remembering the last few kilometres is a sign of driving on autopilot — a microsleep state. This is extremely dangerous. Stop immediately in a safe place. Your brain has already disconnected from driving.',
+  },
+  {
+    id: 436,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Il est 14 h, vous roulez depuis 3 heures. Vous commencez à bailler souvent et avez du mal à vous concentrer. Que faites-vous ?',
+    qEN: 'It is 2 p.m., you have been riding for 3 hours. You are yawning often and have trouble concentrating. What do you do?',
+    options: [
+      'Ouvrez la visière pour que l\'air frais vous réveille',
+      'Arrêtez-vous dès que possible, buvez de l\'eau et reposez-vous au moins 20 minutes',
+      'Buvez un café en conduisant — c\'est autorisé sur les motos',
+      'Accélérez pour finir plus vite et vous reposer à destination',
+    ],
+    optionsEN: [
+      'Open the visor so the fresh air wakes you up',
+      'Stop as soon as possible, drink water and rest at least 20 minutes',
+      'Drink a coffee while riding — it is allowed on motorcycles',
+      'Speed up to finish faster and rest at your destination',
+    ],
+    answer: 1,
+    explanation: 'Les bâillements fréquents et la difficulté à se concentrer sont des signaux d\'alarme clairs. Arrêtez-vous dès que possible — une aire de repos, un stationnement, un restaurant. Une pause de 20 minutes avec de l\'eau aide à récupérer. L\'air frais ou le café au guidon ne compensent pas la fatigue réelle. / Frequent yawning and difficulty concentrating are clear warning signals. Stop as soon as possible — a rest area, parking lot, restaurant. A 20-minute break with water helps recovery. Fresh air or coffee at the handlebars do not compensate for real fatigue.',
+  },
+  {
+    id: 437,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Sur un long trajet autoroutier, à quelle fréquence devriez-vous faire des pauses ?',
+    qEN: 'On a long highway trip, how often should you take breaks?',
+    options: [
+      'Toutes les 3 heures — c\'est la norme professionnelle pour les camionneurs',
+      'Toutes les heures à 90 minutes maximum',
+      'Seulement quand vous sentez de la fatigue réelle',
+      'Une fois à mi-chemin — deux pauses suffisent pour n\'importe quel trajet',
+    ],
+    optionsEN: [
+      'Every 3 hours — the professional standard for truck drivers',
+      'Every hour to 90 minutes maximum',
+      'Only when you feel real fatigue',
+      'Once at the halfway point — two stops are enough for any trip',
+    ],
+    answer: 1,
+    explanation: 'Pour les motocyclistes, une pause toutes les heures à 90 minutes est recommandée. Contrairement à une voiture, conduire une moto demande une concentration et un effort physique constants. La fatigue s\'installe rapidement et discrètement — ne pas attendre de la ressentir pour s\'arrêter. / For motorcyclists, a break every hour to 90 minutes is recommended. Unlike a car, riding a motorcycle requires constant concentration and physical effort. Fatigue sets in quickly and quietly — do not wait to feel it before stopping.',
+  },
+  {
+    id: 438,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Selon le Code de la sécurité routière du Québec, conduire avec les facultés affaiblies par la fatigue est-il une infraction ?',
+    qEN: 'According to the Quebec Highway Safety Code, is driving with faculties impaired by fatigue an offence?',
+    options: [
+      'Non — la fatigue n\'est pas une substance contrôlée, donc ce n\'est pas illégal',
+      'Oui — conduire en état de fatigue extrême peut constituer une conduite dangereuse',
+      'Seulement si un accident survient — sinon aucune infraction',
+      'Seulement pour les conducteurs de véhicules commerciaux',
+    ],
+    optionsEN: [
+      'No — fatigue is not a controlled substance, so it is not illegal',
+      'Yes — driving in a state of extreme fatigue can constitute dangerous driving',
+      'Only if an accident occurs — otherwise no offence',
+      'Only for commercial vehicle drivers',
+    ],
+    answer: 1,
+    explanation: 'Conduire avec des facultés affaiblies — même par la fatigue — peut être traité comme de la conduite dangereuse sous le Code criminel canadien. La SAAQ reconnaît la fatigue comme un facteur majeur d\'accidents. En cas d\'accident grave, la fatigue peut aggraver les accusations portées contre le conducteur. / Driving with impaired faculties — even from fatigue — can be treated as dangerous driving under the Canadian Criminal Code. The SAAQ recognizes fatigue as a major accident factor. In the event of a serious accident, fatigue can worsen the charges brought against the driver.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — GROUP RIDING / Conduite en groupe — 439–442
+  // ============================================================
+
+  {
+    id: 439,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous roulez en groupe de cinq motos. Quelle formation utilisez-vous sur l\'autoroute ?',
+    qEN: 'You are riding in a group of five motorcycles. Which formation do you use on the highway?',
+    options: [
+      'En file indienne — une moto derrière l\'autre dans la même voie',
+      'En quinconce décalé — deux colonnes dans une voie, chacune décalée d\'une position',
+      'En parallèle — côte à côte, deux de front sur la même voie',
+      'En V inversé — le chef au centre et les autres de chaque côté',
+    ],
+    optionsEN: [
+      'Single file — one bike directly behind the other in the same lane',
+      'Staggered formation — two columns in one lane, each offset by one position',
+      'Parallel — side by side, two abreast in the same lane',
+      'Inverted V — the leader in the centre and others on each side',
+    ],
+    answer: 1,
+    explanation: 'La formation en quinconce est la formation recommandée en groupe : le premier moto roule à gauche de la voie, le deuxième à droite légèrement derrière, et ainsi de suite. Cela garde tout le groupe visible, laisse une distance de sécurité et évite le roulage en parallèle qui est dangereux et illégal sur la même voie. / The staggered formation is the recommended group formation: the first bike rides on the left side of the lane, the second on the right slightly behind, and so on. This keeps the entire group visible, maintains a safety margin, and avoids riding parallel which is dangerous and illegal in the same lane.',
+  },
+  {
+    id: 440,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'En formation de groupe en quinconce, quelle distance maintenez-vous derrière la moto directement devant vous ?',
+    qEN: 'In a staggered group formation, what distance do you maintain behind the bike directly in front of you?',
+    options: [
+      '1 seconde — vous suivez la même colonne',
+      '2 secondes derrière la moto dans votre colonne, 1 seconde derrière celle de l\'autre colonne',
+      '3 secondes derrière n\'importe quelle moto du groupe',
+      'La même distance qu\'en conduite solo — 2 secondes',
+    ],
+    optionsEN: [
+      '1 second — you follow the same column',
+      '2 seconds behind the bike in your column, 1 second behind the one in the other column',
+      '3 seconds behind any bike in the group',
+      'The same distance as solo riding — 2 seconds',
+    ],
+    answer: 1,
+    explanation: 'En quinconce, maintenez 2 secondes derrière la moto dans votre propre colonne, et environ 1 seconde derrière la moto de l\'autre colonne qui est légèrement devant vous. Ce décalage vous donne une zone de réaction devant vous tout en gardant la formation compacte et visible. / In staggered formation, maintain 2 seconds behind the bike in your own column, and about 1 second behind the bike in the other column that is slightly ahead. This offset gives you a reaction zone ahead while keeping the formation compact and visible.',
+  },
+  {
+    id: 441,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Pendant un trajet de groupe, un membre commence à prendre du retard. Que doit faire le chef de groupe ?',
+    qEN: 'During a group ride, one member starts falling behind. What should the group leader do?',
+    options: [
+      'Accélérer pour garder le rythme — c\'est à l\'autre de suivre',
+      'Réduire progressivement la vitesse du groupe pour rester ensemble',
+      'Envoyer le balayeur (sweep) à l\'arrière informer le groupe par radio',
+      'S\'arrêter brusquement pour attendre le membre en retard',
+    ],
+    optionsEN: [
+      'Speed up to maintain pace — it is up to the other one to keep up',
+      'Gradually reduce the group\'s speed to stay together',
+      'Send the sweep rider to the back to inform the group by radio',
+      'Stop suddenly to wait for the member falling behind',
+    ],
+    answer: 1,
+    explanation: 'En groupe organisé, personne ne doit être forcé à dépasser ses limites pour suivre. Le chef doit ajuster la vitesse pour garder le groupe uni. Si une personne prend du retard régulièrement, planifiez un arrêt et discutez du rythme. Un bon chef de groupe roule au rythme du membre le plus lent. / In an organized group, no one should be forced beyond their limits to keep up. The leader must adjust speed to keep the group together. If someone regularly falls behind, plan a stop and discuss the pace. A good group leader rides at the pace of the slowest member.',
+  },
+  {
+    id: 442,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'En groupe, comment effectuez-vous un dépassement d\'un véhicule lent ?',
+    qEN: 'In a group ride, how do you overtake a slow vehicle?',
+    options: [
+      'Toutes les motos doublent en même temps pour réduire le temps dans la voie de dépassement',
+      'Chaque moto double individuellement dès que la voie est libre, puis reprend sa position en formation',
+      'Le chef double en premier et les autres suivent à la queue leu leu derrière lui',
+      'Attendez qu\'une voiture double aussi pour profiter de l\'espace créé',
+    ],
+    optionsEN: [
+      'All bikes overtake at the same time to reduce time in the passing lane',
+      'Each bike overtakes individually when the lane is clear, then resumes its formation position',
+      'The leader passes first and others follow single file behind',
+      'Wait for a car to pass too and use the space created',
+    ],
+    answer: 1,
+    explanation: 'Chaque motocycliste est responsable de son propre dépassement. Attendez que la voie soit libre pour vous individuellement avant de doubler. Après le dépassement, reprenez votre position en formation. Doubler en masse est dangereux — une erreur d\'un seul met tout le groupe en danger. / Each motorcyclist is responsible for their own overtaking. Wait for the lane to be clear for you individually before passing. After overtaking, resume your formation position. Mass overtaking is dangerous — one person\'s mistake puts the whole group at risk.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — GRAVEL SHOULDERS / Accotements de gravier — 443–446
+  // ============================================================
+
+  {
+    id: 443,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Un véhicule empiète sur votre voie et vous force sur l\'accotement de gravier. Comment réagissez-vous ?',
+    qEN: 'A vehicle encroaches on your lane and forces you onto the gravel shoulder. How do you react?',
+    options: [
+      'Freinez brusquement sur le gravier pour vous arrêter',
+      'Maintenez le cap droit, relâchez les freins, réduisez les gaz graduellement et revenez calmement sur l\'asphalte',
+      'Tournez brusquement pour revenir sur l\'asphalte le plus vite possible',
+      'Accélérez pour retraverser rapidement devant le véhicule',
+    ],
+    optionsEN: [
+      'Brake hard on the gravel to stop',
+      'Hold a straight course, release brakes, reduce throttle gradually and calmly return to asphalt',
+      'Turn sharply to return to asphalt as fast as possible',
+      'Accelerate to quickly cross back in front of the vehicle',
+    ],
+    answer: 1,
+    explanation: 'Sur le gravier, évitez les réactions brusques. Tenez la moto droite, lâchez les freins (braquage dans le gravier fait chuter), réduisez l\'accélération progressivement et attendez un moment calme pour revenir sur l\'asphalte avec un léger angle. Un retour brusque peut provoquer un highside. / On gravel, avoid sudden reactions. Keep the bike straight, release the brakes (steering in gravel causes a fall), reduce throttle gradually and wait for a calm moment to return to asphalt at a slight angle. A sudden return to pavement can cause a highside.',
+  },
+  {
+    id: 444,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Vous roulez sur un chemin de campagne avec un accotement de gravier non stabilisé. Quelle position adoptez-vous dans la voie ?',
+    qEN: 'You ride on a country road with an unstabilized gravel shoulder. What lane position do you adopt?',
+    options: [
+      'Près du centre de la voie ou légèrement à gauche pour maximiser la distance avec le gravier',
+      'Près de la droite de la voie pour être prêt à céder le passage',
+      'Sur la ligne centrale pour maximiser votre visibilité',
+      'Au centre de la voie en tout temps — c\'est la position par défaut',
+    ],
+    optionsEN: [
+      'Near the centre or slightly left of the lane to maximize distance from the gravel',
+      'Near the right of the lane to be ready to yield',
+      'On the centre line to maximize your visibility',
+      'At the lane centre at all times — it is the default position',
+    ],
+    answer: 0,
+    explanation: 'Évitez de rouler trop près de l\'accotement de gravier — des gravillons peuvent être projetés sous vos roues ou vous pourriez y glisser accidentellement. Restez vers le centre ou légèrement à gauche de votre voie pour garder une marge de sécurité par rapport au gravier. / Avoid riding too close to the gravel shoulder — loose stones may be thrown under your wheels or you might accidentally slide onto it. Stay toward the centre or slightly left of your lane to keep a safety margin from the gravel.',
+  },
+  {
+    id: 445,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous revenez d\'un accotement de gravier vers l\'asphalte. Comment effectuez-vous ce retour ?',
+    qEN: 'You are returning from a gravel shoulder to asphalt. How do you make this transition?',
+    options: [
+      'Tournez brusquement la roue vers l\'asphalte et accélérez pour vous stabiliser',
+      'Réduisez la vitesse sur le gravier, puis revenez à angle très légèrement sur l\'asphalte',
+      'Freinez sur le gravier jusqu\'à l\'arrêt complet, puis remontez sur l\'asphalte',
+      'Accélérez sur le gravier pour avoir de l\'élan et sauter sur l\'asphalte',
+    ],
+    optionsEN: [
+      'Turn the wheel sharply toward asphalt and accelerate to stabilize',
+      'Reduce speed on the gravel, then return at a very slight angle to asphalt',
+      'Brake on the gravel to a complete stop, then climb back to asphalt',
+      'Accelerate on the gravel to gain momentum and jump onto asphalt',
+    ],
+    answer: 1,
+    explanation: 'Ralentissez sur le gravier, puis revenez sur l\'asphalte avec un angle très faible (presque perpendiculaire). Un angle trop prononcé fait rebondir la roue avant sur le rebord et peut déstabiliser la moto. À vitesse réduite, ce rebord est bien absorbé. / Slow down on the gravel, then return to asphalt at a very slight angle (almost perpendicular). Too steep an angle causes the front wheel to bounce off the edge and can destabilize the bike. At reduced speed, this edge is absorbed well.',
+  },
+  {
+    id: 446,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Pourquoi faut-il éviter de freiner brusquement sur un accotement de gravier ?',
+    qEN: 'Why must you avoid hard braking on a gravel shoulder?',
+    options: [
+      'Les freins surchauffent plus vite sur le gravier',
+      'Le gravier offre très peu d\'adhérence — les roues bloquent facilement et la moto se couche',
+      'Le gravier endommage les plaquettes de frein rapidement',
+      'Le Code de la sécurité routière interdit de freiner sur l\'accotement',
+    ],
+    optionsEN: [
+      'Brakes overheat faster on gravel',
+      'Gravel offers very little grip — wheels lock easily and the bike goes down',
+      'Gravel damages brake pads quickly',
+      'The Highway Safety Code prohibits braking on the shoulder',
+    ],
+    answer: 1,
+    explanation: 'Le gravier a un coefficient d\'adhérence très bas. Freiner fort bloque les roues, et une roue bloquée sur gravier n\'offre plus aucun contrôle directionnel — la moto glisse et tombe. Freinez progressivement, surtout avec le frein avant, et ralentissez avant d\'arriver au gravier si possible. / Gravel has a very low coefficient of grip. Hard braking locks the wheels, and a locked wheel on gravel gives no directional control — the bike slides and falls. Brake gradually, especially with the front brake, and slow down before reaching gravel if possible.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — DEER / Chevreuils — 447–450
+  // ============================================================
+
+  {
+    id: 447,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous apercevez un chevreuil sur le côté de la route à 100 mètres. Que faites-vous immédiatement ?',
+    qEN: 'You spot a deer on the side of the road 100 metres ahead. What do you do immediately?',
+    options: [
+      'Klaxonnez fort pour l\'effrayer et continuez à la même vitesse',
+      'Ralentissez, scrutez les deux côtés et soyez prêt à freiner — il y en a souvent d\'autres',
+      'Accélérez pour passer avant qu\'il ne traverse',
+      'Changez de voie vers la gauche pour lui laisser de l\'espace à droite',
+    ],
+    optionsEN: [
+      'Honk loudly to scare it and continue at the same speed',
+      'Slow down, scan both sides and be ready to brake — there are often more nearby',
+      'Accelerate to pass before it crosses',
+      'Change to the left lane to give it space on the right',
+    ],
+    answer: 1,
+    explanation: 'Un chevreuil visible signifie souvent qu\'il y en a d\'autres — ils se déplacent en groupes. Ralentissez immédiatement, scrutez les deux accotements et les fossés, et restez prêt à freiner. Les chevreuils sont imprévisibles et peuvent traverser en courant sans avertissement. / One visible deer often means more are nearby — they travel in groups. Slow down immediately, scan both shoulders and ditches, and be ready to brake. Deer are unpredictable and can dart across without warning.',
+  },
+  {
+    id: 448,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'À quelle période de l\'année et de la journée le risque de collision avec un chevreuil est-il le plus élevé au Québec ?',
+    qEN: 'At what time of year and day is the risk of deer collision highest in Quebec?',
+    options: [
+      'En été, entre midi et 15 h, sur les autoroutes',
+      'En automne (octobre-novembre) et au printemps, à l\'aube et au crépuscule',
+      'En hiver, la nuit, quand les chevreuils cherchent de la chaleur sur l\'asphalte',
+      'En été, tôt le matin, quand ils viennent s\'abreuver près des routes',
+    ],
+    optionsEN: [
+      'In summer, between noon and 3 p.m., on highways',
+      'In autumn (October-November) and spring, at dawn and dusk',
+      'In winter, at night, when deer seek warmth on the pavement',
+      'In summer, early morning, when they come to drink near roads',
+    ],
+    answer: 1,
+    explanation: 'Le risque est maximal en automne (rut d\'octobre à novembre) et au printemps, aux heures crépusculaires (aube et crépuscule). Les chevreuils sont très actifs à ces moments et leur visibilité est réduite dans la lumière rasante. Soyez particulièrement vigilant sur les routes de campagne du Québec à ces heures. / Risk is highest in autumn (rut from October to November) and spring, during twilight hours (dawn and dusk). Deer are very active at these times and visibility is reduced in low-angle light. Be especially vigilant on Quebec country roads at these times.',
+  },
+  {
+    id: 449,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Un chevreuil surgit à 20 mètres devant vous à 80 km/h. Vous n\'avez pas le temps de freiner complètement. Quelle est votre meilleure option ?',
+    qEN: 'A deer jumps out 20 metres ahead at 80 km/h. You cannot stop in time. What is your best option?',
+    options: [
+      'Tentez un virage brusque pour l\'éviter — mieux vaut tomber que frapper l\'animal',
+      'Freinez aussi fort que possible en ligne droite et essayez de passer derrière le chevreuil',
+      'Accélérez pour passer devant le chevreuil avant qu\'il traverse',
+      'Lâchez les freins et maintenez le cap — les chevreuils s\'écartent toujours',
+    ],
+    optionsEN: [
+      'Attempt a sharp turn to avoid it — better to fall than hit the animal',
+      'Brake as hard as possible in a straight line and try to pass behind the deer',
+      'Accelerate to pass in front of the deer before it crosses',
+      'Release brakes and hold course — deer always move out of the way',
+    ],
+    answer: 1,
+    explanation: 'Freinez aussi fort que possible en ligne droite. Essayez de passer derrière le chevreuil — les animaux ont tendance à continuer dans la même direction. Un virage brusque à haute vitesse peut être plus dangereux que la collision elle-même. N\'accélérez jamais vers un animal sur la route. / Brake as hard as possible in a straight line. Try to pass behind the deer — animals tend to continue in the same direction. A sharp turn at high speed may be more dangerous than the collision itself. Never accelerate toward an animal on the road.',
+  },
+  {
+    id: 450,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quel équipement sur votre moto aide le plus à avertir les chevreuils de votre approche ?',
+    qEN: 'Which equipment on your motorcycle helps most to warn deer of your approach?',
+    options: [
+      'Un sifflet ultrasonique fixé sur le guidon',
+      'Le klaxon utilisé fréquemment sur les routes de campagne',
+      'Vos feux de route allumés en permanence pour augmenter votre visibilité',
+      'Aucun équipement n\'est fiable — la meilleure protection est de réduire la vitesse',
+    ],
+    optionsEN: [
+      'An ultrasonic whistle mounted on the handlebars',
+      'The horn used frequently on country roads',
+      'Your high beams on permanently to increase your visibility',
+      'No equipment is reliable — the best protection is to reduce speed',
+    ],
+    answer: 3,
+    explanation: 'Les sifflets ultrasoniques pour cerfs n\'ont pas d\'efficacité prouvée scientifiquement. Le klaxon peut effrayer ou au contraire paniquer le chevreuil. La meilleure protection reste de réduire la vitesse dans les zones à risque, de bien éclairer la route la nuit et d\'être prêt à freiner. La vigilance surpasse tout équipement. / Ultrasonic deer whistles have no scientifically proven effectiveness. The horn may scare or conversely panic the deer. The best protection remains reducing speed in risk zones, lighting the road well at night and being ready to brake. Vigilance surpasses any equipment.',
+  },
+
 ];
 
 // ============================================================
