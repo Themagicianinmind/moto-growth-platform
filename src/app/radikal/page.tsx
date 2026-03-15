@@ -17,6 +17,7 @@ import AboutOwner from '@/components/shop/AboutOwner';
 import BookingForm from '@/components/shop/BookingForm';
 import DarkBookingCTA from '@/components/shop/DarkBookingCTA';
 import ShopFooter from '@/components/shop/ShopFooter';
+import ExamPromoSection from '@/components/shared/ExamPromoSection';
 
 const shop = shops.radikal;
 
@@ -48,6 +49,7 @@ export default function RadikalPage() {
       <AboutOwner shop={shop} lang={lang} />
       <BookingForm shop={shop} lang={lang} />
       <DarkBookingCTA shop={shop} lang={lang} />
+      <ExamPromoSection lang={lang} accentColor={shop.accentColor} />
       <ShopFooter shop={shop} lang={lang} />
     </div>
   );

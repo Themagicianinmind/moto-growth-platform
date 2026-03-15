@@ -11,6 +11,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import BookingForm from '@/components/shop/BookingForm';
 import ReviewCards from '@/components/shop/ReviewCards';
 import FinancingSection from '@/components/shop/FinancingSection';
+import ExamPromoSection from '@/components/shared/ExamPromoSection';
 
 const shop = shops.dynamik;
 
@@ -789,6 +790,9 @@ export default function DynamikPage() {
 
       {/* ── BOOKING FORM ── */}
       <BookingForm shop={shop} lang={lang} />
+
+      {/* ── EXAM APP PROMO ── */}
+      <ExamPromoSection lang={lang} accentColor={ACCENT} />
 
       {/* ── FOOTER ── */}
       <Footer shop={shop} lang={lang} />
