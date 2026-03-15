@@ -157,6 +157,25 @@ export const t = {
   vespaShowcaseCTA: { fr: 'Explorer la gamme', en: 'Explore the Range' },
   vespaOfficialDealer: { fr: '★ Concessionnaire officiel Outaouais', en: '★ Official Dealer Outaouais' },
 
+  // Vespa page
+  vespaPageTitle: { fr: 'La gamme Vespa & Piaggio', en: 'The Vespa & Piaggio Range' },
+  vespaPageSubtitle: { fr: 'Concessionnaire officiel en Outaouais depuis 1999. Mouvements neufs, pièces OEM, service complet.', en: 'Official dealer in Outaouais since 1999. New models, OEM parts, full service.' },
+  vespaPageHeroLabel: { fr: 'VESPA & PIAGGIO — GATINEAU', en: 'VESPA & PIAGGIO — GATINEAU' },
+  vespaWhyLabel: { fr: 'POURQUOI NOUS CHOISIR', en: 'WHY CHOOSE US' },
+  vespaWhyHeading: { fr: "L'expérience concessionnaire officiel", en: 'The Official Dealer Experience' },
+  vespaWhyPoint1: { fr: 'Concessionnaire officiel Vespa & Piaggio en Outaouais', en: 'Official Vespa & Piaggio dealer in Outaouais' },
+  vespaWhyPoint2: { fr: "Pièces OEM garanties d'origine", en: 'Guaranteed OEM original parts' },
+  vespaWhyPoint3: { fr: 'Service complet par techniciens certifiés', en: 'Full service by certified technicians' },
+  vespaWhyPoint4: { fr: 'Financement disponible via Financement auto TD', en: 'Financing available via TD Auto Finance' },
+  vespaWhyPoint5: { fr: 'Garantie constructeur appliquée', en: 'Manufacturer warranty honored' },
+  vespaSpecEngine: { fr: 'Moteur', en: 'Engine' },
+  vespaSpecPower: { fr: 'Puissance', en: 'Power' },
+  vespaSpecTopSpeed: { fr: 'Vitesse max', en: 'Top Speed' },
+  vespaSpecFuel: { fr: 'Réservoir', en: 'Fuel tank' },
+  vespaSpecWeight: { fr: 'Poids', en: 'Weight' },
+  vespaBackToShop: { fr: '← Retour à Dynamik Performance', en: '← Back to Dynamik Performance' },
+  vespaRequestModal: { fr: "Demander l'info sur ce modèle", en: 'Request info on this model' },
+
   // ============================
   // ABOUT OWNER
   // ============================
