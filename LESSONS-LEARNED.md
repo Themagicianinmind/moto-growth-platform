@@ -225,3 +225,49 @@
 - **Git lock issue:** Mounted filesystem (.git/index.lock) gets permission-locked after first commit. Workaround: copy repo to temp dir for subsequent commits, then sync files back.
 - **LESSON:** Data-driven service pages scale perfectly. Adding a 14th page = 1 data object + 1 seven-line page.tsx. No template changes needed.
 - **LESSON:** Keep .md content files as source of truth. Non-technical stakeholders can edit content without touching React code.
+
+---
+
+## March 15, 2026 — Day 5: Supabase Wiring + Fox Racing Page
+
+### Supabase Project Discovery
+- **Don't create a new project first — check for existing ones.** The `moto-growth-platform` Supabase project (`vkzcnkiatypzmxguxflk`, `ca-central-1`) already existed with `bookings` and `leads` tables fully set up. Creating a second project would have wasted time and money.
+- **MCP `list_projects` is the fastest way** to check what exists before doing anything.
+
+### API Architecture Was Pre-Built
+- All three API routes (`/api/booking`, `/api/financing`, `/api/lead`) were already in the repo — just missing `.env.local` with real credentials and the `financing_leads` table.
+- **LESSON:** At session start, always check what's already built before planning. `find src/app/api -name "*.ts"` is a 1-second check that saves hours.
+
+### Supabase Schema Pattern
+- Every table follows the same RLS pattern: `ENABLE ROW LEVEL SECURITY` + `CREATE POLICY "Allow anon insert" FOR INSERT TO anon WITH CHECK (true)`.
+- Anon key can INSERT but never SELECT — correct for public-facing lead capture forms.
+- `financing_leads` table: id (uuid), created_at (timestamptz), name, phone, email, vehicle, down_payment, employment, shop_id (CHECK IN ('dynamik','radikal')), lang (CHECK IN ('fr','en')).
+
+### Vercel Platform Package Issue
+- **`@next/swc-linux-arm64-gnu` in package.json = Vercel build failure.** This is an ARM64-specific native module. Vercel's build servers are x64 Linux — it can't install ARM64 binaries.
+- **Fix:** `npm uninstall @next/swc-linux-arm64-gnu`. Next.js auto-installs the right platform binary itself.
+- **LESSON:** Never manually install platform-specific `@next/swc-*` packages. They belong in devDependencies at most, and only if you know exactly why.
+
+### Env Vars Were Already Set in Vercel
+- `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `RESEND_API_KEY` were already in Vercel production from a prior session.
+- **LESSON:** Check `npx vercel env ls --scope themagicianinminds-projects` before adding vars — avoids duplicate key errors.
+
+### Fox Racing Page Architecture
+- Fox Racing page (`/radikal/fox-racing`) is a **standalone brand page** — not a service page.
+- Uses MegaNav (already has Fox Racing link built in) + ShopFooter.
+- Dark hero section (dark bg, `fox-hero.jpg` at 45% opacity, gradient overlay) — only section that breaks the white luxury theme intentionally (brand alignment with Fox's dark/edgy visual identity).
+- Remaining sections follow white luxury: white category cards, `#f5f4f0` cream "We ride what we sell" section, `#0a0a0a` dark bottom CTA.
+- **MegaNav already had `/radikal/fox-racing` link** — Fox Racing nav item with gold color + "NEW" badge was built in a prior session.
+- 5 categories: Casques, Maillots & Pantalons, Gants, Bottes, Protection — each with icon, description, model badge, green "in stock" indicator.
+- French typographic apostrophe `'` (U+2019) inside a JS single-quoted string causes parse error. Fix: use `"\u2019"` unicode escape or double-quote the string.
+
+### End-to-End Verification
+- Smoke test: `curl -X POST .../api/financing -d '{...}'` → `{"success":true}`.
+- Verified row in Supabase with `execute_sql SELECT` — UUID, timestamp, all fields confirmed.
+- **LESSON:** Always end-to-end test API routes post-deploy with a curl call. Build passing ≠ API working.
+
+### Updated Page Inventory
+- `/radikal/fox-racing` ✅ — Fox Racing showcase (dark hero, 5 categories, dealer badge, "we ride what we sell")
+- All 13 service pages ✅ — bilingual, JSON-LD schema, MegaNav, FAQ accordion
+- `/api/financing` ✅ — Supabase insert, validated, live in production
+- Booking and lead APIs were already wired from earlier sessions
