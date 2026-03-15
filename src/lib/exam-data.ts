@@ -7438,6 +7438,1141 @@ export const questions: Question[] = [
     explanation: 'En freinage d\'urgence sans ABS : appliquez les deux freins simultanément avec une pression progressive (pas d\'un seul coup). Le frein avant fournit 70–80 % de la puissance de freinage. Gardez la moto droite (les pneus freinent mieux verticaux). Si une roue se bloque, relâchez légèrement puis réappliquez. Regardez où vous voulez aller, pas l\'obstacle. / In emergency braking without ABS: apply both brakes simultaneously with progressive pressure (not all at once). The front brake provides 70–80% of braking power. Keep the motorcycle upright (tires grip better when vertical). If a wheel locks, ease off slightly then reapply. Look where you want to go, not at the obstacle.',
   },
 
+  // ============================================================
+  // ONTARIO — DOORING RISK / Risque de portière — questions 351–353
+  // ============================================================
+
+  {
+    id: 351,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un piéton ouvre brusquement sa portière alors que vous passez à vélo moto près de voitures stationnées. Qui est légalement responsable en Ontario ?',
+    qEN: 'A pedestrian suddenly opens their car door as you ride past parked cars. Who is legally at fault in Ontario?',
+    options: [
+      'La personne qui a ouvert la portière — article 165 du Code de la route de l\'Ontario interdit d\'ouvrir une portière sans s\'assurer que c\'est sécuritaire',
+      'Le motocycliste — il devait maintenir une plus grande distance de sécurité',
+      'La responsabilité est partagée à 50/50 entre les deux parties',
+      'Personne — les accidents de portière sont considérés comme inévitables',
+    ],
+    optionsEN: [
+      'The person who opened the door — Section 165 of the Ontario Highway Traffic Act prohibits opening a door without ensuring it is safe',
+      'The motorcyclist — they should have kept a greater safety distance',
+      'Responsibility is shared 50/50 between both parties',
+      'Nobody — dooring accidents are considered unavoidable',
+    ],
+    answer: 0,
+    explanation: 'L\'article 165 du Code de la route de l\'Ontario (HTA) interdit formellement d\'ouvrir une portière dans la circulation sans d\'abord s\'assurer que le geste est sécuritaire. Ouvrir une portière sur un motocycliste constitue une infraction. Les motocyclistes sont encouragés à maintenir au moins 1 mètre de distance avec les voitures stationnées. / Section 165 of Ontario\'s Highway Traffic Act expressly prohibits opening a vehicle door into traffic without first ensuring it is safe. Dooring a motorcyclist is an HTA offence. Motorcyclists are encouraged to maintain at least 1 metre of clearance from parked vehicles.',
+  },
+  {
+    id: 352,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'Vous roulez sur une rue commerciale avec des voitures stationnées des deux côtés. Quelle technique vous protège le mieux contre un dooring ?',
+    qEN: 'You are riding on a commercial street with parked cars on both sides. Which technique best protects you from dooring?',
+    options: [
+      'Roulez dans le tiers gauche de votre voie pour garder 1 mètre des portières et réduire votre vitesse',
+      'Roulez le plus près possible du centre pour dépasser les voitures stationnées rapidement',
+      'Klaxonnez régulièrement pour avertir les occupants des véhicules de votre présence',
+      'Montez sur l\'accélérateur pour traverser la zone dangereuse le plus vite possible',
+    ],
+    optionsEN: [
+      'Ride in the left third of your lane to keep 1 metre from doors and reduce your speed',
+      'Ride as close to the centre as possible to pass parked cars quickly',
+      'Horn regularly to warn vehicle occupants of your presence',
+      'Accelerate to cross the danger zone as fast as possible',
+    ],
+    answer: 0,
+    explanation: 'La technique de « zone de portière » consiste à rouler dans le tiers gauche de la voie, à au moins 1 mètre des portières des voitures stationnées. Réduire la vitesse vous donne plus de temps de réaction si une portière s\'ouvre. Regardez à l\'intérieur des voitures pour détecter des passagers qui pourraient sortir. / The "door zone" technique involves riding in the left third of the lane, at least 1 metre from parked car doors. Slowing down gives you more reaction time if a door opens. Look inside cars to spot occupants who may be exiting.',
+  },
+  {
+    id: 353,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'La nuit, vous roulez près de voitures stationnées dans une rue peu éclairée. Comment évaluez-vous le risque de dooring ?',
+    qEN: 'At night, you ride near parked cars on a poorly lit street. How do you assess dooring risk?',
+    options: [
+      'Cherchez des lumières intérieures allumées, des lumières de recul actives ou des silhouettes dans les voitures',
+      'La nuit, les risques de dooring sont réduits car il y a moins de circulation',
+      'Accélérez rapidement pour minimiser le temps d\'exposition dans la zone de portière',
+      'Restez au centre de la route pour éviter complètement la zone de portière',
+    ],
+    optionsEN: [
+      'Look for interior lights on, active reverse lights, or silhouettes inside the cars',
+      'At night, dooring risk is lower because there is less traffic',
+      'Accelerate quickly to minimize time spent in the door zone',
+      'Stay in the centre of the road to avoid the door zone entirely',
+    ],
+    answer: 0,
+    explanation: 'La nuit, les indices visuels qui indiquent la présence de passagers dans un véhicule incluent les lumières intérieures allumées, les lumières de recul actives et les silhouettes visibles dans les voitures. La nuit ne réduit pas le risque de dooring — elle peut même l\'augmenter car les conducteurs ne vous voient pas approcher. / At night, visual cues indicating passengers in a vehicle include interior lights on, active reverse lights, and visible silhouettes inside cars. Night does not reduce dooring risk — it can increase it because drivers may not see you approaching.',
+  },
+
+  // ============================================================
+  // ONTARIO — OPP ENFORCEMENT PRIORITIES / Priorités d'application OPP — questions 354–356
+  // ============================================================
+
+  {
+    id: 354,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un agent de la Police provinciale de l\'Ontario (OPP) vous arrête à un barrage RIDE. Que peut-il légalement exiger de vous ?',
+    qEN: 'An Ontario Provincial Police (OPP) officer stops you at a RIDE check. What can they legally require from you?',
+    options: [
+      'Votre permis de conduire, l\'immatriculation du véhicule, la preuve d\'assurance, et un test de sobriété approuvé',
+      'Seulement votre permis de conduire — les autres documents sont facultatifs à un barrage RIDE',
+      'Le test de sobriété uniquement — les barrages RIDE ne peuvent pas demander de documents',
+      'Votre identité verbalement — vous n\'êtes pas tenu de présenter de documents',
+    ],
+    optionsEN: [
+      'Your driver\'s licence, vehicle registration, proof of insurance, and an approved sobriety test',
+      'Only your driver\'s licence — other documents are optional at a RIDE check',
+      'Sobriety test only — RIDE checks cannot request documents',
+      'Your identity verbally — you are not required to produce documents',
+    ],
+    answer: 0,
+    explanation: 'Les barrages RIDE (Reduce Impaired Driving Everywhere) sont autorisés par le Code de la route de l\'Ontario. À un barrage RIDE, un agent peut exiger votre permis, l\'immatriculation, la preuve d\'assurance et administrer un test de détection d\'alcool approuvé. Refuser de produire ces documents ou de souffler dans l\'appareil est une infraction. / RIDE (Reduce Impaired Driving Everywhere) checkpoints are authorized under Ontario\'s Highway Traffic Act. At a RIDE check, an officer may demand your licence, registration, proof of insurance, and administer an approved alcohol screening device test. Refusing to produce documents or blow is an offence.',
+  },
+  {
+    id: 355,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'L\'OPP intensifie les contrôles sur les motocyclistes en été dans les régions rurales de l\'Ontario. Quelles infractions ciblées en priorité ?',
+    qEN: 'OPP intensifies checks on motorcyclists in rural Ontario in summer. Which offences are prioritized?',
+    options: [
+      'Excès de vitesse, conduite avec facultés affaiblies, conduite acrobatique et défauts mécaniques visibles',
+      'Seulement les défauts mécaniques — les infractions à la vitesse sont hors mandat des opérations motos',
+      'Uniquement la conduite avec facultés affaiblies lors des fins de semaine de longue durée',
+      'Seulement le port du casque — c\'est la priorité absolue de l\'OPP pour les motocyclistes',
+    ],
+    optionsEN: [
+      'Speeding, impaired driving, stunt driving, and visible mechanical defects',
+      'Only mechanical defects — speed offences are outside the scope of motorcycle operations',
+      'Only impaired driving during long weekends',
+      'Only helmet compliance — this is the OPP\'s top priority for motorcyclists',
+    ],
+    answer: 0,
+    explanation: 'Les campagnes de sécurité moto de l\'OPP ciblent plusieurs infractions simultanément : l\'excès de vitesse (surtout en région rurale), la conduite avec facultés affaiblies, la conduite acrobatique (stunt driving), et les défauts mécaniques visibles comme les pneus lisses ou les feux défectueux. Le port du casque est aussi vérifié. / OPP motorcycle safety campaigns target multiple offences simultaneously: speeding (especially in rural areas), impaired driving, stunt driving, and visible mechanical defects such as bald tires or faulty lights. Helmet compliance is also checked.',
+  },
+  {
+    id: 356,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un agent OPP vous immobilise sur l\'autoroute 17 pour une vérification de sécurité moto. Que vérifie-t-il sur votre véhicule ?',
+    qEN: 'An OPP officer pulls you over on Highway 17 for a motorcycle safety check. What will they inspect on your vehicle?',
+    options: [
+      'Phares, feux de freinage, pneus, rétroviseurs, klaxon, plaque d\'immatriculation et équipement de sécurité du conducteur',
+      'Seulement la plaque d\'immatriculation et l\'assurance — une vérification routière ne couvre pas les pièces mécaniques',
+      'Uniquement le casque et les vêtements de protection du conducteur',
+      'Seulement les pneus et les freins — les autres composants sont exclus des contrôles routiers',
+    ],
+    optionsEN: [
+      'Headlights, brake lights, tires, mirrors, horn, licence plate, and rider safety equipment',
+      'Only the licence plate and insurance — a roadside check does not cover mechanical parts',
+      'Only the helmet and protective clothing of the rider',
+      'Only tires and brakes — other components are excluded from roadside checks',
+    ],
+    answer: 0,
+    explanation: 'Une vérification de sécurité routière de l\'OPP pour un motocycle couvre les éléments de sécurité essentiels : phares (avant et arrière), feux de freinage, état des pneus (usure et pression), rétroviseurs, klaxon fonctionnel, plaque d\'immatriculation lisible, et l\'équipement du conducteur notamment le casque homologué. / An OPP roadside safety check for a motorcycle covers essential safety items: headlights (front and rear), brake lights, tire condition (wear and pressure), mirrors, working horn, legible licence plate, and rider equipment including an approved helmet.',
+  },
+
+  // ============================================================
+  // ONTARIO — STUNT DRIVING PENALTIES / Pénalités conduite acrobatique — questions 357–359
+  // ============================================================
+
+  {
+    id: 357,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'À quelle vitesse excessive une infraction de conduite acrobatique (stunt driving) est-elle automatiquement déclenchée en Ontario ?',
+    qEN: 'At what excessive speed is a stunt driving charge automatically triggered in Ontario?',
+    options: [
+      '50 km/h ou plus au-dessus de la limite affichée dans toute zone de vitesse',
+      '30 km/h au-dessus de la limite seulement sur les autoroutes à 100 km/h',
+      '40 km/h au-dessus de la limite uniquement en zone scolaire',
+      '60 km/h au-dessus de la limite affichée — en dessous c\'est seulement un excès de vitesse ordinaire',
+    ],
+    optionsEN: [
+      '50 km/h or more above the posted limit in any speed zone',
+      '30 km/h above the limit only on highways posted at 100 km/h',
+      '40 km/h above the limit only in school zones',
+      '60 km/h above the posted limit — below that it is only ordinary speeding',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, le seuil de conduite acrobatique (stunt driving) est atteint dès que vous roulez à 50 km/h ou plus au-dessus de la limite de vitesse affichée, quelle que soit la zone. Par exemple : 100 km/h dans une zone de 50, ou 150 km/h sur une autoroute à 100. Les wheelies, les dérapages délibérés et les chicanes entre véhicules comptent également comme conduite acrobatique. / In Ontario, the stunt driving threshold is reached when you travel 50 km/h or more above any posted speed limit. For example: 100 km/h in a 50 zone, or 150 km/h on a 100 highway. Wheelies, deliberate skids, and weaving between vehicles also qualify as stunt driving.',
+  },
+  {
+    id: 358,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous êtes arrêté pour conduite acrobatique pour la première fois en Ontario. Quelles sont les conséquences immédiates ?',
+    qEN: 'You are stopped for stunt driving for the first time in Ontario. What are the immediate consequences?',
+    options: [
+      'Suspension immédiate du permis pour 30 jours, saisie du véhicule pour 14 jours, et amende pouvant atteindre 10 000 $',
+      'Amende de 500 $ et 3 points — la suspension ne s\'applique qu\'à la deuxième infraction',
+      'Avertissement écrit uniquement pour la première infraction — la suspension commence à la deuxième',
+      'Suspension du permis pour 7 jours et amende maximale de 2 000 $',
+    ],
+    optionsEN: [
+      'Immediate 30-day licence suspension, 14-day vehicle impoundment, and a fine up to $10,000',
+      '$500 fine and 3 demerit points — suspension only applies on the second offence',
+      'Written warning only for first offence — suspension begins on the second',
+      '7-day licence suspension and maximum $2,000 fine',
+    ],
+    answer: 0,
+    explanation: 'Pour une première infraction de conduite acrobatique en Ontario : suspension immédiate du permis pour 30 jours, saisie du véhicule pour 14 jours aux frais du conducteur, et amende pouvant aller de 2 000 $ à 10 000 $ si reconnu coupable au tribunal. Des points d\'inaptitude (6) sont aussi ajoutés au dossier. / For a first stunt driving offence in Ontario: immediate 30-day licence suspension, 14-day vehicle impoundment at the driver\'s expense, and a fine from $2,000 to $10,000 upon conviction. Six demerit points are also added to your record.',
+  },
+  {
+    id: 359,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un motocycliste est reconnu coupable de conduite acrobatique pour la deuxième fois en Ontario. Quelle suspension de permis minimale s\'applique ?',
+    qEN: 'A motorcyclist is convicted of stunt driving for the second time in Ontario. What minimum licence suspension applies?',
+    options: [
+      'Minimum 3 ans de suspension du permis, saisie du véhicule pour 14 jours, et possibilité d\'emprisonnement',
+      'Minimum 6 mois de suspension — identique à la première infraction mais avec une amende doublée',
+      'Minimum 1 an de suspension automatique dès la deuxième infraction en 5 ans',
+      'Suspension indéfinie jusqu\'à la décision du tribunal — pas de durée minimale fixe',
+    ],
+    optionsEN: [
+      'Minimum 3-year licence suspension, 14-day vehicle impoundment, and possibility of imprisonment',
+      'Minimum 6-month suspension — same as first offence but with doubled fine',
+      'Minimum 1-year automatic suspension for second offence within 5 years',
+      'Indefinite suspension until court decision — no fixed minimum duration',
+    ],
+    answer: 0,
+    explanation: 'Pour une deuxième déclaration de culpabilité de conduite acrobatique en Ontario, la suspension minimale du permis est de 3 ans. Le véhicule est saisi pour 14 jours. Une peine d\'emprisonnement de 6 mois est possible. Pour une troisième condamnation, la suspension est de 10 ans. Ces peines sévères visent à décourager la récidive. / For a second stunt driving conviction in Ontario, the minimum licence suspension is 3 years. The vehicle is impounded for 14 days. Up to 6 months imprisonment is possible. For a third conviction, the suspension is 10 years. These severe penalties are designed to deter repeat offences.',
+  },
+
+  // ============================================================
+  // ONTARIO — DISTRACTED DRIVING FINES / Amendes conduite distraite — questions 360–362
+  // ============================================================
+
+  {
+    id: 360,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'C\'est votre première condamnation pour conduite distraite en Ontario. Quelle est l\'amende maximale et les points d\'inaptitude ?',
+    qEN: 'It is your first distracted driving conviction in Ontario. What is the maximum fine and demerit points?',
+    options: [
+      'Amende maximale de 1 000 $, 3 points d\'inaptitude, et aucune suspension de permis pour un nouveau conducteur',
+      'Amende fixe de 300 $ avec aucun point d\'inaptitude pour la première infraction',
+      'Amende maximale de 500 $ et 2 points d\'inaptitude — la suspension commence à la troisième infraction',
+      'Amende de 50 $ à 2 500 $ selon la gravité, sans points d\'inaptitude',
+    ],
+    optionsEN: [
+      'Maximum fine of $1,000, 3 demerit points, and no licence suspension for a first offence',
+      'Fixed fine of $300 with no demerit points for a first offence',
+      'Maximum $500 fine and 2 demerit points — suspension starts on third offence',
+      'Fine from $50 to $2,500 depending on severity, with no demerit points',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la première condamnation pour conduite distraite entraîne une amende maximale de 1 000 $, 3 points d\'inaptitude au dossier de conduite. Pour les nouveaux conducteurs (permis probatoire G1, G2, M1, M2), une suspension de 30 jours s\'ajoute dès la première infraction. / In Ontario, the first distracted driving conviction carries a maximum fine of $1,000 and 3 demerit points. For novice drivers (G1, G2, M1, M2), a 30-day licence suspension is added for the first offence.',
+  },
+  {
+    id: 361,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un motocycliste reçoit sa troisième condamnation pour conduite distraite en Ontario. Quelles pénalités s\'appliquent ?',
+    qEN: 'A motorcyclist receives their third distracted driving conviction in Ontario. What penalties apply?',
+    options: [
+      'Amende maximale de 3 000 $, 6 points d\'inaptitude, et suspension du permis pour 3 ans',
+      'Amende maximale de 1 500 $, 5 points d\'inaptitude, et suspension de 6 mois',
+      'Amende fixe de 5 000 $ sans points supplémentaires car les 6 points ont déjà été appliqués',
+      'Amende maximale de 2 000 $ et révocation automatique du permis moto uniquement',
+    ],
+    optionsEN: [
+      'Maximum fine of $3,000, 6 demerit points, and 3-year licence suspension',
+      'Maximum $1,500 fine, 5 demerit points, and 6-month suspension',
+      'Fixed $5,000 fine with no additional points as the 6 points were already applied',
+      'Maximum $2,000 fine and automatic revocation of motorcycle licence only',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la troisième condamnation pour conduite distraite entraîne une amende maximale de 3 000 $, 6 points d\'inaptitude, et une suspension du permis de 3 ans. La progression des peines est : 1re : max 1 000 $, 3 pts, 30 j (novice) ; 2e : max 2 000 $, 6 pts, 90 j ; 3e et + : max 3 000 $, 6 pts, 3 ans. / In Ontario, the third distracted driving conviction carries a maximum fine of $3,000, 6 demerit points, and a 3-year licence suspension. The penalty progression is: 1st: max $1,000, 3 pts, 30 days (novice); 2nd: max $2,000, 6 pts, 90 days; 3rd+: max $3,000, 6 pts, 3 years.',
+  },
+  {
+    id: 362,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous êtes arrêté à un feu rouge sur votre moto et consultez votre GPS monté sur le guidon. Est-ce une infraction de conduite distraite ?',
+    qEN: 'You are stopped at a red light on your motorcycle and check your GPS mounted on the handlebars. Is this a distracted driving offence?',
+    options: [
+      'Non, si le GPS est fixé sur le support et que vous n\'y touchez pas pour entrer des données — consulter la carte est permis',
+      'Oui — tout regard vers un appareil électronique constitue une infraction même à l\'arrêt',
+      'Non, les appareils de navigation montés de façon permanente sont exempts de la loi sur la conduite distraite',
+      'Oui, mais seulement si le moteur tourne — éteindre le moteur à un feu rouge rend la consultation légale',
+    ],
+    optionsEN: [
+      'No, if the GPS is fixed in its mount and you are not touching it to enter data — viewing the map is permitted',
+      'Yes — any glance at an electronic device is an offence even when stopped',
+      'No, permanently mounted navigation devices are fully exempt from distracted driving law',
+      'Yes, but only if the engine is running — turning off the engine at a red light makes consulting it legal',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la loi sur la conduite distraite interdit de tenir ou de manipuler un appareil électronique. Un GPS correctement fixé sur un support (mains libres) peut être consulté visuellement sans enfreindre la loi. Cependant, entrer des données ou manipuler l\'appareil à la main est une infraction, même à l\'arrêt. / In Ontario, the distracted driving law prohibits holding or manipulating an electronic device. A GPS properly mounted in a hands-free holder can be viewed visually without breaking the law. However, entering data or manipulating the device by hand is an offence, even when stopped.',
+  },
+
+  // ============================================================
+  // ONTARIO — CONSTRUCTION ZONE DOUBLED FINES / Amendes doublées zones construction — questions 363–365
+  // ============================================================
+
+  {
+    id: 363,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous excédez la vitesse de 20 km/h dans une zone de construction en Ontario où des travailleurs sont présents. Quel est l\'effet sur l\'amende ?',
+    qEN: 'You exceed the speed limit by 20 km/h in an Ontario construction zone where workers are present. What effect does this have on the fine?',
+    options: [
+      'L\'amende est doublée automatiquement lorsque des travailleurs sont présents dans la zone de construction',
+      'L\'amende reste la même — le doublement ne s\'applique qu\'aux camions de plus de 5 tonnes',
+      'L\'amende est triplée uniquement si l\'infraction se produit entre 7h et 17h en semaine',
+      'L\'amende standard s\'applique — le doublement ne concerne que les autoroutes à 100 km/h',
+    ],
+    optionsEN: [
+      'The fine is automatically doubled when workers are present in the construction zone',
+      'The fine stays the same — doubling only applies to trucks over 5 tonnes',
+      'The fine is tripled only if the offence occurs between 7am and 5pm on weekdays',
+      'The standard fine applies — doubling only applies on 100 km/h highways',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, les amendes pour excès de vitesse dans une zone de construction sont automatiquement doublées lorsque des travailleurs sont présents. Cette règle s\'applique à tous les véhicules, y compris les motos. La signalisation en zone de construction indique habituellement « amendes doublées ». La limite de vitesse en zone de construction est souvent réduite à 60 ou 40 km/h. / In Ontario, speeding fines in construction zones are automatically doubled when workers are present. This rule applies to all vehicles including motorcycles. Construction zone signage typically states "fines doubled." The speed limit in construction zones is often reduced to 60 or 40 km/h.',
+  },
+  {
+    id: 364,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous approchez d\'une zone de construction sur l\'autoroute 401 en Ontario. Quels panneaux indiquent que les amendes doublées sont en vigueur ?',
+    qEN: 'You are approaching a construction zone on Highway 401 in Ontario. What signs indicate that doubled fines are in effect?',
+    options: [
+      'Panneaux orange « ZONE DE CONSTRUCTION — AMENDES DOUBLÉES POUR LES INFRACTIONS DE VITESSE LORSQUE DES TRAVAILLEURS SONT PRÉSENTS »',
+      'Cônes orange seulement — les cônes suffisent pour activer les amendes doublées sans panneaux supplémentaires',
+      'Panneaux blancs avec texte noir indiquant « AMENDES X2 » placés après le début de la zone',
+      'Aucun panneau n\'est requis — les amendes sont doublées dans toutes les zones délimitées par des cônes orange',
+    ],
+    optionsEN: [
+      'Orange signs reading "CONSTRUCTION ZONE — FINES DOUBLED FOR SPEEDING WHEN WORKERS PRESENT"',
+      'Orange cones only — cones are sufficient to activate doubled fines without additional signs',
+      'White signs with black text stating "FINES X2" placed after the zone begins',
+      'No signage is required — fines are doubled in all areas delimited by orange cones',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, les zones de construction doivent être clairement signalisées avec des panneaux orange annonçant les amendes doublées. Ces panneaux sont placés avant l\'entrée de la zone. Sans une signalisation appropriée, le doublement des amendes ne s\'applique pas légalement. Les motocyclistes doivent repérer ces panneaux et ajuster leur vitesse en conséquence. / In Ontario, construction zones must be clearly posted with orange signs announcing doubled fines. These signs are placed before the zone begins. Without proper signage, the fine doubling does not legally apply. Motorcyclists must look for these signs and adjust speed accordingly.',
+  },
+  {
+    id: 365,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'En dehors des heures de travail, la nuit, des cônes délimitent une zone de construction sur l\'autoroute 407 mais aucun travailleur n\'est visible. Les amendes sont-elles doublées ?',
+    qEN: 'Outside working hours at night, cones mark a construction zone on Highway 407 but no workers are visible. Are fines doubled?',
+    options: [
+      'Non — en Ontario, les amendes doublées ne s\'appliquent qu\'en présence effective de travailleurs',
+      'Oui — dès qu\'une zone est délimitée par des cônes, les amendes sont doublées en tout temps',
+      'Oui — la signalisation orange active les amendes doublées 24h/24, 7j/7',
+      'Non — les amendes doublées ne s\'appliquent que de 6h à 22h selon le règlement provincial',
+    ],
+    optionsEN: [
+      'No — in Ontario, doubled fines only apply when workers are actually present',
+      'Yes — once a zone is marked by cones, fines are doubled at all times',
+      'Yes — orange signage activates doubled fines 24/7',
+      'No — doubled fines only apply from 6am to 10pm according to provincial regulation',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la loi précise que les amendes doublées s\'appliquent uniquement « lorsque des travailleurs sont présents ». Si des cônes délimitent une zone de construction mais qu\'aucun travailleur n\'est présent, les amendes standards s\'appliquent. Cependant, réduire votre vitesse reste prudent puisque des travailleurs peuvent apparaître à tout moment. / In Ontario, the law specifies that doubled fines apply only "when workers are present." If cones mark a construction zone but no workers are present, standard fines apply. However, reducing your speed remains prudent since workers may appear at any time.',
+  },
+
+  // ============================================================
+  // ONTARIO — WINTER RIDING PREP / Préparation conduite hivernale — questions 366–368
+  // ============================================================
+
+  {
+    id: 366,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'Est-il légal de conduire une moto en hiver en Ontario lorsque la route est couverte de neige ou de glace ?',
+    qEN: 'Is it legal to ride a motorcycle in winter in Ontario when roads are covered in snow or ice?',
+    options: [
+      'Oui, c\'est légal — il n\'existe aucune loi interdisant la moto en hiver en Ontario, mais c\'est extrêmement risqué',
+      'Non — le Code de la route de l\'Ontario interdit les motos sur les routes enneigées ou verglacées',
+      'Seulement avec des pneus cloutés homologués — sans eux, c\'est une infraction',
+      'Légal uniquement sur les routes secondaires — les autoroutes sont interdites aux motos en dessous de 5 °C',
+    ],
+    optionsEN: [
+      'Yes, it is legal — there is no law banning motorcycles in winter in Ontario, but it is extremely risky',
+      'No — Ontario\'s Highway Traffic Act prohibits motorcycles on snowy or icy roads',
+      'Only with approved studded tires — without them it is an offence',
+      'Legal only on secondary roads — highways are off-limits to motorcycles below 5°C',
+    ],
+    answer: 0,
+    explanation: 'Il n\'existe aucune loi en Ontario qui interdit formellement de conduire une moto en hiver sur route enneigée ou verglacée. Cependant, c\'est extrêmement dangereux car les motos n\'ont pas de cage de sécurité, et les pneus standards ont une adhérence très faible sur la glace. La plupart des motocyclistes rangent leur moto en hiver pour des raisons de sécurité, pas légales. / There is no law in Ontario that formally prohibits riding a motorcycle in winter on snowy or icy roads. However, it is extremely dangerous because motorcycles have no safety cage and standard tires have very little grip on ice. Most motorcyclists store their motorcycle in winter for safety reasons, not legal ones.',
+  },
+  {
+    id: 367,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'Vous décidez de reprendre votre moto au printemps après un hiver de rangement. Quelles vérifications sont prioritaires avant le premier départ ?',
+    qEN: 'You decide to take your motorcycle out in spring after winter storage. What checks are top priority before your first ride?',
+    options: [
+      'Pneus (pression et usure), huile moteur (niveau et qualité), freins, phares, batterie, et carburant frais si l\'ancien a vieilli',
+      'Seulement le niveau d\'huile et la pression des pneus — le reste n\'est pas critique pour un court trajet',
+      'Uniquement la batterie et le carburant — les pneus et freins ne se dégradent pas en rangement statique',
+      'Un lavage extérieur complet suivi d\'un test de démarrage — les vérifications mécaniques peuvent attendre',
+    ],
+    optionsEN: [
+      'Tires (pressure and wear), engine oil (level and condition), brakes, lights, battery, and fresh fuel if old fuel has degraded',
+      'Only oil level and tire pressure — the rest is not critical for a short ride',
+      'Only the battery and fuel — tires and brakes do not degrade in static storage',
+      'A full exterior wash followed by a start test — mechanical checks can wait',
+    ],
+    answer: 0,
+    explanation: 'Après un hiver de rangement, les vérifications prioritaires incluent : pneus (pression et recherche de fissures ou aplatissement d\'un côté), huile (peut se dégrader en rangement prolongé), freins (les étriers peuvent coller et les plaquettes peuvent oxyder), phares et feux (connexions peuvent corroder), batterie (peut se décharger ou sulfater), et carburant (peut se dégrader et vernir le carburateur). / After winter storage, priority checks include: tires (pressure and look for cracks or flat spots), oil (can degrade in prolonged storage), brakes (calipers can seize and pads can oxidize), lights (connections may corrode), battery (may discharge or sulfate), and fuel (may degrade and varnish the carburetor).',
+  },
+  {
+    id: 368,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'Vous planifiez rouler en Ontario tôt le matin en automne quand les températures sont proches de 0 °C. Quelle est votre principale préoccupation ?',
+    qEN: 'You plan to ride in Ontario early morning in autumn when temperatures are near 0°C. What is your main concern?',
+    options: [
+      'Le givre noir (black ice) sur les ponts, les virages ombragés et les passages sous-viaducs — invisible et extrêmement glissant',
+      'La condensation sur la visière du casque seulement — la route reste sûre au-dessus de 0 °C',
+      'La surchauffe du moteur due au démarrage à froid — le moteur doit chauffer 15 minutes avant de rouler',
+      'Les autres conducteurs qui conduisent plus lentement en automne — risque de dépassement dangereux',
+    ],
+    optionsEN: [
+      'Black ice on bridges, shaded corners, and underpasses — invisible and extremely slippery',
+      'Visor condensation only — the road stays safe above 0°C',
+      'Engine overheating from cold start — the engine must warm for 15 minutes before riding',
+      'Other drivers who drive more slowly in autumn — risk of dangerous overtaking',
+    ],
+    answer: 0,
+    explanation: 'Le givre noir (black ice) est une fine couche de glace transparente pratiquement invisible sur la chaussée. Il se forme quand les températures descendent autour de 0 °C, particulièrement sur les ponts (exposés au froid en dessous et au-dessus), sous les viaducs, dans les virages ombragés et les zones humides. En Ontario, le givre noir est la principale cause d\'accidents graves de moto en automne et au printemps. / Black ice is a thin, nearly invisible transparent ice layer on the road surface. It forms when temperatures drop around 0°C, particularly on bridges (exposed to cold above and below), under overpasses, in shaded corners, and in wet areas. In Ontario, black ice is the leading cause of serious motorcycle crashes in autumn and spring.',
+  },
+
+  // ============================================================
+  // ONTARIO — MOTORCYCLE INSPECTION STANDARDS / Normes inspection moto Ontario — questions 369–371
+  // ============================================================
+
+  {
+    id: 369,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous achetez une moto d\'occasion en Ontario. Le vendeur vous dit que la moto n\'a pas besoin d\'inspection car elle a moins de 5 ans. Est-ce vrai ?',
+    qEN: 'You are buying a used motorcycle in Ontario. The seller says the motorcycle does not need an inspection because it is less than 5 years old. Is this true?',
+    options: [
+      'Non — un certificat de normes de sécurité (Safety Standards Certificate) est requis pour tout transfert de propriété de moto en Ontario, peu importe l\'âge',
+      'Oui — les véhicules de moins de 5 ans sont exempts de l\'inspection obligatoire en Ontario',
+      'Non — l\'inspection est obligatoire seulement pour les motos de plus de 10 ans ou de plus de 100 000 km',
+      'Oui — l\'inspection n\'est requise que si la moto a subi des modifications mécaniques importantes',
+    ],
+    optionsEN: [
+      'No — a Safety Standards Certificate is required for any motorcycle ownership transfer in Ontario, regardless of age',
+      'Yes — vehicles under 5 years old are exempt from mandatory inspection in Ontario',
+      'No — inspection is only mandatory for motorcycles over 10 years old or over 100,000 km',
+      'Yes — inspection is only required if the motorcycle has had major mechanical modifications',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, pour tout transfert de propriété d\'un véhicule motorisé (y compris une moto), le vendeur doit fournir un certificat de normes de sécurité (Safety Standards Certificate) délivré par un mécanicien de véhicules automobiles certifié (MVIP). Ce certificat ne dépend pas de l\'âge du véhicule. Acheter une moto sans ce certificat, c\'est acheter une moto dont la sécurité n\'est pas vérifiée. / In Ontario, for any motor vehicle ownership transfer (including a motorcycle), the seller must provide a Safety Standards Certificate issued by a certified Motor Vehicle Inspection Program (MVIP) mechanic. This certificate is not age-dependent. Buying a motorcycle without this certificate means buying a motorcycle whose safety has not been verified.',
+  },
+  {
+    id: 370,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Qu\'est-ce qu\'un mécanicien agréé vérifie lors d\'une inspection de normes de sécurité pour une moto en Ontario ?',
+    qEN: 'What does a certified mechanic check during a Safety Standards Certificate inspection for a motorcycle in Ontario?',
+    options: [
+      'Freins, pneus, direction, suspension, éclairage, klaxon, rétroviseurs, cadre et connexions de carburant',
+      'Seulement les freins et les pneus — ce sont les seules composantes couvertes par le certificat de sécurité pour les motos',
+      'Seulement les éléments visibles extérieurement — l\'inspection ne couvre pas les composantes internes du moteur',
+      'Uniquement la conformité aux normes d\'émissions — les composantes de sécurité sont vérifiées séparément',
+    ],
+    optionsEN: [
+      'Brakes, tires, steering, suspension, lighting, horn, mirrors, frame, and fuel connections',
+      'Only brakes and tires — these are the only components covered by the safety certificate for motorcycles',
+      'Only externally visible items — the inspection does not cover internal engine components',
+      'Only emissions compliance — safety components are checked separately',
+    ],
+    answer: 0,
+    explanation: 'L\'inspection de normes de sécurité pour une moto en Ontario couvre les principaux systèmes de sécurité : freins (fonctionnement et usure), pneus (profondeur de rainure minimale, absence de coupures ou de bulles), direction (jeu et alignement), suspension, tout l\'éclairage (phares, feux de position, clignotants, feux de freinage), klaxon fonctionnel, rétroviseurs, intégrité du cadre, et connexions de carburant. / The Safety Standards Certificate inspection for a motorcycle in Ontario covers major safety systems: brakes (function and wear), tires (minimum tread depth, no cuts or bulges), steering (play and alignment), suspension, all lighting (headlights, position lights, turn signals, brake lights), working horn, mirrors, frame integrity, and fuel connections.',
+  },
+  {
+    id: 371,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Votre certificat de normes de sécurité moto est valide combien de temps en Ontario pour le transfert de propriété ?',
+    qEN: 'How long is a motorcycle Safety Standards Certificate valid in Ontario for an ownership transfer?',
+    options: [
+      '36 jours à compter de la date d\'inspection',
+      '12 mois — le certificat est valide pour toute l\'année suivant l\'inspection',
+      '6 mois, mais seulement si la moto n\'a pas été modifiée depuis l\'inspection',
+      'Indéfiniment — il n\'y a pas de date d\'expiration sur un certificat de normes de sécurité en Ontario',
+    ],
+    optionsEN: [
+      '36 days from the date of inspection',
+      '12 months — the certificate is valid for the full year following inspection',
+      '6 months, but only if the motorcycle has not been modified since the inspection',
+      'Indefinitely — there is no expiry date on a Safety Standards Certificate in Ontario',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, un certificat de normes de sécurité (Safety Standards Certificate) est valide 36 jours à partir de la date de délivrance. Si le transfert de propriété n\'est pas complété dans ce délai, une nouvelle inspection est nécessaire. Cette période courte garantit que l\'état du véhicule n\'a pas changé depuis l\'inspection. / In Ontario, a Safety Standards Certificate is valid for 36 days from the date of issue. If the ownership transfer is not completed within this period, a new inspection is required. This short window ensures the vehicle condition has not changed since inspection.',
+  },
+
+  // ============================================================
+  // ONTARIO — CARGO SECURING / Sécurisation du chargement — questions 372–374
+  // ============================================================
+
+  {
+    id: 372,
+    province: 'on',
+    category: 'Road Rules',
+    q: 'Vous fixez des sacoches latérales sur votre moto pour un voyage de camping. Quelle règle du Code de la route de l\'Ontario s\'applique au chargement ?',
+    qEN: 'You are attaching saddlebags to your motorcycle for a camping trip. What Ontario Highway Traffic Act rule applies to your load?',
+    options: [
+      'Le chargement doit être solidement fixé pour ne pas tomber, se déplacer ou gêner la conduite — le conducteur est responsable de son sécurité',
+      'Aucune règle spécifique — la loi ne réglemente que le chargement des camions, pas des motos',
+      'Le chargement ne peut pas dépasser 10 kg sur une moto — au-delà, un remorque est obligatoire',
+      'Les sacoches latérales n\'ont pas besoin d\'être fixées si elles sont de type magnétique ou à fermeture velcro',
+    ],
+    optionsEN: [
+      'The load must be secured so it cannot fall, shift, or interfere with riding — the operator is responsible for its safety',
+      'No specific rule — the law only regulates cargo on trucks, not motorcycles',
+      'The load cannot exceed 10 kg on a motorcycle — beyond that a trailer is mandatory',
+      'Saddlebags do not need to be secured if they are magnetic or velcro-closure type',
+    ],
+    answer: 0,
+    explanation: 'Le Code de la route de l\'Ontario (HTA) exige que tout chargement sur un véhicule, y compris une moto, soit fixé de manière à ne pas tomber sur la route, se déplacer de façon dangereuse ou gêner la conduite du véhicule. Le conducteur est responsable de la sécurité de son chargement. Un chargement mal fixé peut entraîner une amende et une responsabilité en cas d\'accident. / Ontario\'s HTA requires that any load on a vehicle, including a motorcycle, be secured so it cannot fall onto the road, shift dangerously, or interfere with vehicle operation. The operator is responsible for load safety. An unsecured load can result in a fine and liability in the event of an accident.',
+  },
+  {
+    id: 373,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'Vous chargez votre moto avec des bagages pour un long voyage. Comment le chargement affecte-t-il le comportement de la moto ?',
+    qEN: 'You are loading your motorcycle with luggage for a long trip. How does the load affect motorcycle handling?',
+    options: [
+      'Le centre de gravité monte et recule, ce qui alourdit la direction et augmente la distance de freinage — ajustez la suspension',
+      'Un chargement plus lourd améliore la stabilité à haute vitesse — la moto est plus sûre chargée',
+      'Le chargement n\'affecte pas la moto tant qu\'il est réparti également des deux côtés',
+      'Seul le chargement en position haute (au-dessus des épaules) affecte la conduite — le chargement bas est sans effet',
+    ],
+    optionsEN: [
+      'The centre of gravity rises and shifts rearward, making steering heavier and increasing braking distance — adjust suspension',
+      'A heavier load improves high-speed stability — a loaded motorcycle is safer',
+      'The load does not affect the motorcycle as long as it is evenly distributed on both sides',
+      'Only high-mounted loads (above shoulder height) affect handling — low loads have no effect',
+    ],
+    answer: 0,
+    explanation: 'Charger une moto élève le centre de gravité et peut le déplacer vers l\'arrière. Cela rend la direction plus lourde, augmente la distance de freinage (plus de masse à ralentir), et peut provoquer une surcharge de l\'essieu arrière. Pour compenser, augmentez la pression des pneus et ajustez la précharge de la suspension arrière selon les spécifications du fabricant. Répartissez le poids le plus bas et le plus équitablement possible. / Loading a motorcycle raises the centre of gravity and may shift it rearward. This makes steering heavier, increases braking distance (more mass to slow), and can overload the rear axle. To compensate, increase tire pressure and adjust rear suspension preload per manufacturer specifications. Distribute weight as low and evenly as possible.',
+  },
+  {
+    id: 374,
+    province: 'on',
+    category: 'Road Rules',
+    q: 'Votre chargement tombe sur l\'autoroute 400 en Ontario et provoque un accident. Quelle est votre responsabilité légale ?',
+    qEN: 'Your load falls onto Highway 400 in Ontario and causes an accident. What is your legal liability?',
+    options: [
+      'Vous êtes responsable des dommages causés et pouvez faire face à des accusations criminelles en plus des infractions au HTA',
+      'Vous n\'êtes responsable que si vous étiez présent au moment de la chute — sinon la responsabilité revient à la MTO',
+      'Votre assurance automobile couvre automatiquement les dommages causés par un chargement perdu',
+      'Aucune responsabilité si le chargement était fixé avec au moins deux sangles — vous avez respecté les règles',
+    ],
+    optionsEN: [
+      'You are liable for damages caused and may face criminal charges in addition to HTA offences',
+      'You are only liable if you were present when the load fell — otherwise liability falls to MTO',
+      'Your auto insurance automatically covers damage caused by a lost load',
+      'No liability if the load was secured with at least two straps — you followed the rules',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, un conducteur dont le chargement tombe sur la route peut être accusé de négligence criminelle si des blessures ou décès en résultent, en plus d\'infractions au Code de la route (HTA). Civilement, vous êtes responsable des dommages causés aux autres véhicules, propriétés ou personnes. L\'assurance peut ou non couvrir selon les circonstances. Fixez toujours solidement votre chargement. / In Ontario, a driver whose load falls onto the road may face criminal negligence charges if injuries or death result, in addition to HTA offences. Civilly, you are liable for damages to other vehicles, property, or persons. Insurance may or may not cover depending on circumstances. Always secure your load properly.',
+  },
+
+  // ============================================================
+  // ONTARIO — PASSENGER RULES M LICENSE / Règles passager permis M — questions 375–377
+  // ============================================================
+
+  {
+    id: 375,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Quel niveau de permis moto en Ontario vous autorise à transporter un passager sur votre moto ?',
+    qEN: 'Which level of motorcycle licence in Ontario allows you to carry a passenger on your motorcycle?',
+    options: [
+      'Seulement le permis M complet (classe M) — les titulaires de permis M1 et M2 ne peuvent pas transporter de passagers',
+      'Le permis M2 permet de transporter un passager — le M1 ne le permet pas',
+      'Le permis M1 permet un passager après 6 mois de conduite — le M2 n\'a pas de restriction',
+      'Tous les niveaux de permis M permettent un passager tant que le passager porte un casque approuvé',
+    ],
+    optionsEN: [
+      'Only the full M licence (class M) — M1 and M2 holders cannot carry passengers',
+      'The M2 licence allows carrying a passenger — M1 does not',
+      'The M1 licence allows a passenger after 6 months of riding — M2 has no restriction',
+      'All M licence levels allow a passenger as long as the passenger wears an approved helmet',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, seul le titulaire d\'un permis M complet (classe M finale) peut transporter un passager. Les restrictions M1 et M2 interdisent formellement le transport de passagers. Cette règle existe parce que les novices doivent développer leur compétence à gérer la moto seuls avant d\'assumer la responsabilité d\'un passager. / In Ontario, only the holder of a full M licence (final M class) may carry a passenger. M1 and M2 restrictions formally prohibit carrying passengers. This rule exists because novice riders must develop competency managing the motorcycle alone before assuming responsibility for a passenger.',
+  },
+  {
+    id: 376,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous transportez un passager sur votre moto en Ontario. Quelles conditions doivent être remplies pour que ce soit légal ?',
+    qEN: 'You are carrying a passenger on your motorcycle in Ontario. What conditions must be met for this to be legal?',
+    options: [
+      'Vous avez un permis M complet, la moto a des repose-pieds et des poignées pour le passager, et le passager porte un casque approuvé',
+      'Seulement le casque du passager est requis — les repose-pieds sont recommandés mais pas obligatoires',
+      'Vous devez avoir votre permis M depuis au moins 2 ans et le passager doit peser moins de 90 kg',
+      'Un permis M2 est suffisant si le passager a plus de 18 ans et donne son consentement écrit',
+    ],
+    optionsEN: [
+      'You have a full M licence, the motorcycle has footrests and handgrips for the passenger, and the passenger wears an approved helmet',
+      'Only the passenger\'s helmet is required — footrests are recommended but not mandatory',
+      'You must have held your M licence for at least 2 years and the passenger must weigh under 90 kg',
+      'An M2 licence is sufficient if the passenger is over 18 and gives written consent',
+    ],
+    answer: 0,
+    explanation: 'Pour transporter légalement un passager en Ontario : (1) le conducteur doit posséder un permis M complet ; (2) la moto doit être équipée de repose-pieds passager et de poignées ou d\'un dossier passager ; (3) le passager doit porter un casque homologué (DOT, ECE ou Snell). Un passager sans casque entraîne une infraction pour le conducteur. / To legally carry a passenger in Ontario: (1) the operator must hold a full M licence; (2) the motorcycle must be equipped with passenger footrests and handgrips or a passenger backrest; (3) the passenger must wear an approved helmet (DOT, ECE, or Snell). A passenger without a helmet results in an offence for the operator.',
+  },
+  {
+    id: 377,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Votre ami vous demande de le transporter sur votre moto. Vous êtes titulaire d\'un permis M2 depuis 8 mois. Que lui répondez-vous ?',
+    qEN: 'Your friend asks you to give them a ride on your motorcycle. You have held an M2 licence for 8 months. What do you tell them?',
+    options: [
+      'Je ne peux pas — mon permis M2 m\'interdit de transporter des passagers. Je dois attendre d\'avoir le permis M complet',
+      'Je peux te transporter car j\'ai mon M2 depuis plus de 6 mois — c\'est suffisant selon les règles de l\'Ontario',
+      'Je peux te transporter sur les routes secondaires mais pas sur les autoroutes avec un permis M2',
+      'Je peux te transporter si tu signes une décharge de responsabilité avant de monter',
+    ],
+    optionsEN: [
+      'I cannot — my M2 licence prohibits carrying passengers. I must wait until I have the full M licence',
+      'I can carry you because I have had my M2 for more than 6 months — that is enough under Ontario rules',
+      'I can carry you on secondary roads but not on highways with an M2 licence',
+      'I can carry you if you sign a liability waiver before getting on',
+    ],
+    answer: 0,
+    explanation: 'Le permis M2 interdit explicitement le transport de passagers en Ontario, peu importe depuis combien de temps vous l\'avez. Pour transporter un passager légalement, vous devez détenir le permis M complet (avoir réussi le test de conduite de niveau 2 ou l\'équivalent). Transporter un passager avec un M2 est une infraction au Code de la route. / The M2 licence explicitly prohibits carrying passengers in Ontario, regardless of how long you have held it. To legally carry a passenger, you must hold the full M licence (having passed the Level 2 road test or equivalent). Carrying a passenger with an M2 is a Highway Traffic Act offence.',
+  },
+
+  // ============================================================
+  // ONTARIO — LANE SPLITTING ILLEGAL / Circulation entre les voies illégale — questions 378–380
+  // ============================================================
+
+  {
+    id: 378,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous êtes coincé dans un embouteillage sur l\'autoroute 427 à Toronto. Pouvez-vous légalement circuler entre les voies de trafic immobilisé ?',
+    qEN: 'You are stuck in traffic on Highway 427 in Toronto. Can you legally ride between lanes of stopped traffic?',
+    options: [
+      'Non — la circulation entre les voies (lane splitting) est illégale en Ontario. Vous devez rester dans votre voie',
+      'Oui — le lane splitting est légal en Ontario si la vitesse ne dépasse pas 30 km/h',
+      'Oui — le lane splitting est toléré par l\'OPP sur les autoroutes en situation d\'embouteillage confirmé',
+      'Légal seulement si les voitures sont à l\'arrêt complet et que vous roulez à moins de 20 km/h',
+    ],
+    optionsEN: [
+      'No — lane splitting is illegal in Ontario. You must stay in your lane',
+      'Yes — lane splitting is legal in Ontario if speed does not exceed 30 km/h',
+      'Yes — lane splitting is tolerated by OPP on highways during confirmed traffic jams',
+      'Legal only if cars are completely stopped and you ride under 20 km/h',
+    ],
+    answer: 0,
+    explanation: 'Le lane splitting (circuler entre les voies de trafic) est illégal en Ontario en vertu du Code de la route (HTA). Chaque véhicule doit occuper une voie complète. Contrairement à certains États américains ou à d\'autres pays, l\'Ontario n\'a pas légalisé cette pratique. Dépasser les voitures par l\'espace entre les voies expose le motocycliste à une amende et à un grave risque d\'accident. / Lane splitting (riding between lanes of traffic) is illegal in Ontario under the Highway Traffic Act. Each vehicle must occupy a complete lane. Unlike some US states or other countries, Ontario has not legalized this practice. Passing cars through the space between lanes exposes the motorcyclist to a fine and serious accident risk.',
+  },
+  {
+    id: 379,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Quelle est la différence entre le lane splitting et le lane filtering, et lequel est légal en Ontario ?',
+    qEN: 'What is the difference between lane splitting and lane filtering, and which is legal in Ontario?',
+    options: [
+      'Lane splitting : circuler entre voies en mouvement. Lane filtering : avancer entre voies à l\'arrêt. Ni l\'un ni l\'autre n\'est légal en Ontario',
+      'Lane splitting est légal en Ontario à moins de 30 km/h. Lane filtering est toujours illégal',
+      'Lane filtering est légal aux feux rouges en Ontario. Lane splitting reste illégal',
+      'Les deux sont légaux en Ontario pour les motos immatriculées — seuls les scooters sont exclus',
+    ],
+    optionsEN: [
+      'Lane splitting: riding between moving lanes. Lane filtering: advancing between stopped lanes. Neither is legal in Ontario',
+      'Lane splitting is legal in Ontario under 30 km/h. Lane filtering is always illegal',
+      'Lane filtering is legal at red lights in Ontario. Lane splitting remains illegal',
+      'Both are legal in Ontario for registered motorcycles — only scooters are excluded',
+    ],
+    answer: 0,
+    explanation: 'En terminologie de sécurité routière : le lane splitting désigne la circulation entre des voies en mouvement, tandis que le lane filtering désigne l\'avancement entre des véhicules à l\'arrêt (à un feu rouge, par exemple). Les deux pratiques sont illégales en Ontario en vertu du HTA. Aucune exception n\'est prévue pour les motos ou les scooters. / In road safety terminology: lane splitting refers to riding between moving lanes of traffic, while lane filtering refers to advancing between stopped vehicles (at a red light, for example). Both practices are illegal in Ontario under the HTA. No exception is provided for motorcycles or scooters.',
+  },
+  {
+    id: 380,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'En Ontario, un motocycliste est surpris en train de circuler entre deux voies sur l\'autoroute. Quelle infraction lui est reprochée et quelles sont les pénalités possibles ?',
+    qEN: 'In Ontario, a motorcyclist is caught riding between two lanes on the highway. What offence applies and what penalties are possible?',
+    options: [
+      'Infraction au HTA pour dépassement non sécuritaire ou conduite imprudente — amende plus points d\'inaptitude',
+      'Aucune infraction spécifique — seul un avertissement verbal est possible car la loi ne mentionne pas explicitement le lane splitting',
+      'Infraction de conduite acrobatique (stunt driving) automatique — suspension immédiate du permis',
+      'Seulement un avertissement écrit pour une première infraction de lane splitting',
+    ],
+    optionsEN: [
+      'HTA offence for unsafe passing or careless driving — fine plus demerit points',
+      'No specific offence — only a verbal warning is possible because the law does not explicitly mention lane splitting',
+      'Automatic stunt driving charge — immediate licence suspension',
+      'Only a written warning for a first lane splitting offence',
+    ],
+    answer: 0,
+    explanation: 'Bien que le Code de la route de l\'Ontario ne mentionne pas le terme « lane splitting » explicitement, la pratique peut être punie sous plusieurs articles : dépassement non sécuritaire, conduite imprudente, ou dans les cas extrêmes, conduite acrobatique. Les peines pour conduite imprudente incluent une amende pouvant aller jusqu\'à 2 000 $, 6 points d\'inaptitude, et une possible suspension du permis. / Although Ontario\'s HTA does not explicitly mention "lane splitting," the practice can be penalized under several sections: unsafe passing, careless driving, or in extreme cases, stunt driving. Careless driving penalties include a fine up to $2,000, 6 demerit points, and possible licence suspension.',
+  },
+
+  // ============================================================
+  // ONTARIO — HIGHWAY MERGING 400-SERIES (M2+) / Fusion sur autoroute série 400 — questions 381–383
+  // ============================================================
+
+  {
+    id: 381,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous avez un permis M1 en Ontario. Pouvez-vous conduire votre moto sur les autoroutes de la série 400 ?',
+    qEN: 'You hold an M1 licence in Ontario. Can you ride your motorcycle on 400-series highways?',
+    options: [
+      'Non — les titulaires de permis M1 sont interdits sur les autoroutes de la série 400 et les voies rapides',
+      'Oui — le M1 permet l\'accès à toutes les routes, y compris les autoroutes, sans restriction',
+      'Oui, mais seulement si la limite de vitesse est de 80 km/h ou moins',
+      'Oui, entre 6h et 22h — les autoroutes sont interdites aux motocyclistes M1 la nuit seulement',
+    ],
+    optionsEN: [
+      'No — M1 holders are prohibited from 400-series highways and expressways',
+      'Yes — the M1 allows access to all roads including highways with no restriction',
+      'Yes, but only where the speed limit is 80 km/h or less',
+      'Yes, between 6am and 10pm — highways are only banned for M1 motorcyclists at night',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, les titulaires d\'un permis M1 sont soumis à plusieurs restrictions : interdiction de circuler sur les autoroutes de la série 400 et les voies rapides (expressways), interdiction de conduire la nuit, interdiction de transporter des passagers, et limite de taux d\'alcoolémie de zéro. Ces restrictions s\'appliquent jusqu\'à l\'obtention du permis M2 (après le test de compétences de niveau 1). / In Ontario, M1 holders are subject to several restrictions: prohibited from 400-series highways and expressways, prohibited from driving at night, prohibited from carrying passengers, and zero blood alcohol limit. These restrictions apply until obtaining the M2 licence (after passing the Level 1 skills test).',
+  },
+  {
+    id: 382,
+    province: 'on',
+    category: 'Road Rules',
+    q: 'Vous êtes titulaire d\'un permis M2 et vous fusionnez sur l\'autoroute 401 à partir d\'une bretelle d\'accès. Quelle est la technique correcte ?',
+    qEN: 'You hold an M2 licence and are merging onto Highway 401 from an on-ramp. What is the correct technique?',
+    options: [
+      'Accélérez sur la bretelle pour atteindre la vitesse de la circulation, vérifiez votre angle mort gauche, signalez, et fusionnez progressivement dans un espace adéquat',
+      'Arrêtez-vous à l\'extrémité de la bretelle et attendez un espace de 5 secondes dans la circulation avant de fusionner',
+      'Fusionnez immédiatement sur l\'autoroute dès que vous entrez dans la bretelle — les véhicules sur l\'autoroute doivent vous céder le passage',
+      'Klaxonnez pour signaler votre présence, puis fusionnez quelle que soit la circulation',
+    ],
+    optionsEN: [
+      'Accelerate on the ramp to match traffic speed, check your left blind spot, signal, and merge smoothly into an adequate gap',
+      'Stop at the end of the ramp and wait for a 5-second gap in traffic before merging',
+      'Merge onto the highway immediately upon entering the ramp — highway vehicles must yield to you',
+      'Horn to signal your presence, then merge regardless of traffic',
+    ],
+    answer: 0,
+    explanation: 'La fusion sur une autoroute ontarienne exige : (1) accélérer sur la bretelle pour correspondre à la vitesse de la circulation (typiquement 100–110 km/h) ; (2) vérifier l\'angle mort gauche au-delà du rétroviseur ; (3) signaler votre intention ; (4) choisir un espace adéquat entre deux véhicules ; (5) fusionner progressivement. S\'arrêter sur une bretelle est dangereux et peut causer une collision par l\'arrière. / Merging onto an Ontario highway requires: (1) accelerating on the ramp to match traffic speed (typically 100–110 km/h); (2) checking the left blind spot beyond the mirror; (3) signalling your intention; (4) choosing an adequate gap between two vehicles; (5) merging smoothly. Stopping on a ramp is dangerous and can cause a rear-end collision.',
+  },
+  {
+    id: 383,
+    province: 'on',
+    category: 'Road Rules',
+    q: 'Sur l\'autoroute 400 en Ontario, vous roulez à 80 km/h alors que la limite est 100 km/h. Est-ce légal en moto ?',
+    qEN: 'On Highway 400 in Ontario, you are riding at 80 km/h when the posted limit is 100 km/h. Is this legal on a motorcycle?',
+    options: [
+      'Légal, mais l\'obstruction de la circulation peut entraîner une amende si vous gênez le flot normal — restez dans la voie de droite',
+      'Illégal — les motos doivent rouler à la vitesse affichée exacte, pas en dessous',
+      'Illégal — les autoroutes ontariennes ont une vitesse minimale de 90 km/h pour toutes les motos',
+      'Légal sans restriction — la limite affichée est un maximum, pas un minimum',
+    ],
+    optionsEN: [
+      'Legal, but obstructing traffic can result in a fine if you impede the normal flow — stay in the right lane',
+      'Illegal — motorcycles must ride at exactly the posted speed, not below',
+      'Illegal — Ontario highways have a minimum speed of 90 km/h for all motorcycles',
+      'Legal without restriction — the posted limit is a maximum not a minimum',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, il n\'existe pas de vitesse minimale officielle sur les autoroutes sauf exceptions spécifiques signalisées. Rouler sous la vitesse de la circulation est légal, mais obstruer indûment la circulation peut entraîner une amende (article 132 du HTA). Si vous roulez plus lentement que la vitesse normale, restez dans la voie de droite et laissez passer les véhicules plus rapides. / In Ontario, there is no official minimum speed on highways except specifically posted exceptions. Riding below traffic speed is legal, but unduly obstructing traffic can result in a fine (HTA Section 132). If you are travelling slower than the normal flow, stay in the right lane and allow faster vehicles to pass.',
+  },
+
+  // ============================================================
+  // ONTARIO — INSURANCE REQUIREMENTS / Exigences assurance Ontario — questions 384–386
+  // ============================================================
+
+  {
+    id: 384,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Quel est le montant minimal de couverture en responsabilité civile obligatoire pour conduire une moto en Ontario ?',
+    qEN: 'What is the minimum mandatory third-party liability coverage required to ride a motorcycle in Ontario?',
+    options: [
+      '200 000 $ de couverture en responsabilité civile (Third-Party Liability) — c\'est le minimum légal en Ontario',
+      '50 000 $ de couverture en responsabilité civile — identique au minimum pour les automobiles',
+      '500 000 $ de couverture en responsabilité civile — les motos sont plus risquées donc le minimum est plus élevé',
+      '100 000 $ de couverture en responsabilité civile pour les motos de moins de 600 cc, 200 000 $ pour les plus grosses',
+    ],
+    optionsEN: [
+      '$200,000 of Third-Party Liability coverage — this is the legal minimum in Ontario',
+      '$50,000 of Third-Party Liability coverage — the same minimum as for automobiles',
+      '$500,000 of Third-Party Liability coverage — motorcycles are riskier so the minimum is higher',
+      '$100,000 for motorcycles under 600cc, $200,000 for larger ones',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la couverture minimale obligatoire en responsabilité civile (Third-Party Liability) pour tout véhicule motorisé, y compris les motos, est de 200 000 $. Cette couverture protège les tiers en cas de blessures ou de dommages que vous causez. La plupart des experts recommandent une couverture d\'au moins 1 000 000 $ compte tenu des coûts réels de dommages corporels. / In Ontario, the minimum mandatory Third-Party Liability coverage for any motor vehicle, including motorcycles, is $200,000. This coverage protects third parties in case of injuries or damages you cause. Most experts recommend at least $1,000,000 in coverage given the actual costs of bodily injury.',
+  },
+  {
+    id: 385,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous partez pour une randonnée en moto en Ontario. Quel document d\'assurance devez-vous avoir sur vous ?',
+    qEN: 'You are heading out for a motorcycle ride in Ontario. What insurance document must you carry with you?',
+    options: [
+      'La carte rose (pink card) — votre certificat d\'assurance Ontario délivré par votre assureur',
+      'Votre police d\'assurance complète — le document intégral doit être sur vous en tout temps',
+      'Seulement le numéro de police — les agents acceptent la preuve numérique sur téléphone uniquement',
+      'Aucun document d\'assurance n\'est requis sur vous si la plaque est à jour',
+    ],
+    optionsEN: [
+      'The pink card — your Ontario Insurance Certificate issued by your insurer',
+      'Your complete insurance policy — the full document must be on you at all times',
+      'Only the policy number — officers accept digital proof on phone only',
+      'No insurance document is required on you if the plate is current',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, vous devez porter sur vous lors de chaque déplacement en moto la « carte rose » (pink card) — officiellement appelée le Certificat d\'assurance de véhicule automobile de l\'Ontario (OPCF 16). Cet document est délivré par votre assureur et confirme que vous avez la couverture minimale requise. Ne pas être capable de le présenter à un agent est une infraction au HTA. / In Ontario, you must carry with you on every motorcycle trip the "pink card" — officially called the Ontario Automobile Insurance Certificate (OPCF 16). This document is issued by your insurer and confirms you have the required minimum coverage. Being unable to present it to an officer is an HTA offence.',
+  },
+  {
+    id: 386,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un motocycliste est pris en flagrant délit de conduite sans assurance en Ontario. Quelles sont les pénalités minimales et maximales ?',
+    qEN: 'A motorcyclist is caught riding without insurance in Ontario. What are the minimum and maximum penalties?',
+    options: [
+      'Amende minimale de 5 000 $ et maximale de 50 000 $, plus suspension possible du permis et saisie du véhicule',
+      'Amende fixe de 500 $ et 3 points d\'inaptitude — même traitement que pour un excès de vitesse mineur',
+      'Amende minimale de 1 000 $ et maximale de 10 000 $ — pas de suspension de permis pour la première infraction',
+      'Avertissement et 30 jours pour souscrire une assurance avant amende — tolérance pour la première infraction',
+    ],
+    optionsEN: [
+      'Minimum fine of $5,000 and maximum of $50,000, plus possible licence suspension and vehicle impoundment',
+      'Fixed $500 fine and 3 demerit points — same treatment as a minor speeding offence',
+      'Minimum $1,000 and maximum $10,000 fine — no licence suspension for first offence',
+      'Warning and 30 days to obtain insurance before fine — tolerance for first offence',
+    ],
+    answer: 0,
+    explanation: 'La conduite sans assurance en Ontario est parmi les infractions les plus sévèrement punies : amende minimale de 5 000 $ (première infraction) pouvant atteindre 50 000 $, suspension du permis possible pour jusqu\'à 1 an, et saisie du véhicule pour jusqu\'à 3 mois. La Loi sur les assurances de l\'Ontario exige une assurance valide pour tout véhicule sur la voie publique. / Riding without insurance in Ontario is among the most severely penalized offences: minimum fine of $5,000 (first offence) up to $50,000, possible licence suspension for up to 1 year, and vehicle impoundment for up to 3 months. Ontario\'s Insurance Act requires valid insurance for any vehicle on a public road.',
+  },
+
+  // ============================================================
+  // ONTARIO — ACCIDENT REPORTING OBLIGATIONS / Obligations déclaration accident — questions 387–389
+  // ============================================================
+
+  {
+    id: 387,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous êtes impliqué dans un accident de moto en Ontario avec des dommages estimés à plus de 2 000 $. Êtes-vous obligé d\'appeler la police ?',
+    qEN: 'You are involved in a motorcycle accident in Ontario with estimated damage over $2,000. Are you required to call police?',
+    options: [
+      'Non, vous n\'êtes pas obligé d\'appeler la police si personne n\'est blessé — vous devez vous rendre à un centre de déclaration de collision dans les 24 heures',
+      'Oui — tout accident avec des dommages au-delà de 2 000 $ exige un rapport de police immédiat sur les lieux',
+      'Non — la déclaration est facultative pour tout accident sans blessés en Ontario',
+      'Oui, mais seulement si l\'un des véhicules ne peut plus rouler après la collision',
+    ],
+    optionsEN: [
+      'No, you are not required to call police if nobody is injured — you must go to a collision reporting centre within 24 hours',
+      'Yes — any accident with damage exceeding $2,000 requires an immediate police report on scene',
+      'No — reporting is optional for any accident without injuries in Ontario',
+      'Yes, but only if one of the vehicles cannot drive away after the collision',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, si un accident implique des dommages matériels seulement (pas de blessés) et que les dommages estimés dépassent 2 000 $, vous n\'avez pas à appeler la police sur les lieux si tous les conducteurs impliqués sont présents et coopératifs. Vous devez toutefois vous rendre à un centre de déclaration de collision dans les 24 heures pour déclarer l\'accident. / In Ontario, if an accident involves property damage only (no injuries) and estimated damage exceeds $2,000, you are not required to call police to the scene if all involved drivers are present and cooperative. However, you must go to a collision reporting centre within 24 hours to report the accident.',
+  },
+  {
+    id: 388,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Dans quelles circonstances devez-vous absolument appeler la police sur les lieux d\'un accident de moto en Ontario ?',
+    qEN: 'Under what circumstances must you absolutely call police to the scene of a motorcycle accident in Ontario?',
+    options: [
+      'Si quelqu\'un est blessé, si un conducteur refuse de donner ses informations, ou si un conducteur semble avec facultés affaiblies',
+      'Seulement si l\'accident se produit sur une autoroute — les accidents sur voies secondaires ne requièrent pas la police',
+      'Uniquement si les dommages dépassent 10 000 $ — en dessous, le centre de déclaration suffit',
+      'Seulement si un véhicule est volé ou si la plaque d\'immatriculation est manquante',
+    ],
+    optionsEN: [
+      'If someone is injured, if a driver refuses to provide information, or if a driver appears impaired',
+      'Only if the accident occurs on a highway — accidents on secondary roads do not require police',
+      'Only if damage exceeds $10,000 — below that, the reporting centre is sufficient',
+      'Only if a vehicle is stolen or if a licence plate is missing',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la police doit être appelée sur les lieux si : quelqu\'un est blessé ou tué, un conducteur refuse de donner ses informations ou quitte les lieux, un conducteur semble conduire avec les facultés affaiblies, un véhicule gouvernemental est impliqué, ou un véhicule impliqué est non assuré ou volé. Dans ces cas, ne quittez pas les lieux avant l\'arrivée de la police. / In Ontario, police must be called to the scene if: someone is injured or killed, a driver refuses to provide information or leaves the scene, a driver appears impaired, a government vehicle is involved, or an involved vehicle is uninsured or stolen. In these cases, do not leave the scene before police arrive.',
+  },
+  {
+    id: 389,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous frappez accidentellement une voiture stationnée dans un stationnement en Ontario et personne n\'est présent. Que devez-vous faire légalement ?',
+    qEN: 'You accidentally hit a parked car in a parking lot in Ontario and no one is present. What must you do legally?',
+    options: [
+      'Laisser vos coordonnées sur le véhicule endommagé et signaler la collision à un centre de déclaration si les dommages dépassent 2 000 $',
+      'Partir sans laisser de note — il n\'y a pas d\'obligation légale si personne n\'est témoin de l\'accident',
+      'Appeler le 911 immédiatement — tout accident de véhicule à moteur en Ontario exige un rapport de police',
+      'Attendre sur les lieux jusqu\'à ce que le propriétaire revienne, peu importe le temps d\'attente',
+    ],
+    optionsEN: [
+      'Leave your contact information on the damaged vehicle and report to a collision reporting centre if damage exceeds $2,000',
+      'Leave without a note — there is no legal obligation if nobody witnessed the accident',
+      'Call 911 immediately — all motor vehicle accidents in Ontario require a police report',
+      'Wait at the scene until the owner returns, regardless of wait time',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, si vous endommagez un véhicule non accompagné, vous êtes légalement tenu de laisser vos coordonnées (nom, adresse, numéro de plaque) de façon visible sur ou à l\'intérieur du véhicule endommagé. Si les dommages estimés dépassent 2 000 $, vous devez aussi vous rendre à un centre de déclaration de collision dans les 24 heures. Quitter les lieux sans s\'identifier constitue un délit de fuite. / In Ontario, if you damage an unattended vehicle, you are legally required to leave your contact information (name, address, plate number) visibly on or inside the damaged vehicle. If estimated damage exceeds $2,000, you must also go to a collision reporting centre within 24 hours. Leaving without identifying yourself constitutes a hit and run offence.',
+  },
+
+  // ============================================================
+  // ONTARIO — FAULT DETERMINATION / Détermination de la faute — questions 390–392
+  // ============================================================
+
+  {
+    id: 390,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Un automobiliste tamponne l\'arrière de votre moto sur l\'autoroute 417 en Ontario. Selon les règles de détermination de la faute, qui est responsable ?',
+    qEN: 'A driver rear-ends your motorcycle on Highway 417 in Ontario. Under fault determination rules, who is at fault?',
+    options: [
+      'L\'automobiliste est à 100 % responsable — le conducteur de derrière est toujours responsable en cas de collision arrière selon les règles de l\'Ontario',
+      'Vous êtes à 50 % responsable car vous auriez dû accélérer pour éviter la collision',
+      'La faute est partagée 50/50 car les deux véhicules étaient en mouvement',
+      'L\'automobiliste est responsable seulement si vous pouvez prouver qu\'il n\'a pas freiné',
+    ],
+    optionsEN: [
+      'The driver is 100% at fault — the following driver is always at fault in a rear-end collision under Ontario rules',
+      'You are 50% at fault because you should have accelerated to avoid the collision',
+      'Fault is shared 50/50 because both vehicles were moving',
+      'The driver is at fault only if you can prove they did not brake',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, les Règles de détermination de la responsabilité (Fault Determination Rules — Regulation 668) précisent que le conducteur qui tamponne l\'arrière d\'un autre véhicule est à 100 % responsable. Cette règle s\'applique quel que soit le type de véhicule (voiture, moto). Les exceptions sont très limitées (marche arrière de la victime, etc.). / In Ontario, the Fault Determination Rules (Regulation 668) specify that the driver who rear-ends another vehicle is 100% at fault. This rule applies regardless of vehicle type (car, motorcycle). Exceptions are very limited (victim reversing, etc.).',
+  },
+  {
+    id: 391,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Vous roulez en moto sur la rue principale et une voiture brûle un feu rouge, vous percutant latéralement. Comment la faute est-elle déterminée en Ontario ?',
+    qEN: 'You are riding on the main road and a car runs a red light, hitting you from the side. How is fault determined in Ontario?',
+    options: [
+      'Le conducteur de la voiture est à 100 % responsable — il a grillé un feu rouge ce qui constitue une faute claire',
+      'Vous partagez 50 % de la responsabilité car vous auriez dû anticiper la voiture grillant le feu',
+      'La faute est partagée 25/75 — vous auriez dû ralentir à chaque intersection même avec le feu vert',
+      'La responsabilité dépend entièrement du témoignage des témoins oculaires — sans témoin, 50/50',
+    ],
+    optionsEN: [
+      'The car driver is 100% at fault — they ran a red light which constitutes a clear fault',
+      'You share 50% of the fault because you should have anticipated the car running the light',
+      'Fault is shared 25/75 — you should have slowed at every intersection even with a green light',
+      'Fault depends entirely on eyewitness testimony — without witnesses, 50/50',
+    ],
+    answer: 0,
+    explanation: 'Selon les Règles de détermination de la responsabilité de l\'Ontario, un conducteur qui grille un feu rouge et percute un véhicule qui avait la priorité (feu vert) est à 100 % responsable. La partie ayant la priorité de passage n\'est pas tenue d\'anticiper les infractions des autres conducteurs. Le rapport de police et les caméras de surveillance peuvent confirmer les circonstances. / Under Ontario\'s Fault Determination Rules, a driver who runs a red light and strikes a vehicle that had the right of way (green light) is 100% at fault. The party with the right of way is not required to anticipate other drivers\' infractions. Police reports and surveillance cameras can confirm the circumstances.',
+  },
+  {
+    id: 392,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'En Ontario, vous avez contribué à 25 % d\'un accident de moto. Comment cela affecte-t-il votre réclamation d\'assurance ?',
+    qEN: 'In Ontario, you are determined to be 25% at fault in a motorcycle accident. How does this affect your insurance claim?',
+    options: [
+      'Vos dommages sont couverts à 75 % seulement — la responsabilité partagée réduit votre remboursement proportionnellement',
+      'Votre réclamation est refusée en totalité — toute responsabilité partagée annule la couverture',
+      'Votre réclamation est couverte à 100 % car 25 % est en dessous du seuil de 50 % pour les déductions',
+      'La responsabilité partagée n\'a aucun effet en Ontario — toutes les réclamations sont remboursées à 100 %',
+    ],
+    optionsEN: [
+      'Your damages are covered at 75% only — shared fault reduces your reimbursement proportionally',
+      'Your claim is denied in full — any shared fault cancels coverage',
+      'Your claim is covered at 100% because 25% is below the 50% threshold for deductions',
+      'Shared fault has no effect in Ontario — all claims are reimbursed at 100%',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, la responsabilité contributive (contributory negligence) réduit votre indemnisation proportionnellement à votre part de responsabilité. Si vous êtes à 25 % responsable, vous recevez 75 % de la valeur de vos dommages. De plus, votre prime d\'assurance peut augmenter lors du renouvellement. Ceci encourage les motocyclistes à adopter une conduite défensive même quand ils ont la priorité. / In Ontario, contributory negligence reduces your compensation proportionally to your share of fault. If you are 25% at fault, you receive 75% of your damage value. Additionally, your insurance premium may increase at renewal. This encourages motorcyclists to ride defensively even when they have the right of way.',
+  },
+
+  // ============================================================
+  // ONTARIO — RIDING IN CROSSWINDS / Conduite en vents latéraux — questions 393–395
+  // ============================================================
+
+  {
+    id: 393,
+    province: 'on',
+    category: 'Riding Scenarios',
+    q: 'Vous roulez sur l\'autoroute 402 en Ontario et une soudaine rafale de vent latéral pousse votre moto vers la droite. Quelle est la réaction correcte ?',
+    qEN: 'You are riding on Highway 402 in Ontario and a sudden crosswind gust pushes your motorcycle to the right. What is the correct reaction?',
+    options: [
+      'Inclinez légèrement la moto dans le vent (contre-direction), desserrez la poignée et réduisez doucement la vitesse',
+      'Tournez le guidon fermement vers la gauche pour contrer immédiatement la dérive',
+      'Freinez brusquement et restez parfaitement droit pour stabiliser la moto',
+      'Accélérez pour dépasser rapidement la zone de vent et retrouver la stabilité',
+    ],
+    optionsEN: [
+      'Lean the motorcycle slightly into the wind (counter-steer), relax your grip, and gently reduce speed',
+      'Turn the handlebars firmly to the left to immediately counter the drift',
+      'Brake sharply and stay perfectly upright to stabilize the motorcycle',
+      'Accelerate to quickly pass through the wind zone and regain stability',
+    ],
+    answer: 0,
+    explanation: 'Face à une rafale de vent latéral, la technique correcte est de contre-pencher légèrement vers la direction du vent (contrebalancer), de desserrer les poignées pour permettre à la moto de trouver son équilibre naturel, et de réduire doucement la vitesse. Tourner brusquement le guidon aggrave l\'instabilité. Freiner fort pendant un déplacement latéral peut provoquer un dérapage. / When hit by a crosswind gust, the correct technique is to lean slightly into the direction of the wind (counterbalancing), relax your grip to allow the motorcycle to find its natural balance, and gently reduce speed. Sharply turning the handlebars worsens instability. Hard braking during a lateral displacement can cause a slide.',
+  },
+  {
+    id: 394,
+    province: 'on',
+    category: 'Riding Scenarios',
+    q: 'Sur quels types de routes ontariennes les vents latéraux sont-ils les plus dangereux pour les motocyclistes ?',
+    qEN: 'On what types of Ontario roads are crosswinds most dangerous for motorcyclists?',
+    options: [
+      'Les ponts, les zones déboisées, les plaines agricoles ouvertes et les grands carrefours sans bâtiments autour',
+      'Seulement dans les tunnels — les vents sont canalisés et amplifiés dans les passages souterrains',
+      'Les rues urbaines étroites — les bâtiments créent des tourbillons imprévisibles entre eux',
+      'Les routes en forêt dense — les arbres brisent le vent de façon inégale créant des zones de turbulence',
+    ],
+    optionsEN: [
+      'Bridges, deforested zones, open agricultural plains, and large intersections with no surrounding buildings',
+      'Only in tunnels — winds are channelled and amplified in underground passages',
+      'Narrow urban streets — buildings create unpredictable eddies between them',
+      'Roads through dense forest — trees break wind unevenly creating turbulence zones',
+    ],
+    answer: 0,
+    explanation: 'En Ontario, les vents latéraux sont les plus dangereux dans les zones sans obstacles naturels ou bâtis : ponts (exposés au vent de tous côtés), plaines agricoles (comme dans le sud-ouest de l\'Ontario), zones récemment déboisées, et grandes intersections sans bâtiments à proximité. Les motocyclistes doivent réduire la vitesse et renforcer leur concentration dans ces zones. / In Ontario, crosswinds are most dangerous in areas without natural or built obstacles: bridges (exposed to wind from all sides), agricultural plains (like in southwestern Ontario), recently deforested areas, and large intersections with no nearby buildings. Motorcyclists should reduce speed and increase focus in these areas.',
+  },
+  {
+    id: 395,
+    province: 'on',
+    category: 'Riding Scenarios',
+    q: 'Vous dépassez un camion semi-remorque sur l\'autoroute 11 en Ontario par vent latéral modéré. Quel danger spécifique guette-t-il dans cette manœuvre ?',
+    qEN: 'You are overtaking a transport truck on Highway 11 in Ontario in moderate crosswind. What specific danger awaits you in this manoeuvre?',
+    options: [
+      'En sortant derrière le camion, vous passez d\'une zone abritée à un vent latéral complet — la rafale soudaine peut vous déporter violemment',
+      'Le camion crée un vide d\'air qui vous aspire vers lui lorsque vous passez à côté',
+      'Le vent rebondit sur le flanc du camion et crée une zone de calme parfait — la reprise du vent en sortie est prévisible',
+      'Le vent latéral n\'est pas un problème significatif lors du dépassement — seul le vent de face compte',
+    ],
+    optionsEN: [
+      'As you exit from behind the truck, you transition from a sheltered zone to full crosswind — the sudden gust can violently push you',
+      'The truck creates an air vacuum that pulls you toward it as you pass alongside',
+      'The wind bounces off the truck\'s side and creates a perfect calm zone — the wind resumption on exit is predictable',
+      'Crosswind is not a significant issue when overtaking — only headwind matters',
+    ],
+    answer: 0,
+    explanation: 'Lors du dépassement d\'un camion en vent latéral, le plus grand danger survient au moment où vous quittez la zone abritée derrière le camion. À cet instant, vous passez brusquement d\'un vent nul (abri du camion) à un vent latéral plein. Cette transition soudaine peut déporter violemment la moto. Anticipez ce moment en réduisant la vitesse et en tenant fermement le guidon. / When overtaking a truck in crosswind, the greatest danger occurs the moment you exit the sheltered zone behind the truck. At that instant, you transition abruptly from zero wind (sheltered by the truck) to full crosswind. This sudden transition can violently push the motorcycle sideways. Anticipate this moment by reducing speed and holding the handlebars firmly.',
+  },
+
+  // ============================================================
+  // ONTARIO — GRAVEL ROADS / Routes de gravier Ontario — questions 396–398
+  // ============================================================
+
+  {
+    id: 396,
+    province: 'on',
+    category: 'Riding Scenarios',
+    q: 'Vous vous engagez par erreur sur un chemin de gravier en Ontario. Comment adaptez-vous votre technique de conduite ?',
+    qEN: 'You accidentally turn onto a gravel road in Ontario. How do you adapt your riding technique?',
+    options: [
+      'Réduisez la vitesse immédiatement avant d\'entrer dans le gravier, desserrez les poignées, restez assis et laissez la moto se déplacer librement sous vous',
+      'Accélérez fermement pour maintenir l\'élan — la vitesse stabilise la moto sur les surfaces meubles',
+      'Freinez fort immédiatement pour ralentir avant que les pneus ne perdent l\'adhérence',
+      'Restez sur les freins et tournez rapidement pour retourner sur la route asphaltée',
+    ],
+    optionsEN: [
+      'Reduce speed immediately before entering the gravel, relax your grip, stay seated, and let the motorcycle move freely under you',
+      'Accelerate firmly to maintain momentum — speed stabilizes the motorcycle on loose surfaces',
+      'Brake hard immediately to slow down before the tires lose grip',
+      'Stay on the brakes and turn quickly to get back onto the paved road',
+    ],
+    answer: 0,
+    explanation: 'Sur un chemin de gravier, la technique correcte est de réduire la vitesse AVANT d\'entrer dans la zone (pas en dedans), de desserrer les poignées pour laisser la moto absorber les irrégularités, de rester assis (le poids sur la roue arrière améliore la traction), et de laisser la moto se déplacer librement. Freiner fort sur le gravier ou serrer les poignées provoque des glissades. / On a gravel road, the correct technique is to reduce speed BEFORE entering the loose surface (not once on it), relax your grip to let the motorcycle absorb irregularities, stay seated (weight on rear wheel improves traction), and let the motorcycle move freely. Hard braking on gravel or gripping the handlebars tightly causes slides.',
+  },
+  {
+    id: 397,
+    province: 'on',
+    category: 'Riding Scenarios',
+    q: 'Vous roulez sur un chemin de gravier rural en Ontario et approchez d\'un virage. Comment abordez-vous le virage en toute sécurité ?',
+    qEN: 'You are riding on a rural gravel road in Ontario and approaching a corner. How do you safely approach the turn?',
+    options: [
+      'Ralentissez bien avant le virage en ligne droite, inclinez moins que sur l\'asphalte, et accélérez doucement en sortie',
+      'Freinez fort à l\'entrée du virage comme sur l\'asphalte — la technique est identique',
+      'Penchez-vous fortement dans le virage pour maintenir la vitesse — une plus grande inclinaison améliore l\'adhérence sur le gravier',
+      'Évitez tout freinage dans le virage et laissez simplement la vitesse diminuer naturellement par friction',
+    ],
+    optionsEN: [
+      'Slow well before the corner on the straight, lean less than on asphalt, and accelerate gently on exit',
+      'Brake hard at the corner entry just like on asphalt — the technique is identical',
+      'Lean aggressively into the corner to maintain speed — greater lean improves grip on gravel',
+      'Avoid all braking in the corner and simply let speed decrease naturally through friction',
+    ],
+    answer: 0,
+    explanation: 'Dans un virage sur gravier, la règle d\'or est de ralentir AVANT le virage (pas dedans) en ligne droite où la traction est maximale. L\'inclinaison dans le virage doit être moindre que sur l\'asphalte car la surface est moins adhérente. Accélérez doucement en sortie de virage pour éviter que la roue arrière ne glisse. Freiner dans un virage sur gravier est très risqué. / On a gravel corner, the golden rule is to slow down BEFORE the corner (not inside it) on the straight where traction is maximum. The lean angle in the corner should be less than on asphalt because the surface has less grip. Accelerate gently on corner exit to prevent the rear wheel from sliding. Braking in a gravel corner is very risky.',
+  },
+  {
+    id: 398,
+    province: 'on',
+    category: 'Riding Scenarios',
+    q: 'Sur un chemin de gravier ontarien, quelle est la meilleure position dans la voie pour maximiser la traction ?',
+    qEN: 'On an Ontario gravel road, what is the best lane position to maximize traction?',
+    options: [
+      'Le centre de la voie ou légèrement à gauche du centre — le gravier y est plus compact car les voitures y roulent en ligne',
+      'Le bord extrême de la route — le gravier fin y est plus stable et moins profond',
+      'Changez constamment de position dans la voie — aucun endroit n\'est plus stable que les autres sur le gravier',
+      'L\'épaule herbeuse — l\'herbe offre plus d\'adhérence que le gravier',
+    ],
+    optionsEN: [
+      'The centre of the lane or slightly left of centre — gravel there is more compacted because cars drive on it consistently',
+      'The far edge of the road — fine gravel there is more stable and shallower',
+      'Constantly change lane position — no spot is more stable than others on gravel',
+      'The grassy shoulder — grass offers more grip than gravel',
+    ],
+    answer: 0,
+    explanation: 'Sur un chemin de gravier, le centre de la voie ou légèrement à gauche du centre est généralement le plus compact et stable, car les pneus des voitures y roulent régulièrement et compriment le gravier. Les bords de la route accumulent souvent du gravier meuble et profond (washboard effect). Les ornières peuvent aussi piéger les roues d\'une moto. Évitez les accumulations de gravier dans les virages. / On a gravel road, the centre of the lane or slightly left of centre is generally the most compacted and stable, as car tires regularly drive there and compress the gravel. Road edges often accumulate loose, deep gravel (washboard effect). Ruts can also trap a motorcycle\'s wheels. Avoid gravel accumulations in corners.',
+  },
+
+  // ============================================================
+  // ONTARIO — NIGHT RIDING REQUIREMENTS / Exigences conduite nocturne — questions 399–400
+  // ============================================================
+
+  {
+    id: 399,
+    province: 'on',
+    category: 'Ontario Law',
+    q: 'Quels éclairages sont légalement obligatoires sur une moto en Ontario entre le coucher et le lever du soleil ?',
+    qEN: 'What lighting is legally mandatory on a motorcycle in Ontario between sunset and sunrise?',
+    options: [
+      'Un phare avant blanc allumé, un feu arrière rouge allumé, et un feu de freinage rouge qui s\'active au freinage',
+      'Seulement le phare avant — le feu arrière est recommandé mais non obligatoire en Ontario',
+      'Phare avant, feu arrière, deux rétroviseurs éclairés et un feu de position latéral orange de chaque côté',
+      'Seulement le phare avant et les clignotants — le feu arrière n\'est obligatoire que sur les autoroutes',
+    ],
+    optionsEN: [
+      'One white front headlight on, one red rear light on, and a red brake light activated when braking',
+      'Front headlight only — rear light is recommended but not mandatory in Ontario',
+      'Front headlight, rear light, two lit mirrors, and an amber side position light on each side',
+      'Front headlight and turn signals only — rear light is only mandatory on highways',
+    ],
+    answer: 0,
+    explanation: 'Le Code de la route de l\'Ontario (HTA) exige que toute moto circulant entre le coucher et le lever du soleil soit équipée et utilise : un phare avant blanc (ou jaune ambré) en état de fonctionnement, un feu arrière rouge allumé visible à distance, et un feu de freinage rouge qui s\'active lors du freinage. Les clignotants doivent également être fonctionnels. Des réflecteurs supplémentaires augmentent la visibilité. / Ontario\'s HTA requires that any motorcycle driven between sunset and sunrise be equipped with and use: a functioning white (or amber) front headlight, an illuminated red rear light visible from a distance, and a red brake light that activates when braking. Turn signals must also be functional. Additional reflectors increase visibility.',
+  },
+  {
+    id: 400,
+    province: 'on',
+    category: 'Motorcycle Safety',
+    q: 'Vous planifiez une randonnée nocturne sur les routes de l\'Ontario. Quels équipements supplémentaires améliorent le plus votre visibilité pour les autres conducteurs ?',
+    qEN: 'You are planning a night ride on Ontario roads. What additional equipment most improves your visibility to other drivers?',
+    options: [
+      'Veste ou gilet réfléchissant, bandes réfléchissantes sur le casque et les bagages, et éventuellement des feux LED supplémentaires sur la moto',
+      'Des gants blancs — les mains en mouvement sont les éléments les plus visibles la nuit',
+      'Un casque de couleur claire — c\'est suffisant pour être visible la nuit sans équipement supplémentaire',
+      'Des espadrilles fluorescentes — les pieds sont le premier endroit que les conducteurs regardent à l\'approche d\'une moto',
+    ],
+    optionsEN: [
+      'Reflective jacket or vest, reflective strips on helmet and luggage, and optional additional LED lights on the motorcycle',
+      'White gloves — moving hands are the most visible elements at night',
+      'A light-coloured helmet — this is sufficient to be visible at night without additional equipment',
+      'Fluorescent shoes — feet are the first place drivers look when approaching a motorcycle',
+    ],
+    answer: 0,
+    explanation: 'La nuit, le principal risque pour les motocyclistes est d\'être invisible aux autres conducteurs. Les mesures les plus efficaces pour améliorer la visibilité : veste ou dossard réfléchissant (renvoi de lumière des phares), bandes réfléchissantes sur le casque, les sacoches et les jambes, et des feux additionnels (auxiliary lights, LED running lights) sur la moto. Les couleurs fluorescentes sont efficaces de jour mais peu utiles la nuit — c\'est le matériau réfléchissant qui compte. / At night, the main risk for motorcyclists is being invisible to other drivers. The most effective measures to improve visibility: reflective jacket or vest (reflects headlight beams), reflective strips on helmet, saddlebags and legs, and additional lights (auxiliary lights, LED running lights) on the motorcycle. Fluorescent colours are effective in daylight but not useful at night — it is the reflective material that matters.',
+  },
+
 ];
 
 // ============================================================
