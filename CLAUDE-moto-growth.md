@@ -20,19 +20,27 @@
 # Email (Phase 2): Resend
 
 # ============================================================
-# DEPLOYMENT STATUS — WHAT'S LIVE
+# DEPLOYMENT STATUS — WHAT'S LIVE (Updated March 15, 2026 — Day 3)
 # ============================================================
 # ✅ Dynamik homepage — hero with Vespa photos, stats, services, Vespa showcase,
 #    model cards, about Steve, financing section (OPC-compliant), booking CTA, reviews, footer
-# ✅ Radikal homepage — about Eric section (portrait placeholder, Police HD + Fox Racing badges,
-#    quote, bio, gold CTA). Needs full build matching Dynamik level.
+# ✅ Dynamik /vespa page — Sprint, Primavera, GTS model cards with specs + dual CTA
+#    ("Explorer ce modèle" + "Demander l'info") + "Why buy from us" section
+# ✅ Radikal homepage — full 13-section build:
+#    dark cinematic hero (hero.jpg), PoliceTrust strip, StatsStrip, ServiceGrid,
+#    VehicleCategories (6 cards with images), FoxRacingShowcase, PartsCategories (8 tiles),
+#    BrandsBar (11 brands), ReviewCards, AboutOwner (Eric), BookingForm, DarkBookingCTA, ShopFooter
 # ✅ Exam app — 50 QC SAAQ questions, bilingual, TTS working
-# ✅ Shared components — MegaNav, Footer, StatsStrip, ServiceCard, SectionHeader, LanguageToggle
-# ✅ Vespa/Piaggio product images — 8 images downloaded from wlassets.vespa.com + wlassets.piaggio.com,
-#    self-hosted in /public (no hotlink risk)
+# ✅ Shared components — ShopNavbar, ShopFooter, StatsStrip, ServiceGrid, ServiceCard,
+#    SectionHeader, LanguageToggle, ReviewCards, AboutOwner, BookingForm, FinancingSection
+# ✅ New components (Day 3) — RadikalHeroSection, VehicleCategories, FoxRacingShowcase,
+#    PartsCategories, BrandsBar, DarkBookingCTA
+# ✅ Vespa/Piaggio product images — 8 images self-hosted in /public/images/vespa/
+# ✅ Radikal Unsplash images — 6 images self-hosted in /public/images/radikal/
 #
-# 🔄 NEXT: Radikal full homepage build (same level as Dynamik)
-# 🔄 NEXT: Dynamik /vespa page (model grid + specs)
+# 🔄 NEXT (Day 4): Individual service pages for SEO + Supabase booking forms
+# 🔄 NEXT (Day 5): Fox Racing showcase page for Radikal
+# ⬜ UPCOMING: Marketplace MVP, Schema markup, DNS migration
 
 # ============================================================
 # BUSINESSES SERVED — STRICT SEPARATION
@@ -245,6 +253,24 @@
 #   - Bilingual meta tags and OG images
 
 # ============================================================
+# RULE 0: SESSION START PROTOCOL — READ BEFORE BUILDING
+# ============================================================
+# At the START of every new session, Claude Code MUST:
+# 1. Read CLAUDE-moto-growth.md (this file) — project rules + current state
+# 2. Read BUILD-PLAN-moto-growth.md — what needs to be built
+# 3. Read LESSONS-LEARNED.md — institutional memory (~3200+ lines)
+#    - Contains past mistakes, solutions, patterns, and hard-won knowledge
+#    - If LESSONS-LEARNED.md doesn't exist yet for this project, create it
+#    - Append new lessons at the end of every session
+# 4. Check deployment status — what's live, what's broken, what's next
+# 5. Run git pull to ensure latest code
+# 6. THEN start building
+#
+# NEVER skip LESSONS-LEARNED.md. It exists to prevent repeating mistakes.
+# If you hit a problem that took time to solve, append it to LESSONS-LEARNED.md
+# before ending the session.
+
+# ============================================================
 # RULE 1: DEFAULT TO ACTION
 # ============================================================
 # When the task is clear, implement it without asking permission.
@@ -337,9 +363,10 @@
 #   Day 1-2: ✅ DONE — Shared design system (MegaNav, Footer, ServiceCard, StatsStrip,
 #            SectionHeader, LanguageToggle) + Dynamik homepage (9 sections, Vespa images,
 #            financing, about Steve) + Radikal about section
-#   Day 3:   🔄 NOW — Radikal full homepage (same level as Dynamik: hero, police Harley,
-#            Fox Racing, vehicle categories, parts, brands bar, booking CTA)
-#            + Dynamik /vespa page (model grid with official imagery)
+#   Day 3:   ✅ DONE — Radikal full homepage (13 sections: dark hero, PoliceTrust, StatsStrip,
+#            ServiceGrid, VehicleCategories, FoxRacingShowcase, PartsCategories, BrandsBar,
+#            ReviewCards, AboutOwner, BookingForm, DarkBookingCTA, ShopFooter)
+#            + Dynamik /vespa page (Sprint, Primavera, GTS cards + specs + dual CTA)
 #   Day 4:   Individual service pages for both shops (for SEO)
 #            Booking/quote form component → Supabase → Resend notification
 #   Day 5:   Fox Racing showcase page for Radikal
@@ -380,8 +407,8 @@
 #   ✅ Shared design system components (MegaNav, Footer, StatsStrip, ServiceCard, etc.)
 #   ✅ Vespa/Piaggio product images downloaded and self-hosted
 #   ✅ Exam app (50 QC questions, bilingual, TTS)
-#   🔄 Radikal full homepage (police Harley trust, Fox Racing, vehicle categories)
-#   🔄 Dynamik /vespa page (model grid + specs)
+#   ✅ Radikal full homepage (police Harley trust, Fox Racing, vehicle categories, all 13 sections)
+#   ✅ Dynamik /vespa page (model grid + specs + dual CTA)
 #   ⬜ Booking/quote forms → Supabase
 #   ⬜ Parts catalog MVP (Radikal)
 #   ⬜ Fox Racing showcase (Radikal)

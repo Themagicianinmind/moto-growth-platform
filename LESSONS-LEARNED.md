@@ -1,374 +1,200 @@
 # LESSONS-LEARNED.md — Motorcycle Growth Platform
-# Institutional memory — update after every phase
-# Seeded from universal patterns (Sovereign Self™ Portal, 18 phases, 3200+ lines)
+# Institutional memory. Append new lessons at the end of every session.
+# Format: Date — Category — Lesson
+# ⚠️ READ THIS FILE AT THE START OF EVERY SESSION. See Rule 0 in CLAUDE-moto-growth.md.
 
 ---
 
-## UNIVERSAL NEXT.JS PATTERNS (Proven across 18+ phases)
+## March 14, 2026 — Design System Overhaul
 
-### Build Discipline
-- ALWAYS run `npm run build` between every component — never batch
-- A clean build after each step catches errors immediately; batching creates cascading failures
-- If build fails, fix it BEFORE moving to the next component — never skip
-- TypeScript strict mode catches bugs at build time that would be runtime disasters
+- **Dark navy design RETIRED for shop sites.** Original CLAUDE.md specified #0f0f1a dark navy for everything. Client showed vespa.com, piaggio.com, and powersports.honda.com as references — all white/cream luxury aesthetic. Dark navy was wrong for shop sites.
+- **New shop site palette:** #ffffff (white) / #fafaf8 (off-white) / #f5f4f0 (cream). Text: #0a0a0a / #1a1a1a / #555 / #888.
+- **Gold accent changed:** From bright #D4AF37 to muted #9e8a5a (Hermès-tier, not Las Vegas). Bright gold stayed for exam app only.
+- **Typography:** Cormorant Garamond (serif for headings — elegant, editorial, Italian luxury) + DM Sans (body — clean, modern). Previously only DM Sans was specified.
+- **Pill-shaped buttons:** border-radius: 100px. Matches Porsche/Vespa configurator energy.
+- **Exam app stays dark navy (#0f0f1a)** for visual differentiation from shop sites. This creates a clear boundary — shop = premium white, exam = study mode dark.
+- **LESSON:** Always study the client's aspirational reference sites BEFORE building. Don't default to a design system from another project.
 
-### Import Patterns
-- Use `@/` path aliases (configured in tsconfig.json) — never relative `../../` paths
-- Named imports over default imports for tree-shaking
-- Always verify imports resolve before committing — phantom imports cause build failures
-- When importing from lib files, match the exact export name
+## March 14, 2026 — Navigation Pattern
 
-### Component Patterns
-- One component per file — never bundle multiple components
-- 'use client' directive at the TOP of any file using useState, useEffect, or browser APIs
-- Server components are the default in App Router — only add 'use client' when needed
-- Props interfaces defined in the same file, not in a separate types file (for small projects)
+- **Horizontal mega-menu is MANDATORY.** First build used minimal vertical nav with a few inline links. Client correctly pointed out every site he showed (Vespa, Piaggio, Honda) uses horizontal top navigation with mega-menu dropdowns.
+- **Structure:** Utility bar (phone, address, promo, FR/EN) → Main nav bar (logo, mega-menu links, CTA) → Mega-dropdown on hover (multi-column, featured cards).
+- **Mobile:** Hamburger → full-screen nav with section labels.
+- **LESSON:** For service/retail business sites, horizontal mega-menu is industry standard. Never default to minimal nav — that's for portfolios and blogs.
 
-### App Router (Next.js 14)
-- `layout.tsx` wraps all children — use for shared UI, metadata, fonts
-- `page.tsx` is the route entry point — this is what renders
-- Dynamic routes: `[slug]/page.tsx` — bracket syntax
-- Loading states: `loading.tsx` in any route folder
-- Error boundaries: `error.tsx` with 'use client' directive
-- Metadata: export `metadata` object from layout.tsx or page.tsx (not both in same route)
+## March 14, 2026 — Business Ownership Separation
 
----
+- **Vespa/Piaggio = Dynamik (Steve) ONLY.** Never show Vespa/Piaggio on Radikal's site.
+- **Fox Racing = Radikal (Eric) ONLY.** Never show Fox Racing on Dynamik's site.
+- **Police Harley trust signal = Radikal (Eric) ONLY.** Never on Dynamik's site.
+- **Both businesses are REPAIR-FIRST.** Repair pays the bills. Everything else (Vespa sales, Fox Racing boutique, parts) layers on top.
+- **Steve CTA:** "Réserver" / "Book now" (repair booking focus).
+- **Eric CTA:** "Soumission" / "Get a quote" (quote-first flow).
+- **LESSON:** These are two separate businesses with different positioning. Crossed wires (showing Vespa on Radikal, etc.) would damage credibility with both brothers.
 
-## TAILWIND CSS PATTERNS
+## March 14, 2026 — Marketplace Addition
 
-### Custom Colors
-- Bracket syntax works: `bg-[#161625]` `text-[#D4AF37]` `border-[#1e1e35]`
-- BUT: if Tailwind purges them, switch to inline styles as fallback
-- For reusable colors, add to `tailwind.config.ts` under `theme.extend.colors`
-- Example: `colors: { navy: '#0f0f1a', gold: '#D4AF37', card: '#161625' }`
+- **New feature added mid-sprint:** Marketplace tab for both sites where people can list motorcycles/ATVs for sale (like AutoTrader but local + shop-backed trust).
+- **Revenue model:** Option A — Possibilities IN MIND collects listing fees, shops earn inspection/service revenue.
+- **Listing tiers:** Standard ($25/30 days), Premium ($50), Certified ($75 + inspection fee to shop).
+- **Supabase table:** marketplace_listings with seller info, vehicle details, tier, payment/approval status, shop affiliation, inspection status.
+- **LESSON:** Revenue features can be added to the architecture without disrupting the core build if the Supabase schema is designed for it upfront.
 
-### Common Gotchas
-- `rounded-xl` = 12px, `rounded-lg` = 8px, `rounded-full` = 50%
-- Grid: `grid grid-cols-3 gap-4` — always specify gap
-- Flex: `flex items-center gap-4` — use gap not margins between flex children
-- Dark backgrounds need explicit text colors — Tailwind defaults won't contrast
-- `truncate` for text overflow — requires `max-w-*` or width constraint on parent
+## March 14, 2026 — Best Practices from Brand Sites
 
-### Responsive
-- Mobile-first: write base styles for 375px, then add `md:` and `lg:` breakpoints
-- `grid-cols-1 md:grid-cols-2 lg:grid-cols-3` for responsive grids
-- Test at 375px (iPhone SE), 390px (iPhone 14), 768px (iPad), 1024px+ (desktop)
-- Touch targets: minimum 44px x 44px for buttons on mobile
+- **Studied:** vespa.com, piaggio.com, storeusa.vespa.com, powersports.honda.com
+- **Product cards must always include:** image, name, category label, price (or "Call for pricing"), dual CTA ("Explore" + "Get Quote").
+- **Dual-filter pattern:** For any catalog, filter by CATEGORY + VEHICLE + BRAND simultaneously. Vespa Store USA does category + model. Radikal needs category + vehicle type + brand.
+- **Honda Powersports nav pattern:** Products mega-menu shows every model with image + starting price + "Explore" + "Build" CTAs visible in the dropdown.
+- **Financing/promotions visible in nav** — not buried on a sub-page.
+- **"Find a Dealer" always visible** — for Dynamik, this becomes "Visit Us" since Steve IS the dealer.
+- **LESSON:** Study the actual manufacturer sites before building dealer/shop sites. The patterns are proven and customers expect them.
 
----
+## March 14, 2026 — Piaggio/Vespa Clarification
 
-## VERCEL DEPLOYMENT PATTERNS
+- Client said "I want their site to look like Porsche or Mercedes but for motorcycles." This was about DESIGN CLASS, not the automobile industry. They don't sell cars.
+- Vespa and Piaggio are scooters/motorcycles, not automobiles. The reference was aspirational design quality.
+- **LESSON:** Clarify aspirational references before building. "Like Porsche" means luxury UX, not automotive industry.
 
-### First Deploy
-- `npx vercel` for preview, `npx vercel --prod` for production
-- When asked "Link to existing project?" — say NO for new projects
-- Framework: Next.js (auto-detected)
-- Build command: `npm run build` (default)
-- Output directory: `.next` (default)
+## March 14, 2026 — Timeline Pressure
 
-### Custom Domains
-- Vercel dashboard → Project → Settings → Domains → Add domain
-- A record: point to `76.76.21.21`
-- CNAME for www: point to `cname.vercel-dns.com`
-- SSL certificate auto-generates — takes 1-5 minutes
-- Domain stays registered with the original registrar (GoDaddy, etc.)
-- Steve and Eric keep dynamikperformance.com and radikalmotosport.com — just update DNS
-
-### Environment Variables
-- Add via Vercel dashboard → Project → Settings → Environment Variables
-- NEVER commit .env files to git
-- For Supabase: `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-- For Resend: `RESEND_API_KEY` (server-side only, no NEXT_PUBLIC_ prefix)
-- After adding env vars, redeploy: `npx vercel --prod`
-
-### GitHub Auto-Deploy (Connected March 8, 2026)
-- moto-growth-platform GitHub repo is now connected to Vercel
-- Every `git push` to main triggers a production deploy automatically
-- No more `npx vercel --prod` needed — just `git push`
-- Connect via: Vercel dashboard → Project → Settings → Git → Connect Git Repository
-- Cannot connect via API/CLI alone — requires one-time OAuth click in Vercel dashboard
-
-### Common Vercel Issues
-- "Module not found" — usually case-sensitive import (macOS ignores case, Linux doesn't)
-- "Page changed from static to dynamic" — add `export const dynamic = 'force-dynamic'`
-- Deployment hangs — check if `npm run build` works locally first
-- Preview deployments are per-commit; production needs explicit `--prod` flag
+- **Summer season in Outaouais is time-sensitive.** Riders buy NOW. Every week without a real site = lost Vespa sales and bookings.
+- **2-week hard target (March 28), 3-week buffer (April 4).**
+- **DNS cutover from GoDaddy:** Point A record to 76.76.21.21. Plan for Tuesday/Wednesday (not weekend) due to 24-48hr propagation.
+- **LESSON:** Seasonal businesses need sites live BEFORE the season starts. The build timeline is driven by revenue timing, not feature completeness.
 
 ---
 
-## SUPABASE PATTERNS (Phase 2)
+## March 15, 2026 — Image Strategy
 
-### Schema Discipline
-- ALWAYS verify schema before writing SQL — never assume a table exists
-- Keep a `supabase-schema-snapshot.md` as source of truth
-- Schema drift is the #1 cause of migration failures
-- Test SQL in the Supabase SQL Editor before committing as a migration
+### Nano Banana 2: KILLED
+- Attempted to generate a brand hero image for Dynamik using Nano Banana 2.
+- **Quality was awful.** Not sufficient for brand-level imagery on a premium site.
+- **Decision:** Nano Banana 2 is permanently removed from the image toolchain. Do NOT use it for any images.
+- **LESSON:** AI image generation quality varies wildly. Test before committing to a tool for brand work. Always have a fallback.
 
-### RLS (Row Level Security)
-- ALWAYS enable RLS on every table — no exceptions
-- Test RLS policies from the client, not the SQL editor (editor bypasses RLS)
-- Common pattern: `auth.uid() = user_id` for user-owned data
-- For public-read data: policy with `FOR SELECT` and `USING (true)`
+### Vespa/Piaggio CDN Discovery
+- Both vespa.com and piaggio.com render client-side (Vue.js SPA) — static HTML fetching returns empty shells.
+- Claude Code used Chrome tool to render pages fully and extract actual image URLs.
+- **Found CDNs:** `wlassets.vespa.com` and `wlassets.piaggio.com` (Akamai CDN).
+- **No hotlink protection.** HTTP 200, fully accessible.
+- **Downloaded 8 images** (200KB–760KB each) to /public — self-hosted to avoid broken URLs if CDN cache expires.
+- **LESSON:** For JS-rendered brand sites, use a browser tool (not just fetch) to extract real asset URLs. Always self-host downloaded images rather than hotlinking.
 
-### Common Issues
-- "relation does not exist" — case-sensitive table name or wrong schema
-- "violates row-level security" — missing INSERT policy
-- "JWT expired" — client needs session refresh
-- Foreign key constraints — insert parent rows before child rows
+### Updated Image Stack
+| Source | Use for | Status |
+|---|---|---|
+| Vespa/Piaggio CDN (wlassets) | Product shots (Dynamik only) | ✅ Done — 8 images |
+| Lucide React | Service/UI icons (replace emojis) | ✅ Available in stack |
+| Unsplash API (free) | Hero/lifestyle backgrounds, category cards | Use for Radikal |
+| Gemini image gen | Marketing pieces, ad creatives, campaigns | Replaces Nano Banana 2 |
+| Pompei | Ad campaign management | Uses Gemini-generated assets |
+| Real shop photos | Final replacement when provided | Waiting on Steve & Eric |
+| ~~Nano Banana 2~~ | ~~Brand imagery~~ | ❌ KILLED |
 
-### Auth
-- Use `@supabase/ssr` for Next.js 14 App Router (not old auth-helpers)
-- Create middleware.ts for session refresh on every request
-- Store user preferences (language, audio) in profiles table, not just localStorage
-
----
-
-## RESEND EMAIL PATTERNS (Phase 2)
-
-### Setup
-- Create API key at resend.com → API Keys
-- Verify sending domain (add DNS records)
-- Server-side only (API route or server action) — never expose key to client
-
-### Templates
-- Booking confirmation: trigger on form submit → API route → Resend
-- Review request: trigger 24h after service (Supabase cron or edge function)
-- Spring reminder: batch send in March to all customers with language preference
-- Always include unsubscribe link (CASL compliance for Canada)
+### Image Sourcing Rules
+- Steve can use official Vespa/Piaggio imagery — he's an authorized dealer.
+- Download and self-host in /public — never hotlink in production.
+- Add images.unsplash.com to next.config remotePatterns if using Unsplash.
+- Unsplash requires attribution (photographer name).
+- Use Gemini for marketing/campaign visuals, NOT for product shots on the site.
 
 ---
 
-## GIT WORKFLOW
-
-- Commit after EVERY component — never batch
-- Descriptive messages: "Phase 1.5: ServiceGrid component with colored icon backgrounds"
-- Never commit broken code — `npm run build` must pass first
-- Pull before starting work: `git pull origin main`
-- main = production (deployed to Vercel)
-
----
-
-## WEB SPEECH API PATTERNS
-
-### Voice Loading
-- Voices load ASYNC — use `speechSynthesis.onvoiceschanged` callback
-- Always call `preloadVoices()` on app mount
-- French Canadian: look for `fr-CA` first → `fr-FR` → `fr`
-- Chrome has different voices than Safari — test both
-
-### Common Issues
-- `speak()` fails silently if called before voices load — always preload
-- Mobile Safari requires user gesture (button tap) first — can't auto-play
-- Multiple `speak()` calls queue up — always `cancel()` before new speech
-- Some Android devices have very limited voices
-- Rate 0.85-0.95 is the sweet spot for learning (below 0.5 sounds robotic)
-
-### Pattern
-```typescript
-speechSynthesis.cancel(); // prevent overlap
-const utterance = new SpeechSynthesisUtterance(text);
-utterance.lang = 'fr-CA';
-utterance.rate = 0.9;
-speechSynthesis.speak(utterance);
-```
-
----
-
-## OQLF / BILL 96 COMPLIANCE
-
-- French MUST be the default language on load — not English
-- Store language preference in localStorage (Supabase profiles in Phase 2)
-- Every user-facing string needs both FR and EN in i18n.ts
-- Marketing materials: French with "marked predominance"
-- Transactional emails: send in user's preferred language
-- Language toggle in top-right corner of every page
-
----
-
-## PHONE NUMBER PATTERNS
-
-- Always clickable: `<a href="tel:8197729444">819-772-9444</a>`
-- Display format: `819-772-9444` (human readable)
-- Href format: `tel:8197729444` (no dashes)
-- Minimum 44px tap target height on mobile
-- Phone CTA above the fold on every shop page
-
----
-
-## Phase 1 Findings (Session: March 8, 2026)
+## March 15, 2026 — Day 1-2 Sprint Results
 
 ### What Was Built
-- Full Next.js 14 + TypeScript + Tailwind CSS app in one session
-- 5 routes: `/` (landing), `/dynamik`, `/radikal`, `/exam`, `/_not-found`
-- 18 components across `ui/`, `shop/`, and `exam/` folders
-- 5 lib files: design.ts, speech.ts, i18n.ts, shops.ts, exam-data.ts
-- 12 QC (SAAQ) + 6 ON (MTO) original quiz questions
-- 8 gear checklist items with audio read-aloud
-- 5 licensing steps per province (QC + ON = 10 total)
-- Full audio system with global ON/OFF toggle + per-item AudioButtons
-- Language toggle (FR/EN) persistent in localStorage
-- Booking form → localStorage (Phase 2: Supabase)
-- Lead capture → localStorage (Phase 2: Supabase + Resend)
-- Deployed to: https://moto-growth-platform.vercel.app
+- **Shared design system:** MegaNav (utility bar + mega-dropdown + mobile hamburger), Footer (4-column dark luxury), StatsStrip (4-column navy with Cormorant serif), ServiceCard (hover-animated with accent color)
+- **Updated components:** SectionHeader (+ subtitle, cta, centered props), LanguageToggle (pill-shaped, light/dark theme prop)
+- **Dynamik homepage:** 9 sections — hero (split layout), stats, services, Vespa showcase, model cards, about Steve, booking CTA, reviews, booking form
+- **Radikal:** About Eric section (portrait placeholder, Police HD + Fox Racing badges, quote, bio)
 
-### Build Order Confirmed
-The 32-step order worked perfectly. Foundation lib files first, then UI components, then
-shop components, then shop pages, then landing, then exam components, then exam page.
-Each `npm run build` after each step is non-negotiable.
-
-### Vercel Deploy Notes
-- First deploy needs `--scope themagicianinminds-projects` to avoid "missing_scope" error
-- After first deploy with scope, Vercel creates `.vercel/` folder that stores project link
-- Production URL: https://moto-growth-platform.vercel.app
-- Subsequent deploys: `npx vercel --prod --scope themagicianinminds-projects`
-
-## Errors Discovered
-
-### Set spread TypeScript error
-- `[...new Set(array)]` fails with "can only be iterated with --downlevelIteration"
-- Fix: `Array.from(new Set(array))` — always use Array.from with Set
-
-### Write tool requires Read first
-- The Write tool requires reading an existing file before overwriting it
-- For new files: Write works directly; for existing files: Read first
-
-### create-next-app interactive prompt
-- `--import-alias "@/*"` flag bypasses the interactive prompt for import alias
-- Without it, the CLI hangs waiting for input in non-interactive mode
-
-## Decisions Made
-
-- Phone numbers: using `tel:8197729444` (no dashes) in href, display as `819-772-9444`
-- Booking form: localStorage only for Phase 1, Supabase in Phase 2
-- Lead capture: localStorage only for Phase 1, Supabase + Resend in Phase 2
-- Audio: global toggle stored in localStorage key `moto-audio`, default ON
-- Language: stored in localStorage key `moto-lang`, default FR (OQLF)
-- Police Harley trust: appears on Radikal page only — confirmed working
-- Exam disclaimer: appears in both exam header and footer
-- Score threshold: 80% pass (per CLAUDE.md spec)
-- QuizEngine: shows explanation after each answer (better UX than end-of-quiz)
-- CTAButton: accepts `href` for links, `onClick` for buttons — same component
-- No pink, no purple — confirmed throughout entire codebase
+### What Claude Code Built That Wasn't Spec'd
+- **Financing section with OPC compliance** — TD Auto, Desjardins, LendCare with legal disclaimers referencing Loi sur la protection du consommateur (RLRQ c P-40.1). Full Quebec consumer protection compliance.
+- **Pre-qualification form** — name, phone, email, vehicle selection, down payment range, employment status. Real financing lead funnel.
+- **Hours of operation** on both sites (Lun–Ven 8h–17h · Sam 9h–14h).
+- **LESSON:** A well-written CLAUDE.md with business context enables Claude Code to infer and build features that weren't explicitly spec'd but make business sense. The financing section is a major Vespa sales conversion tool.
 
 ---
 
-## Phase 2.1 Findings (Session: March 8, 2026)
+## March 15, 2026 — Day 3 Sprint Results
 
-### What Was Built
-- Complete restructure of exam-data.ts with a new, cleaner Question interface
-- 50 original bilingual Quebec SAAQ questions (10 per category × 5 categories)
-- Updated QuizEngine.tsx and ScoreDisplay.tsx to match new field names
-- /exam bundle: 22.7 kB (right-sized baseline for 50 questions)
+### Radikal Full Homepage (13 sections)
+- Dark cinematic hero with hero.jpg at 45% opacity + deep gradient + gold CTAs + trust badges
+- Police Harley trust strip (navy, "Assez fiable pour la police")
+- StatsStrip (11+ brands, 6 vehicle types, Fox Racing dealer, Free inspection)
+- Services grid (6 cards)
+- Vehicle categories (6 visual cards with image overlays — motos, ATV, motocross, snowmobile, marine, inspection)
+- Fox Racing showcase (2-col layout, fox-gear.jpg, Fox orange branding, 4 feature tiles, authorized dealer badge)
+- Parts categories (8 tiles)
+- Brands bar (11 brand pills)
+- Reviews (3 verified)
+- About Eric (with Police/Fox/Powersports badges)
+- BookingForm
+- Dark booking CTA (navy gradient, radial gold glow)
+- Footer
 
-### New Question Interface (Phase 2 format)
-```typescript
-interface Question {
-  id: number;
-  province: Province;          // 'qc' | 'on'
-  category: Category;          // 5 string literals (see below)
-  q: string;                   // French question
-  qEN: string;                 // English question
-  options: string[];           // 4 French answer options
-  optionsEN: string[];         // 4 English answer options
-  answer: number;              // correct index 0–3
-  explanation: string;         // "FR text / EN text" — split on ' / '
-}
-```
+### Dynamik /vespa Page
+- Hero with cream gradient + official dealer badge
+- 3 alternating model cards (Sprint / Primavera / GTS) — hero image, description, 5-spec grid, starting price, dual CTA
+- "Why Buy From Us" — 5 trust point cards + blue contact strip with phone
+- Fully responsive (720px breakpoint)
 
-### Category Values (Phase 2)
-- `'Road Rules'` → FR label: "Règles de la route"
-- `'Road Signs'` → FR label: "Signalisation routière"
-- `'Motorcycle Safety'` → FR label: "Sécurité et technique"
-- `'Quebec Law'` → FR label: "Loi québécoise et SAAQ"
-- `'Riding Scenarios'` → FR label: "Scénarios de conduite"
-- ScoreDisplay.tsx categoryLabels must match these exact strings as keys
-
-### Explanation Format
-- Single string: `"FR explanation text / EN explanation text"`
-- Separator: ` / ` (space-slash-space)
-- Split in QuizEngine: `const [expFr, expEn] = q.explanation.split(' / ')`
-- Fallback: `expFr ?? q.explanation` and `expEn ?? q.explanation`
-- Keep explanations to 2–3 short sentences each (TTS-friendly)
-
-### Audio-Friendly Writing Rules (confirmed)
-- Max 20 words per sentence — TTS reads long sentences without pause
-- Concrete scenarios beat abstract rules: "You see gravel..." beats "When gravel..."
-- Explanations must make sense heard cold by a 16-year-old on first listen
-- French Canadian syntax, not European French — local register matters
-
-### QuizEngine Bug Fixed
-- Old code: `correct: correctCount + (selectedIdx === q.correctIndex ? 0 : 0)` — always added 0
-- Fixed: `correct: correctCount + (selectedIdx === q.answer ? 1 : 0)` — correctly adds last Q
-
-### Git Remote Status
-- GitHub repo: https://github.com/Themagicianinmind/moto-growth-platform (public)
-- Remote configured: `origin` → GitHub
-- Created with: `gh repo create moto-growth-platform --public --source=. --remote=origin --push`
-- Future pushes: `git push` from ~/projects/moto-growth-platform
-- Vercel deployment is independent of git remote — uses local build via `.vercel/` config
-
-### Question ID Convention (Phase 2)
-- QC questions: numeric IDs 1–150 (planned), province: 'qc'
-- ON questions: numeric IDs 201–350 (planned), province: 'on'
-- Gap (151–200) reserved as buffer between QC and ON ranges
-
-### Deployment Notes
-- Deploy command: `cd ~/projects/moto-growth-platform && npx vercel --prod --scope themagicianinminds-projects`
-- No git push required — Vercel builds from local project config (`.vercel/` folder)
-- Phase 2.1 live: https://moto-growth-platform.vercel.app
+### Unsplash Images for Radikal
+- Used for hero background and vehicle category card images
+- Downloaded to /public/images/ and self-hosted
 
 ---
 
-## Phase 2.2 Findings (Session: March 8, 2026)
+## March 15, 2026 — Complete Page Inventory (What's Actually Live)
 
-### What Was Built
-- 50 more Quebec SAAQ questions (IDs 51–100), same 5 categories, 10 per category
-- Topics: pre-ride inspection (TBOLC), tire pressure, chain tension/lubrication, parking on hills,
-  railway crossings, school zones, construction zones, freeway on-ramps, lane changes,
-  hand signals, night visibility, fatigue signs, group riding formation, gravel shoulders, deer crossings
-- No duplicates with IDs 1–50 — always list existing topics before generating new ones
-- /exam bundle grew proportionally — no performance concerns
+### Root
+- `/` — Landing page (shop selector: Dynamik, Radikal, Exam)
 
-### Duplicate Prevention Pattern
-- Before generating new questions, grep for `q:` lines in existing province/category block
-- List all existing question topics explicitly — then generate non-overlapping ones
-- This is essential at 50+ questions per province where topic overlap becomes likely
+### Dynamik (/dynamik)
+- `/dynamik` — Full homepage (15+ sections including financing + pre-qual form)
+- `/dynamik/vespa` — Full Vespa range page (3 models + specs + trust section)
+- `/dynamik/vespa/sprint` — Individual model page (linked)
+- `/dynamik/vespa/primavera` — Individual model page (linked)
+- `/dynamik/vespa/gts` — Individual model page (linked)
+- `/dynamik/about` — (linked in nav)
+- `/dynamik/contact` — (linked in nav)
+- `/dynamik/promotions` — (linked in nav)
+- `/dynamik/marketplace` — (linked in nav)
 
----
+### Radikal (/radikal)
+- `/radikal` — Full homepage (13 sections)
 
-## Phase 2.5 Findings (Session: March 8, 2026)
+### Exam (/exam)
+- `/exam` — 50 QC SAAQ questions, bilingual, TTS audio
 
-### What Was Built
-- 50 Ontario M1/M2/M questions (IDs 251–300), 10 per category × 5 categories
-- Added `'Ontario Law'` to Category type in exam-data.ts (was QC-only before)
-- Added `'Ontario Law': { fr: 'Loi ontarienne et MTO', en: 'Ontario Law' }` to ScoreDisplay.tsx
-- Topics: lane positioning, 400-series highway merging, cargo securing, M1/M2/M passenger rules,
-  $200K liability insurance, stunt driving penalties, distracted driving, construction zone double fines,
-  winter storage (fill tank + stabilizer, remove battery), motorcycle inspection standards
-
-### Ontario vs Quebec Law — Key Differences
-- Ontario: M1 → M2 → M (3-level graduated); Quebec: 6R → 6A (2-level)
-- Ontario: M1 no passengers, no 400-series, no night riding
-- Ontario: M2 passengers allowed if bike has seat + footrests
-- Ontario: stunt driving = 50+ km/h over limit → immediate 30-day suspension + 14-day seizure
-- Ontario: insurance minimum $200,000 liability (Quebec: $50,000)
-- Ontario: lane splitting illegal (same as Quebec)
-- Ontario: zero tolerance alcohol for M1/M2; 0.08 for full M
-
-### Adding a New Category — Checklist
-1. Add to `Category` type union in exam-data.ts
-2. Add label to `categoryLabels` in ScoreDisplay.tsx
-3. Use the exact string as `category:` value in question objects
-4. Run `npm run build` to confirm TypeScript accepts the new type
-
-### Vercel Auto-Deploy Connected (March 8, 2026)
-- GitHub repo connected to Vercel project via dashboard OAuth
-- Every `git push` to main now triggers automatic production deploy
-- Cannot connect via API/CLI alone — requires one-time OAuth click in Vercel UI
-- Path: Vercel dashboard → Project → Settings → Git → Connect Git Repository
-- After connection: `git push` = deploy, no more `npx vercel --prod` needed
+### Still Need Building
+- Individual service pages (both shops) — for SEO
+- Booking/quote forms wired to Supabase
+- Radikal /fox-racing page
+- Radikal /parts page
+- Marketplace pages (/marketplace, /marketplace/sell, /marketplace/[id])
+- Schema markup (LocalBusiness JSON-LD)
+- Radikal sub-pages (about, contact, promotions)
 
 ---
 
-*Seeded March 2026 from 18 phases of Sovereign Self™ Portal development*
-*Update after every session and every phase completion*
+## Patterns & Anti-Patterns
+
+### DO
+- Read CLAUDE-moto-growth.md + BUILD-PLAN + LESSONS-LEARNED.md at session start
+- Download and self-host external images (never hotlink in production)
+- Use Lucide React icons (not emojis) for service cards and UI
+- Build one component at a time, npm run build between each
+- French default on every page (OQLF / Bill 96)
+- Test at 375px mobile width
+- Commit with descriptive messages after each step
+
+### DON'T
+- Don't use Nano Banana 2 (killed for poor quality)
+- Don't use dark navy background on shop sites (white luxury is the standard)
+- Don't use minimal/vertical navigation (horizontal mega-menu mandatory)
+- Don't show Vespa/Piaggio on Radikal or Fox Racing on Dynamik
+- Don't skip LESSONS-LEARNED.md at session start
+- Don't assume features from Sovereign Self™ Portal apply here (separate project)
+- Don't tell the user to do manual browser steps
