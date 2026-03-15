@@ -1,5 +1,5 @@
 // Radikal ONLY — Police Harley-Davidson trust signal
-// Navy gradient background, gold heading, restrained and professional tone
+// Intentional dark chapter break on the light shop page — restraint converts better than bragging
 // DO NOT show on Dynamik's page
 
 import { Lang, tr } from '@/lib/i18n';
@@ -12,12 +12,12 @@ export default function PoliceTrust({ lang }: PoliceTrustProps) {
   return (
     <section
       style={{
-        padding: '48px 20px',
+        padding: '56px 20px',
         background: 'linear-gradient(135deg, #0a1628 0%, #1e3a5f 60%, #0a1628 100%)',
       }}
     >
       <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center' }}>
-        {/* Badge */}
+        {/* Label */}
         <div style={{ marginBottom: 16 }}>
           <span
             style={{
@@ -25,7 +25,7 @@ export default function PoliceTrust({ lang }: PoliceTrustProps) {
               fontWeight: 700,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: '#D4AF3780',
+              color: '#9e8a5a80',
             }}
           >
             {tr('policeTrustLabel', lang)}
@@ -39,10 +39,12 @@ export default function PoliceTrust({ lang }: PoliceTrustProps) {
         <h2
           style={{
             fontSize: 'clamp(22px, 5vw, 32px)',
-            fontWeight: 800,
-            color: '#D4AF37',
+            fontWeight: 300,
+            color: '#9e8a5a',
             marginBottom: 16,
             lineHeight: 1.2,
+            fontFamily: 'var(--font-cormorant), Georgia, serif',
+            letterSpacing: '0.01em',
           }}
         >
           {tr('policeTrustHeading', lang)}
@@ -65,10 +67,9 @@ export default function PoliceTrust({ lang }: PoliceTrustProps) {
         <div
           style={{
             width: 60,
-            height: 2,
-            background: '#D4AF3740',
+            height: 1,
+            background: '#9e8a5a40',
             margin: '24px auto 0',
-            borderRadius: 1,
           }}
         />
       </div>
