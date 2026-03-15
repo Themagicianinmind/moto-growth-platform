@@ -259,6 +259,67 @@ export const t = {
   },
 
   // ============================
+  // STATS STRIP
+  // ============================
+  statsLabel: { fr: 'EN CHIFFRES', en: 'BY THE NUMBERS' },
+  statsGetQuote: { fr: 'Obtenir une soumission', en: 'Get a Quote' },
+
+  // ============================
+  // VEHICLE CATEGORIES (Radikal)
+  // ============================
+  vehicleCatLabel: { fr: 'NOS SPÉCIALITÉS', en: 'OUR SPECIALTIES' },
+  vehicleCatHeading: { fr: 'Tous les types de véhicules', en: 'All Vehicle Types' },
+  vehicleCatSubtitle: { fr: 'Motos, VTT, motocross, motoneige et marine — une seule adresse.', en: 'Motorcycles, ATV, motocross, snowmobiles and marine — one address.' },
+  catMotorcycles: { fr: 'Motos & Harley', en: 'Motorcycles & Harley' },
+  catMotorcyclesSub: { fr: 'Toutes marques', en: 'All brands' },
+  catATV: { fr: 'VTT & UTV', en: 'ATV & UTV' },
+  catATVSub: { fr: 'Tous terrains', en: 'All terrain' },
+  catMotocross: { fr: 'Motocross', en: 'Motocross' },
+  catMotocrossSub: { fr: 'Pièces & service', en: 'Parts & service' },
+  catSnowmobile: { fr: 'Motoneige', en: 'Snowmobile' },
+  catSnowmobileSub: { fr: 'Révision & entreposage', en: 'Tune-up & storage' },
+  catBoats: { fr: 'Marine', en: 'Marine' },
+  catBoatsSub: { fr: 'Moteurs hors-bord', en: 'Outboard engines' },
+  catInspectionFree: { fr: 'Inspection gratuite', en: 'Free Inspection' },
+  catInspectionFreeSub: { fr: '30 points de contrôle', en: '30 checkpoints' },
+
+  // ============================
+  // FOX RACING SHOWCASE (Radikal)
+  // ============================
+  foxLabel: { fr: 'BOUTIQUE OFFICIELLE', en: 'OFFICIAL BOUTIQUE' },
+  foxHeading: { fr: 'Fox Racing à Gatineau', en: 'Fox Racing in Gatineau' },
+  foxDesc: { fr: 'Équipementier officiel Fox Racing pour la région de Gatineau. Casques, vêtements, protections et accessoires — en stock.', en: 'Official Fox Racing dealer for the Gatineau region. Helmets, apparel, protection and accessories — in stock.' },
+  foxFeature1: { fr: 'Casques certifiés', en: 'Certified Helmets' },
+  foxFeature2: { fr: 'Maillots & pantalons', en: 'Jerseys & Pants' },
+  foxFeature3: { fr: 'Protections & gants', en: 'Protection & Gloves' },
+  foxFeature4: { fr: 'Bottes homologuées', en: 'Approved Boots' },
+  foxCTA: { fr: 'Voir la boutique', en: 'Visit the Shop' },
+  foxBadge: { fr: 'Revendeur autorisé', en: 'Authorized Dealer' },
+
+  // ============================
+  // PARTS CATEGORIES (Radikal)
+  // ============================
+  partsCatLabel: { fr: 'PIÈCES & ACCESSOIRES', en: 'PARTS & ACCESSORIES' },
+  partsCatHeading: { fr: 'Tout ce dont votre moto a besoin', en: 'Everything Your Bike Needs' },
+  partsCatSubtitle: { fr: 'En stock ou commandé rapidement. Toutes marques, tous véhicules.', en: 'In stock or fast order. All brands, all vehicles.' },
+  partsCatQuote: { fr: 'Demander ce produit', en: 'Request this item' },
+
+  // ============================
+  // BRANDS BAR (Radikal)
+  // ============================
+  brandsLabel: { fr: 'MARQUES SERVIES', en: 'BRANDS SERVICED' },
+  brandsHeading: { fr: '11+ marques sous un même toit', en: '11+ brands under one roof' },
+
+  // ============================
+  // DARK BOOKING CTA (Radikal)
+  // ============================
+  darkCTALabel: { fr: 'PRÊT À ROULER ?', en: 'READY TO RIDE?' },
+  darkCTAHeading: { fr: 'Obtenez votre soumission gratuite', en: 'Get Your Free Quote' },
+  darkCTASubtitle: { fr: 'Service expert, inspection gratuite. Réponse garantie sous 24h.', en: 'Expert service, free inspection. Response guaranteed within 24h.' },
+  darkCTACall: { fr: 'Appeler maintenant', en: 'Call Now' },
+  darkCTABook: { fr: 'Formulaire de soumission', en: 'Quote Request Form' },
+
+  // ============================
   // FOOTER
   // ============================
   address: { fr: 'Adresse', en: 'Address' },
