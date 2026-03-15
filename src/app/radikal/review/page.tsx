@@ -7,7 +7,11 @@ import { useState, useEffect } from 'react';
 import { Lang } from '@/lib/i18n';
 import Link from 'next/link';
 
-const GOOGLE_REVIEW_URL = 'https://g.page/r/radikal-motosport-gatineau/review';
+// Maps search URL — CID not found via public directories (verified March 15, 2026)
+// Opens Radikal Motosport search in Google Maps → user taps listing → "Write a review"
+// TODO (owner action): Get CID from GBP dashboard → replace with maps.google.com/?cid=XXXX
+// TODO (owner action): Set GBP short name → replace with g.page/r/XXXX/review for direct review form
+const GOOGLE_REVIEW_URL = 'https://www.google.com/maps/search/Radikal+Motosport+Gatineau';
 const SHOP_NAME = 'Radikal Motosport';
 const SHOP_PHONE = '819-561-6686';
 const ACCENT = '#9e8a5a';

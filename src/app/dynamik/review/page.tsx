@@ -8,8 +8,10 @@ import { useState, useEffect } from 'react';
 import { Lang } from '@/lib/i18n';
 import Link from 'next/link';
 
-// Replace with actual Google Maps Place ID once confirmed
-const GOOGLE_REVIEW_URL = 'https://g.page/r/dynamik-performance-gatineau/review';
+// CID confirmed from JSON-LD structured data on autodir.ca (verified March 15, 2026)
+// Opens Dynamik Performance listing in Google Maps → user clicks "Write a review"
+// TODO (owner action): Claim GBP short name → replace with g.page/r/XXXX/review for direct review form
+const GOOGLE_REVIEW_URL = 'https://maps.google.com/?cid=11036265702185342305';
 const SHOP_NAME = 'Dynamik Performance';
 const SHOP_PHONE = '819-772-9444';
 const ACCENT = '#2563eb';

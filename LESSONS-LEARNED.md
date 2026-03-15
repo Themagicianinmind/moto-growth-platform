@@ -325,3 +325,60 @@
   `vercel env rm DYNAMIK_NOTIFY_EMAIL && echo "real@email.com" | vercel env add DYNAMIK_NOTIFY_EMAIL production`
   (same for RADIKAL)
 - **LESSON:** Never assume email addresses. Domain-based emails may not exist or may be unmonitored. Always confirm with the business owner before relying on them for lead notifications.
+
+---
+
+## March 15, 2026 — Google Business Profile Review Links
+
+### Context
+Review QR pages at `/dynamik/review` and `/radikal/review` originally had placeholder `g.page/r/` URLs that were guessed slugs (not real). Task: find the actual Google review URLs for both shops.
+
+### Method 1 — Chrome Extension (FAILED)
+- Chrome extension timed out repeatedly (screenshot, click, get_page_text all failed).
+- Lesson: Chrome extension is unreliable for Google Maps due to dynamic content + bot detection. Don't retry more than 2×.
+
+### Method 2 — Web Search + Directory Scraping (PARTIAL)
+- Searched 8+ business directories (AutoDir, YellowPages, PagesJaunes, Manta, Canpages, Yelp, Wheree, 411.ca).
+- AutoDir JSON-LD confirmed Dynamik Performance CID: `11036265702185342305` → `maps.google.com/?cid=11036265702185342305`
+- Radikal Motosport: No CID found in any public directory. AutoDir's `sameAs` field was empty `[]`. The only 17-digit number on the page was AutoDir's own AdSense publisher ID (`ca-pub-3736612529668045`) — a false positive.
+- **LESSON:** Always verify large numbers in context before treating as CIDs. AdSense publisher IDs (ca-pub-XXXXXXXX) look like CIDs but are unrelated.
+
+### Method 3 — CID → g.page/r/ URL Computation (FAILED)
+- Computed `g.page/r/` URL by encoding CID as little-endian bytes → base64url. Result: `https://g.page/r/YZWV-S6xKJk/review`
+- Tested: redirects to `www.google.com` (not to the business). The `g.page/r/` format is NOT a simple CID encoding.
+- **LESSON:** `g.page/r/` short URLs are assigned by Google Business Profile when the owner sets up a "short name." They cannot be computed from the CID. They only exist if the business has claimed their GBP and configured a short name.
+
+### Current Status (March 15, 2026)
+- **Dynamik** → `https://maps.google.com/?cid=11036265702185342305` (CONFIRMED CID, opens listing → "Write a review")
+- **Radikal** → `https://www.google.com/maps/search/Radikal+Motosport+Gatineau` (fallback, opens Maps search → tap listing → "Write a review")
+- Both work. Dynamik's is a 1-tap flow; Radikal's requires 2 taps (search result → review button).
+
+### The RIGHT Way to Get a Direct Review Link
+There are two reliable direct-to-review-form URL formats:
+
+**Option A — Using Place ID (ChIJ format):**
+`https://search.google.com/local/writereview?placeid=ChIJ_XXXXXXXX`
+- Requires: The business's Google Maps Place ID
+- How to get it: Open Google Maps, find the business, look at the URL — it contains `/place/.../@lat,lng,zoom/data=...!1s0x{CID_HEX}:0x{HASH}!...`
+
+**Option B — GBP Short Name (g.page/r/ format):**
+`https://g.page/r/SHORT_NAME/review`
+- Requires: Business owner claims GBP and sets a custom short name
+- How to set up:
+  1. Go to business.google.com
+  2. Select the business profile
+  3. Click "Edit profile" → "Add short name"
+  4. Set a short name (e.g., "dynamik-performance-gatineau")
+  5. The review link becomes: `https://g.page/r/SHORT_NAME/review`
+  6. GBP also shows this as "Get your review link" — copy it directly from there
+
+### Consulting Action Items for Steve & Eric
+- **Before DNS cutover:** Ask each owner to share their GBP dashboard review link
+- **If they haven't claimed GBP:** Walk them through claiming at business.google.com
+- **Once claimed:** Copy the "Share review form" link from GBP → update `GOOGLE_REVIEW_URL` constant in review page → redeploy
+- **For Eric (Radikal):** Priority — Police Harley contract is a major trust signal but needs GBP to be active to appear in "Trusted by" searches
+
+### Key Identifiers Found
+- Dynamik Performance CID: `11036265702185342305` (hex: `0x9928b12ef9959561`)
+- Dynamik Maps URL: `https://maps.google.com/?cid=11036265702185342305`
+- Radikal Motosport CID: **UNKNOWN** — needs GBP claim to determine
