@@ -317,3 +317,11 @@
 ### Vercel Chrome Extension Timeout
 - Chrome extension tool (screenshot, click) repeatedly timed out during Vercel dashboard interaction.
 - **LESSON:** When Chrome extension times out, fall back to CLI immediately: `npx vercel env add VAR_NAME production`. CLI is faster, more reliable, and scriptable. Don't retry Chrome extension more than 2× before switching to CLI.
+
+### ⚠️ Email Addresses Need Confirmation
+- `DYNAMIK_NOTIFY_EMAIL=steve@dynamikperformance.com` and `RADIKAL_NOTIFY_EMAIL=eric@radikalmotosport.com` were set as best-guess placeholders based on shop domain names.
+- **These have NOT been confirmed with Steve or Eric directly.**
+- Before go-live / DNS cutover: confirm actual email addresses, then run:
+  `vercel env rm DYNAMIK_NOTIFY_EMAIL && echo "real@email.com" | vercel env add DYNAMIK_NOTIFY_EMAIL production`
+  (same for RADIKAL)
+- **LESSON:** Never assume email addresses. Domain-based emails may not exist or may be unmonitored. Always confirm with the business owner before relying on them for lead notifications.
