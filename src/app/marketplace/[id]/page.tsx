@@ -125,7 +125,7 @@ export default function ListingDetailPage() {
             {/* Image */}
             <div
               style={{
-                height: 360, background: listing.image_url ? `url(${listing.image_url}) center/cover` : '#f5f4f0',
+                height: 'clamp(220px, 55vw, 360px)', background: listing.image_url ? `url(${listing.image_url}) center/cover` : '#f5f4f0',
                 borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center',
                 marginBottom: 28, border: '1px solid #e8e3d8',
               }}
@@ -175,7 +175,7 @@ export default function ListingDetailPage() {
           {/* Right: price + contact */}
           <div style={{ position: 'sticky', top: 80 }}>
             <div style={{ background: '#fafaf8', border: '1px solid #e8e3d8', borderRadius: 14, padding: '28px 24px' }}>
-              <p style={{ fontSize: 32, fontWeight: 700, color: '#0a0a0a', fontFamily: SERIF, marginBottom: 4 }}>
+              <p style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 700, color: '#0a0a0a', fontFamily: SERIF, marginBottom: 4 }}>
                 {formatPrice(listing.price)}
               </p>
               <p style={{ fontSize: 12, color: '#888', marginBottom: 24 }}>
@@ -211,7 +211,7 @@ export default function ListingDetailPage() {
       </div>
 
       <style>{`
-        @media (max-width: 640px) {
+        @media (max-width: 760px) {
           .listing-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
