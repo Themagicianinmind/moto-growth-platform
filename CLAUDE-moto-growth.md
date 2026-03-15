@@ -1,17 +1,38 @@
 # CLAUDE.md — Motorcycle Growth Platform Rules
-# Updated: March 14, 2026
+# Updated: March 14, 2026 (evening — post Day 1-2 sprint)
 
 # ============================================================
 # PROJECT IDENTITY
 # ============================================================
 # Project: Motorcycle Growth Platform (moto-growth-platform)
 # Owner: Alain Jean-Baptiste / Possibilities IN MIND™ (6702724 Canada Inc.)
+# GitHub: github.com/Themagicianinmind/moto-growth-platform
 # ⚠️ THIS IS NOT THE SOVEREIGN SELF™ PORTAL. Separate repo, separate Vercel, separate everything.
 # Stack: Next.js (upgraded to 16.1.6) + TypeScript + Tailwind CSS
 # Hosting: Vercel (edge) — project name: moto-growth-platform
-# Deployed DNS rewrites: dynamikperformance.com → /dynamik, radikalmotosport.com → /radikal
+# Live: https://moto-growth-platform.vercel.app
+#   /dynamik  — Steve's site
+#   /radikal  — Eric's site
+#   /exam     — Exam-prep app
+# DNS rewrites ready: dynamikperformance.com → /dynamik, radikalmotosport.com → /radikal
+# DNS cutover: Point A record to 76.76.21.21 when ready
 # Backend (Phase 2): Supabase (own project, NOT sovereign-self Supabase)
 # Email (Phase 2): Resend
+
+# ============================================================
+# DEPLOYMENT STATUS — WHAT'S LIVE
+# ============================================================
+# ✅ Dynamik homepage — hero with Vespa photos, stats, services, Vespa showcase,
+#    model cards, about Steve, financing section (OPC-compliant), booking CTA, reviews, footer
+# ✅ Radikal homepage — about Eric section (portrait placeholder, Police HD + Fox Racing badges,
+#    quote, bio, gold CTA). Needs full build matching Dynamik level.
+# ✅ Exam app — 50 QC SAAQ questions, bilingual, TTS working
+# ✅ Shared components — MegaNav, Footer, StatsStrip, ServiceCard, SectionHeader, LanguageToggle
+# ✅ Vespa/Piaggio product images — 8 images downloaded from wlassets.vespa.com + wlassets.piaggio.com,
+#    self-hosted in /public (no hotlink risk)
+#
+# 🔄 NEXT: Radikal full homepage build (same level as Dynamik)
+# 🔄 NEXT: Dynamik /vespa page (model grid + specs)
 
 # ============================================================
 # BUSINESSES SERVED — STRICT SEPARATION
@@ -23,6 +44,7 @@
 #   - Exclusive Vespa/Piaggio dealer in Outaouais (sales + OEM parts + accessories)
 #   - Vespa/Piaggio content belongs ONLY on Dynamik's site — NEVER on Radikal
 #   - Steve can use official Vespa/Piaggio imagery from vespa.com and piaggio.com
+#   - Images sourced from CDNs: wlassets.vespa.com + wlassets.piaggio.com (Akamai, no hotlink protection)
 #   - AMO Moto member
 #   - Accent color: blue #2563eb
 #   - CTA: "Réserver" / "Book now" (repair booking focus)
@@ -49,6 +71,52 @@
 #   - Revenue model: Option A — Possibilities IN MIND collects listing fees, shops earn inspection/service revenue
 #   - Listing tiers: Standard ($25), Premium ($50), Certified ($75 + inspection)
 #   - Supabase: marketplace_listings table
+
+# ============================================================
+# IMAGE STRATEGY — UPDATED MARCH 14, 2026
+# ============================================================
+#
+# ✅ VESPA/PIAGGIO PRODUCT SHOTS (Dynamik only):
+#   - Source: wlassets.vespa.com + wlassets.piaggio.com (Akamai CDN)
+#   - 8 images downloaded and self-hosted in /public
+#   - Steve is authorized dealer — full right to use these images
+#   - Used for: hero panel, showcase section, model cards
+#
+# ✅ LUCIDE REACT ICONS:
+#   - Replace all emojis in service cards and navigation
+#   - 20-22px, stroke-width 1.5, inherit color from parent
+#
+# ✅ UNSPLASH API (free tier — 50 req/hr demo, 5000/hr production):
+#   - Use for: hero backgrounds, lifestyle shots, vehicle category cards (especially Radikal)
+#   - Requires attribution (photographer name + Unsplash link)
+#   - Download to /public/images/ and self-host for performance
+#   - Add images.unsplash.com to next.config remotePatterns
+#
+# ✅ GEMINI IMAGE GENERATION (replaces Nano Banana 2):
+#   - Use for: marketing campaign visuals, ad creatives, seasonal promo banners,
+#     social media posts, email header images for Resend campaigns
+#   - Higher quality than Nano Banana 2
+#   - Pairs with Pompei for paid ad management (Gemini generates creative, Pompei manages campaigns)
+#
+# ✅ REAL SHOP PHOTOS (when Steve & Eric provide them):
+#   - Replace all placeholder/generated images
+#   - One-line swap in AboutOwner component
+#   - Priority: Steve portrait, Eric portrait, shop exteriors, Fox Racing wall
+#
+# ⛔ NANO BANANA 2 — KILLED. Quality not sufficient for brand-level imagery.
+#   - Do NOT use Nano Banana 2 for any images
+#   - Remove any generated Nano Banana images from /public if present
+#
+# TOOL STACK:
+#   | Source              | Use for                                    |
+#   |---------------------|--------------------------------------------|
+#   | Vespa/Piaggio CDN   | Product shots (Dynamik only) ✅ Done        |
+#   | Lucide React        | Service/UI icons ✅ Available                |
+#   | Unsplash API        | Hero/lifestyle backgrounds, category cards  |
+#   | Gemini image gen    | Marketing pieces, ad creatives, campaigns   |
+#   | Pompei              | Ad campaign management (uses Gemini assets) |
+#   | Real shop photos    | Final replacement when provided             |
+#   | ~~Nano Banana 2~~   | ❌ KILLED — quality not there                |
 
 # ============================================================
 # DESIGN SYSTEM — UPDATED MARCH 2026
@@ -113,10 +181,10 @@
 # ============================================================
 #
 # DYNAMIK PERFORMANCE (dynamikperformance.com)
-#   /                  Homepage (hero + stats + services + Vespa showcase + about Steve + reviews + booking CTA)
+#   /                  Homepage ✅ BUILT
 #   /services          Service landing page
 #   /services/[slug]   Individual service pages (repair, maintenance, modifications, towing, storage)
-#   /vespa             Vespa model showcase (Sprint, Primavera, GTS — with official imagery)
+#   /vespa             Vespa model showcase (Sprint, Primavera, GTS — with official imagery) 🔄 NEXT
 #   /vespa/[model]     Individual model page (images, specs, "Request Info" CTA)
 #   /accessories       Vespa/Piaggio accessories (dual-filter: by category + by model)
 #   /marketplace       Vehicle marketplace (shared component)
@@ -125,7 +193,7 @@
 #   /promotions        Seasonal offers (spring tune-up, winter storage)
 #
 # RADIKAL MOTOSPORT (radikalmotosport.com)
-#   /                  Homepage (hero + police Harley trust + stats + services + vehicle categories + Fox + parts + brands + about Eric + booking CTA)
+#   /                  Homepage (about Eric section done, full homepage 🔄 NEXT)
 #   /services          Service landing page
 #   /services/[slug]   Individual service pages (by vehicle type: moto, ATV, motocross, snowmobile, boat)
 #   /parts             Parts catalog (dual-filter: by category + by vehicle + by brand)
@@ -133,7 +201,7 @@
 #   /fox-racing        Fox Racing apparel/gear showcase (lookbook style)
 #   /fox-racing/[cat]  Fox category pages (helmets, jerseys, gloves, boots, protection)
 #   /marketplace       Vehicle marketplace (shared component)
-#   /exam              Exam-prep app (existing, bilingual)
+#   /exam              Exam-prep app (existing, bilingual) ✅ BUILT
 #   /about             Eric's story, police Harley credibility
 #   /contact           Quote request form + Google Maps + hours
 #   /promotions        Seasonal offers + free inspection promo
@@ -175,10 +243,6 @@
 #   - LocalBusiness JSON-LD on every page
 #   - Individual service pages for SEO targeting
 #   - Bilingual meta tags and OG images
-#
-# OWNER RESOURCES (Phase 3):
-#   - MyGarage-style service history (Supabase)
-#   - Seasonal service reminders (Resend)
 
 # ============================================================
 # RULE 1: DEFAULT TO ACTION
@@ -240,6 +304,8 @@
 # - Never tell the user to do manual browser steps
 # - Never use dark navy as background on shop sites (use white/cream)
 # - Never default to vertical/minimal nav — always horizontal mega-menu for shop sites
+# - Never use Nano Banana 2 for image generation — it's killed
+# - Never hotlink images from external CDNs in production — download and self-host
 
 # ============================================================
 # RULE 7: POLICE HARLEY TRUST SIGNAL
@@ -268,16 +334,16 @@
 # ⚠️ SUMMER SEASON IS TIME-SENSITIVE — Outaouais riders buy NOW
 #
 # WEEK 1 (March 15-21): Build & Wire
-#   Day 1-2: Shared design system components (nav, footer, service cards, booking form, lang toggle)
-#            + Dynamik homepage (white luxury, Vespa/Piaggio hero images from official sites)
-#            + Radikal homepage (police Harley trust, Fox Racing showcase, vehicle categories)
-#   Day 3:   Dynamik /vespa page (model cards with official imagery, "Request Info" CTAs)
-#            Radikal /parts page (dual-filter: category + vehicle + brand)
+#   Day 1-2: ✅ DONE — Shared design system (MegaNav, Footer, ServiceCard, StatsStrip,
+#            SectionHeader, LanguageToggle) + Dynamik homepage (9 sections, Vespa images,
+#            financing, about Steve) + Radikal about section
+#   Day 3:   🔄 NOW — Radikal full homepage (same level as Dynamik: hero, police Harley,
+#            Fox Racing, vehicle categories, parts, brands bar, booking CTA)
+#            + Dynamik /vespa page (model grid with official imagery)
 #   Day 4:   Individual service pages for both shops (for SEO)
 #            Booking/quote form component → Supabase → Resend notification
-#   Day 5:   About Steve + About Eric pages
-#            Reviews sections
-#            Fox Racing showcase page for Radikal
+#   Day 5:   Fox Racing showcase page for Radikal
+#            Reviews sections for both
 #   Day 6-7: Bilingual i18n pass (every string FR/EN)
 #            Mobile testing at 375px
 #            Vercel deployment verification
@@ -287,7 +353,7 @@
 #   Day 9:   Marketplace browse page (type/price/make filters, bilingual)
 #   Day 10:  Resend email setup (booking confirmations, quote notifications)
 #   Day 11:  Schema markup (LocalBusiness JSON-LD), meta tags, OG images
-#   Day 12:  Final content pass (real Vespa/Piaggio images, clickable phones, Google Maps)
+#   Day 12:  Final content pass (real photos if available, clickable phones, Google Maps)
 #   Day 13:  DNS cutover (dynamikperformance.com + radikalmotosport.com → Vercel)
 #   Day 14:  Launch day — smoke test, verify forms, verify emails
 #
@@ -303,23 +369,26 @@
 #   - Shop exterior/interior (both)
 #   - Steve working on a bike
 #   - Eric's boutique / Fox Racing wall
-#   - Vespa/Piaggio inventory at Dynamik (can supplement with official imagery)
+#   - Vespa/Piaggio inventory at Dynamik (supplemented with official imagery ✅)
 #   - Actual parts shelves at Radikal
 
 # ============================================================
 # PHASE TRACKING
 # ============================================================
 # Phase 1 (CURRENT — 2-week sprint):
-#   - Both shop homepages (white luxury design)
-#   - Horizontal mega-menu navigation
-#   - Booking/quote forms → Supabase
-#   - Vespa showcase page (Dynamik)
-#   - Parts catalog MVP (Radikal)
-#   - Fox Racing showcase (Radikal)
-#   - Marketplace MVP
-#   - Service pages for SEO
-#   - Schema markup
-#   - DNS migration from GoDaddy to Vercel
+#   ✅ Dynamik homepage (white luxury design, Vespa images, financing)
+#   ✅ Shared design system components (MegaNav, Footer, StatsStrip, ServiceCard, etc.)
+#   ✅ Vespa/Piaggio product images downloaded and self-hosted
+#   ✅ Exam app (50 QC questions, bilingual, TTS)
+#   🔄 Radikal full homepage (police Harley trust, Fox Racing, vehicle categories)
+#   🔄 Dynamik /vespa page (model grid + specs)
+#   ⬜ Booking/quote forms → Supabase
+#   ⬜ Parts catalog MVP (Radikal)
+#   ⬜ Fox Racing showcase (Radikal)
+#   ⬜ Marketplace MVP
+#   ⬜ Service pages for SEO
+#   ⬜ Schema markup
+#   ⬜ DNS migration from GoDaddy to Vercel
 #
 # Phase 2 (April):
 #   - Supabase backend fully wired
@@ -339,6 +408,7 @@
 #   - Owner portal / MyGarage service history
 #   - Dream 100 outreach
 #   - Shopify evaluation for e-commerce
+#   - Gemini-generated marketing visuals for campaigns
 #
 # Always reference phase in commits: "Phase 1.X: [component]"
 
@@ -357,8 +427,13 @@
 # - They may not adopt Google Ads immediately.
 # - Fox Racing marketplace authorization not yet confirmed for Amazon.
 # - Steve can use official Vespa/Piaggio imagery (not just redirect URLs).
+# - Vespa/Piaggio images hosted on wlassets.vespa.com + wlassets.piaggio.com (Akamai CDN, no hotlink protection).
 # - Piaggio/Vespa reference was about design CLASS, not selling automobiles.
 # - Dark navy design system RETIRED for shop sites — white luxury is the standard.
 # - Navigation MUST be horizontal mega-menu, not minimal/vertical.
 # - Summer season in Outaouais is time-sensitive — sites must be live within 2-3 weeks.
 # - Marketplace revenue: Option A (Possibilities IN MIND collects listing fees, shops earn service revenue).
+# - Nano Banana 2 KILLED — image quality not sufficient for brand-level work.
+# - Gemini image generation replaces Nano Banana 2 for marketing visuals.
+# - Pompei handles ad campaign management, uses Gemini-generated creative assets.
+# - AboutOwner component supports one-line photo swap when real portraits are provided.
