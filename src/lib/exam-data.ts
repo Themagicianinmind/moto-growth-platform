@@ -9694,6 +9694,1127 @@ export const questions: Question[] = [
     explanation: 'Les sifflets ultrasoniques pour cerfs n\'ont pas d\'efficacité prouvée scientifiquement. Le klaxon peut effrayer ou au contraire paniquer le chevreuil. La meilleure protection reste de réduire la vitesse dans les zones à risque, de bien éclairer la route la nuit et d\'être prêt à freiner. La vigilance surpasse tout équipement. / Ultrasonic deer whistles have no scientifically proven effectiveness. The horn may scare or conversely panic the deer. The best protection remains reducing speed in risk zones, lighting the road well at night and being ready to brake. Vigilance surpasses any equipment.',
   },
 
+
+  // ============================================================
+  // QUEBEC SAAQ — WINTER STORAGE / Remisage hivernal — 451–453
+  // ============================================================
+
+  {
+    id: 451,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Avant de remiser votre moto pour l\'hiver, pourquoi faut-il faire le plein de carburant ?',
+    qEN: 'Before storing your motorcycle for winter, why should you fill the fuel tank?',
+    options: [
+      'Pour faciliter le démarrage au printemps sans ajouter d\'essence',
+      'Pour éviter la condensation et la rouille à l\'intérieur du réservoir',
+      'Pour que l\'essence reste fraîche pendant l\'hiver',
+      'Pour éviter que le réservoir ne se déforme sous le froid',
+    ],
+    optionsEN: [
+      'To make spring starting easier without adding fuel',
+      'To prevent condensation and rust inside the tank',
+      'To keep the fuel fresh over winter',
+      'To prevent the tank from warping in the cold',
+    ],
+    answer: 1,
+    explanation: 'Un réservoir à moitié vide permet à l\'air humide de circuler et de créer de la condensation — ce qui rouille le réservoir de l\'intérieur. Faites le plein et ajoutez un stabilisateur de carburant pour éviter que l\'essence ne se dégrade en 4 à 6 mois. / A half-empty tank allows moist air to circulate and create condensation — which rusts the tank from the inside. Fill it up and add a fuel stabilizer to prevent the fuel from degrading over 4 to 6 months.',
+  },
+  {
+    id: 452,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quelle précaution prenez-vous pour la batterie de votre moto pendant le remisage hivernal ?',
+    qEN: 'What precaution do you take for your motorcycle battery during winter storage?',
+    options: [
+      'Laissez-la en place — les batteries modernes supportent le froid sans entretien',
+      'Retirez-la et conservez-la au chaud, branchée sur un chargeur-mainteneur',
+      'Videz-la complètement pour éviter qu\'elle ne gèle',
+      'Branchez-la sur le secteur en permanence pendant toute la saison',
+    ],
+    optionsEN: [
+      'Leave it in place — modern batteries handle cold without maintenance',
+      'Remove it and keep it somewhere warm, connected to a trickle charger',
+      'Drain it completely to prevent freezing',
+      'Connect it to a power outlet continuously throughout the season',
+    ],
+    answer: 1,
+    explanation: 'Le froid décharge les batteries rapidement. Retirez la batterie, conservez-la dans un endroit hors gel et branchez-la sur un chargeur-mainteneur (Battery Tender) qui maintient la charge sans surcharger. Au printemps, votre batterie sera prête et durera plus longtemps. / Cold drains batteries quickly. Remove the battery, keep it in a frost-free location and connect it to a trickle charger (Battery Tender) that maintains charge without overcharging. In spring, your battery will be ready and will last longer.',
+  },
+  {
+    id: 453,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Que devez-vous faire avec les pneus de votre moto pendant un remisage de 5 mois ?',
+    qEN: 'What should you do with your motorcycle tires during a 5-month storage period?',
+    options: [
+      'Les dégonfler à moitié pour éviter qu\'ils ne craquent sous le froid',
+      'Surélever la moto pour retirer le poids des pneus et éviter les déformations',
+      'Les enduire d\'huile pour préserver le caoutchouc',
+      'Ne rien faire de spécial — les pneus modernes supportent le remisage sans problème',
+    ],
+    optionsEN: [
+      'Deflate them by half to prevent cracking in the cold',
+      'Elevate the bike to remove weight from the tires and prevent flat spots',
+      'Coat them with oil to preserve the rubber',
+      'Do nothing special — modern tires handle storage without issue',
+    ],
+    answer: 1,
+    explanation: 'Un pneu qui supporte le poids de la moto pendant 5 mois développe des méplats là où il touche le sol. Surélevez la moto sur des chandelles ou un paddock stand pour retirer la charge. Gonflez les pneus à la pression maximale recommandée pour le remisage. / A tire bearing the weight of the bike for 5 months develops flat spots where it contacts the ground. Elevate the bike on stands or a paddock stand to remove the load. Inflate tires to the maximum recommended storage pressure.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — LOW-TRACTION SURFACES / Surfaces glissantes — 454–457
+  // ============================================================
+
+  {
+    id: 454,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous approchez d\'une intersection après la pluie. Où le risque de glissade est-il le plus élevé ?',
+    qEN: 'You approach an intersection after rain. Where is the skid risk highest?',
+    options: [
+      'Au centre de votre voie, là où les pneus des voitures passent le plus souvent',
+      'Juste devant les lignes d\'arrêt, où les huiles de moteur s\'accumulent avec la pluie',
+      'Sur les lignes peintes et les marquages au sol',
+      'Sur les pavés de béton, plus lisses que l\'asphalte',
+    ],
+    optionsEN: [
+      'At the centre of your lane where car tires pass most often',
+      'Just before the stop lines, where engine oils accumulate with rain',
+      'On painted lines and road markings',
+      'On concrete pavement, which is smoother than asphalt',
+    ],
+    answer: 2,
+    explanation: 'Les lignes peintes, les marquages, les plaques métalliques et les rails de tramway sont extrêmement glissants quand ils sont mouillés. Traversez-les perpendiculairement si possible, sans freiner dessus. Les huiles d\'intersection sont aussi dangereuses, mais les marquages sont le risque le plus direct sous vos roues. / Painted lines, markings, metal plates and tram rails are extremely slippery when wet. Cross them perpendicularly if possible, without braking on them. Intersection oils are also dangerous, but markings are the most direct risk under your tires.',
+  },
+  {
+    id: 455,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quelle technique de freinage utilisez-vous sur une surface mouillée pour éviter de bloquer les roues ?',
+    qEN: 'What braking technique do you use on a wet surface to avoid wheel lockup?',
+    options: [
+      'Utilisez uniquement le frein avant — il est plus puissant',
+      'Freinez progressivement avec les deux freins, en évitant tout blocage',
+      'Utilisez uniquement le frein arrière sur surface mouillée',
+      'Pompez rapidement le frein avant pour simuler un ABS',
+    ],
+    optionsEN: [
+      'Use only the front brake — it is more powerful',
+      'Brake progressively with both brakes, avoiding any lockup',
+      'Use only the rear brake on wet surfaces',
+      'Pump the front brake rapidly to simulate ABS',
+    ],
+    answer: 1,
+    explanation: 'Sur surface mouillée, les deux freins doivent être appliqués progressivement et simultanément. La limite d\'adhérence est réduite — un freinage trop brusque bloque les roues instantanément. Freinez plus tôt et plus doucement qu\'en conditions sèches. / On a wet surface, both brakes must be applied progressively and simultaneously. The grip threshold is reduced — hard braking locks wheels instantly. Brake earlier and more gently than in dry conditions.',
+  },
+  {
+    id: 456,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Il vient de commencer à pleuvoir après une longue période de sécheresse. Pourquoi ce moment est-il particulièrement dangereux ?',
+    qEN: 'It just started raining after a long dry spell. Why is this moment particularly dangerous?',
+    options: [
+      'Les pneus refroidissent trop vite et perdent leur efficacité',
+      'Les huiles et résidus accumulés sur la route remontent à la surface et la rendent très glissante',
+      'Les freins hydrauliques sont moins efficaces quand ils sont mouillés',
+      'La visibilité est réduite mais l\'adhérence reste normale pendant les 10 premières minutes',
+    ],
+    optionsEN: [
+      'Tires cool too quickly and lose effectiveness',
+      'Oils and residue accumulated on the road surface rise up and make it very slippery',
+      'Hydraulic brakes are less effective when wet',
+      'Visibility is reduced but grip remains normal for the first 10 minutes',
+    ],
+    answer: 1,
+    explanation: 'Les premières minutes de pluie sont les plus dangereuses. L\'eau mélangée aux huiles, graisses et poussières accumulées crée une couche extrêmement glissante. Après 10 à 15 minutes de pluie, ces résidus sont en grande partie lavés. Ralentissez significativement au début d\'une pluie. / The first minutes of rain are the most dangerous. Water mixed with accumulated oils, grease and dust creates an extremely slippery film. After 10 to 15 minutes of rain, most of these residues are washed away. Slow down significantly at the start of a rain shower.',
+  },
+  {
+    id: 457,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous abordez une courbe et réalisez que le sol est couvert de feuilles mortes mouillées. Que faites-vous ?',
+    qEN: 'You enter a curve and realize the ground is covered with wet fallen leaves. What do you do?',
+    options: [
+      'Penchez davantage pour maintenir votre trajectoire normale',
+      'Redressez la moto autant que possible, relâchez les freins et traversez en ligne droite si possible',
+      'Freinez doucement pour réduire la vitesse dans la courbe',
+      'Accélérez pour traverser rapidement la zone de feuilles',
+    ],
+    optionsEN: [
+      'Lean more to maintain your normal trajectory',
+      'Straighten the bike as much as possible, release brakes and cross in a straight line if possible',
+      'Brake gently to reduce speed in the curve',
+      'Accelerate to cross the leaf zone quickly',
+    ],
+    answer: 1,
+    explanation: 'Les feuilles mortes mouillées ont une adhérence proche de zéro — comme de la glace. Évitez tout freinage et tout angle de penchement dans ce secteur. Si vous ne pouvez pas éviter la zone, redressez la moto, traversez en ligne droite, mains légères. / Wet dead leaves have grip close to zero — like ice. Avoid any braking and any lean angle in this area. If you cannot avoid the zone, straighten the bike, cross in a straight line, light hands on the bars.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — ABS BRAKING / Freinage ABS — 458–461
+  // ============================================================
+
+  {
+    id: 458,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Qu\'est-ce que l\'ABS fait lorsque vous freinez trop fort et que la roue est sur le point de se bloquer ?',
+    qEN: 'What does ABS do when you brake too hard and a wheel is about to lock up?',
+    options: [
+      'Il coupe l\'alimentation du moteur pour réduire la vitesse',
+      'Il relâche et réapplique la pression de freinage plusieurs fois par seconde pour maintenir l\'adhérence',
+      'Il active le frein arrière automatiquement pour compenser',
+      'Il émet un signal sonore pour vous avertir de relâcher le frein',
+    ],
+    optionsEN: [
+      'It cuts engine power to reduce speed',
+      'It releases and reapplies brake pressure several times per second to maintain grip',
+      'It activates the rear brake automatically to compensate',
+      'It emits an audible signal to warn you to release the brake',
+    ],
+    answer: 1,
+    explanation: 'L\'ABS détecte quand une roue décélère trop vite et est sur le point de se bloquer. Il module la pression hydraulique des freins en relâchant et réappliquant rapidement — souvent 10 à 20 fois par seconde — pour maintenir l\'adhérence et la direction. / ABS detects when a wheel is decelerating too fast and is about to lock. It modulates hydraulic brake pressure by rapidly releasing and reapplying — often 10 to 20 times per second — to maintain grip and steering.',
+  },
+  {
+    id: 459,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Votre moto est équipée de l\'ABS. Devez-vous changer votre technique de freinage d\'urgence ?',
+    qEN: 'Your motorcycle has ABS. Should you change your emergency braking technique?',
+    options: [
+      'Oui — l\'ABS est moins efficace si vous appuyez trop fort, appuyez donc à 70 %',
+      'Non — appuyez fermement et continuellement sur les deux freins, l\'ABS gère le reste',
+      'Oui — utilisez seulement le frein arrière, l\'ABS est surtout utile à l\'avant',
+      'Non — l\'ABS ne change rien, continuez à pomper les freins comme avant',
+    ],
+    optionsEN: [
+      'Yes — ABS is less effective if you press too hard, so press to 70%',
+      'No — press firmly and continuously on both brakes, ABS handles the rest',
+      'Yes — use only the rear brake, ABS is mainly useful at the front',
+      'No — ABS changes nothing, keep pumping the brakes as before',
+    ],
+    answer: 1,
+    explanation: 'Avec l\'ABS, appuyez fermement sur les deux freins et maintenez la pression — ne relâchez pas. L\'ABS gère lui-même le seuil de blocage. Inutile de pomper les freins. Une pression ferme et continue donne le meilleur résultat. / With ABS, press firmly on both brakes and hold — do not release. ABS manages the lockup threshold itself. No need to pump the brakes. Firm, continuous pressure gives the best result.',
+  },
+  {
+    id: 460,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'L\'ABS est-il aussi efficace sur gravier ou neige que sur asphalte sec ?',
+    qEN: 'Is ABS as effective on gravel or snow as on dry asphalt?',
+    options: [
+      'Oui — l\'ABS est conçu pour toutes les surfaces et optimise toujours le freinage',
+      'Non — l\'ABS réduit les distances d\'arrêt sur asphalte mais peut les allonger sur gravier ou neige',
+      'Non — l\'ABS s\'éteint automatiquement sur les surfaces non asphaltées',
+      'Oui — mais il est moins efficace sur neige compactée que sur neige fraîche',
+    ],
+    optionsEN: [
+      'Yes — ABS is designed for all surfaces and always optimizes braking',
+      'No — ABS reduces stopping distances on asphalt but may increase them on gravel or snow',
+      'No — ABS shuts off automatically on non-paved surfaces',
+      'Yes — but less effective on packed snow than fresh snow',
+    ],
+    answer: 1,
+    explanation: 'Sur asphalte, l\'ABS réduit considérablement les distances d\'arrêt. Sur gravier ou neige, une roue bloquée peut parfois creuser et s\'arrêter plus court — l\'ABS peut légèrement allonger la distance. Certaines motos modernes ont des modes ABS spécifiques pour ces surfaces. / On asphalt, ABS considerably reduces stopping distances. On gravel or snow, a locked wheel can sometimes dig in and stop shorter — ABS may slightly increase distance. Some modern bikes have specific ABS modes for these surfaces.',
+  },
+  {
+    id: 461,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'En freinant d\'urgence, vous sentez des vibrations dans le levier de frein. De quoi s\'agit-il probablement ?',
+    qEN: 'During emergency braking, you feel vibrations in the brake lever. What is this likely to be?',
+    options: [
+      'Un problème de frein — arrêtez-vous immédiatement et inspectez',
+      'L\'ABS en action — c\'est normal, maintenez la pression et regardez là où vous voulez aller',
+      'La roue avant qui se bloque — relâchez le frein immédiatement',
+      'Un disque voilé — faites réparer avant la prochaine sortie',
+    ],
+    optionsEN: [
+      'A brake problem — stop immediately and inspect',
+      'ABS in action — this is normal, hold pressure and look where you want to go',
+      'The front wheel locking — release the brake immediately',
+      'A warped disc — have it repaired before your next ride',
+    ],
+    answer: 1,
+    explanation: 'Les vibrations et pulsations dans le levier signalent que l\'ABS est actif — c\'est exactement ce qu\'il doit faire. Maintenez une pression ferme, regardez là où vous voulez aller, et l\'ABS fera son travail pour arrêter la moto le plus court possible. / Vibrations and pulsations in the lever signal that ABS is active — that is exactly what it should do. Maintain firm pressure, look where you want to go, and ABS will do its job to stop the bike as short as possible.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — CORNERING TECHNIQUE / Technique en virage — 462–465
+  // ============================================================
+
+  {
+    id: 462,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous entrez trop vite dans un virage et réalisez que vous ne pouvez pas suivre la courbe. Que faites-vous ?',
+    qEN: 'You enter a curve too fast and realize you cannot follow the bend. What do you do?',
+    options: [
+      'Freinez brusquement pour réduire la vitesse',
+      'Regardez la sortie du virage, penchez davantage et maintenez un filet de gaz',
+      'Redressez la moto et sortez de la route en ligne droite',
+      'Lâchez le guidon pour que la moto trouve son équilibre naturel',
+    ],
+    optionsEN: [
+      'Brake hard to reduce speed',
+      'Look at the exit of the curve, lean more and maintain a light throttle',
+      'Straighten the bike and exit the road in a straight line',
+      'Let go of the bars so the bike finds its natural balance',
+    ],
+    answer: 1,
+    explanation: 'La technique pour un virage serré : regardez la sortie du virage (votre regard guide la moto), penchez davantage, et un léger filet de gaz stabilise la moto et augmente l\'adhérence arrière. Ne freinez pas dans un virage — cela redresse la moto et élargit la trajectoire. / The technique for a tight surprise curve: look at the exit (your gaze guides the bike), lean more, and a light throttle stabilizes the bike and increases rear grip. Do not brake in a curve — it straightens the bike and widens the line.',
+  },
+  {
+    id: 463,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quelle est la position correcte de votre regard dans un virage ?',
+    qEN: 'What is the correct gaze position in a curve?',
+    options: [
+      'Regardez le centre de la courbe pour rester sur votre voie',
+      'Regardez la sortie du virage — là où vous voulez que la moto aille',
+      'Regardez les marquages au sol pour rester dans votre voie',
+      'Regardez la ligne de rive pour éviter de déborder',
+    ],
+    optionsEN: [
+      'Look at the centre of the curve to stay in your lane',
+      'Look at the exit of the curve — where you want the bike to go',
+      'Look at the road markings to stay in your lane',
+      'Look at the edge line to avoid going wide',
+    ],
+    answer: 1,
+    explanation: 'La moto suit votre regard. Regardez toujours la sortie du virage — votre corps s\'ajuste naturellement et la moto suit votre vision. Regarder trop près devant vous provoque une trajectoire courte et réduit votre réaction aux imprévus. / The bike follows your gaze. Always look at the exit of the curve — your body adjusts naturally and the bike follows your vision. Looking too close ahead creates a short trajectory and reduces your reaction to the unexpected.',
+  },
+  {
+    id: 464,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Pourquoi faut-il éviter de freiner fort en plein milieu d\'un virage ?',
+    qEN: 'Why must you avoid hard braking in the middle of a curve?',
+    options: [
+      'Car les freins sont moins efficaces quand la moto est penchée',
+      'Car le freinage redresse la moto, élargit la trajectoire et peut faire sortir de voie',
+      'Car le pneu avant peut se dégonfler sous l\'effort combiné',
+      'Car la SAAQ interdit de freiner en virage',
+    ],
+    optionsEN: [
+      'Because brakes are less effective when the bike is leaned',
+      'Because braking straightens the bike, widens the line and can cause lane departure',
+      'Because the front tire can deflate under the combined stress',
+      'Because SAAQ prohibits braking in curves',
+    ],
+    answer: 1,
+    explanation: 'Quand vous freinez, la moto se redresse par réaction mécanique. En virage, cela élargit votre trajectoire — vous risquez de sortir de votre voie. Si vous devez ralentir, faites-le avant le virage. Dans la courbe, maintenez un filet de gaz constant pour stabiliser la moto. / When you brake, the bike straightens by mechanical reaction. In a curve, this widens your line — you risk leaving your lane. If you need to slow down, do so before the curve. In the bend, maintain a steady light throttle to stabilize the bike.',
+  },
+  {
+    id: 465,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Dans un virage à gauche, quelle position dans la voie vous offre la meilleure visibilité ?',
+    qEN: 'In a left-hand curve, which lane position gives you the best visibility?',
+    options: [
+      'À droite de la voie — pour voir plus tôt dans la courbe',
+      'Au centre de la voie — la position neutre standard',
+      'À gauche de la voie — pour regarder autour du virage',
+      'La position varie selon la vitesse — centrez-vous à haute vitesse',
+    ],
+    optionsEN: [
+      'Right side of the lane — to see earlier into the curve',
+      'Centre of the lane — the standard neutral position',
+      'Left side of the lane — to look around the bend',
+      'Position varies with speed — centre at high speed',
+    ],
+    answer: 0,
+    explanation: 'Dans un virage à gauche, roulez à droite de votre voie. Cela vous permet de voir plus tôt autour du virage — davantage de la route est visible depuis la droite. À l\'inverse, dans un virage à droite, roulez à gauche de votre voie pour voir plus loin. / In a left-hand curve, ride on the right side of your lane. This allows you to see further around the bend — more of the road curving left is visible from the right side. Conversely, in a right-hand curve, ride on the left side of your lane to see further.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — CARGO LOAD LIMITS / Limites de chargement — 466–468
+  // ============================================================
+
+  {
+    id: 466,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quelle règle s\'applique au chargement de bagages sur une moto au Québec ?',
+    qEN: 'What rule applies to luggage loading on a motorcycle in Quebec?',
+    options: [
+      'Le chargement ne doit pas dépasser 20 kg par sacoche',
+      'Le chargement doit être sécurisé, équilibré et ne pas dépasser les dimensions légales',
+      'Il n\'y a pas de règle spécifique — le fabricant fixe les limites',
+      'Les sacoches sont interdites sur les motos de moins de 500 cc',
+    ],
+    optionsEN: [
+      'Load must not exceed 20 kg per saddlebag',
+      'Load must be secured, balanced and not exceed legal dimensions',
+      'There is no specific rule — the manufacturer sets the limits',
+      'Saddlebags are prohibited on motorcycles under 500 cc',
+    ],
+    answer: 1,
+    explanation: 'Le Code de la sécurité routière exige que tout chargement soit bien arrimé, ne nuise pas à la conduite et respecte les dimensions légales. Un chargement mal équilibré affecte la stabilité et les virages. Respectez aussi les capacités de charge indiquées dans le manuel du fabricant. / The Highway Safety Code requires all cargo to be properly secured, not to impair riding, and to respect legal dimensions. An unbalanced load affects stability and cornering. Also respect the load capacities stated in the manufacturer\'s manual.',
+  },
+  {
+    id: 467,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Vous chargez des sacoches pour un long voyage. Comment répartissez-vous le poids correctement ?',
+    qEN: 'You are loading saddlebags for a long trip. How do you distribute weight correctly?',
+    options: [
+      'Concentrez le poids le plus lourd dans la sacoche gauche pour compenser l\'inclinaison naturelle',
+      'Répartissez le poids également des deux côtés et placez les objets lourds aussi bas que possible',
+      'Placez les objets lourds en hauteur pour améliorer la stabilité en virage',
+      'Chargez davantage à l\'arrière pour alléger la direction',
+    ],
+    optionsEN: [
+      'Concentrate the heaviest items in the left bag to offset the bike\'s natural lean',
+      'Distribute weight equally on both sides and place heavy items as low as possible',
+      'Place heavy items high up to improve cornering stability',
+      'Load more at the rear to lighten the steering',
+    ],
+    answer: 1,
+    explanation: 'Un poids équilibré des deux côtés prévient les tendances à la dérive dans les virages. Les objets lourds bas abaissent le centre de gravité et améliorent la stabilité. Un poids mal distribué rend la moto instable, surtout dans les virages et à grande vitesse. / Equal weight on both sides prevents drifting tendencies in curves. Heavy items placed low lower the centre of gravity and improve stability. A poorly distributed load makes the bike unstable, especially in corners and at high speed.',
+  },
+  {
+    id: 468,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous attachez un sac sur le siège arrière avec des sangles élastiques. Quel danger principal cela représente-t-il ?',
+    qEN: 'You attach a bag to the rear seat with bungee cords. What is the main danger?',
+    options: [
+      'Les sangles peuvent se coincer dans la chaîne ou la roue arrière et provoquer une chute',
+      'Le sac peut être volé plus facilement',
+      'Le poids est trop concentré à l\'arrière, ce qui affecte la direction',
+      'Les sangles élastiques ne sont pas légales sur les motos au Québec',
+    ],
+    optionsEN: [
+      'The cords can get caught in the chain or rear wheel and cause a fall',
+      'The bag can be stolen more easily',
+      'The weight is too concentrated at the rear, affecting steering',
+      'Bungee cords are not legal on motorcycles in Quebec',
+    ],
+    answer: 0,
+    explanation: 'Les extrémités de sangles élastiques qui pendent peuvent facilement se coincer dans la roue arrière ou la chaîne — ce qui peut provoquer une chute instantanée à haute vitesse. Assurez-vous que toutes les extrémités sont bien fixées. Préférez les filets à bagages ou les sacs de moto avec fixations dédiées. / Hanging bungee cord ends can easily get caught in the rear wheel or chain — which can cause an instant fall at high speed. Make sure all ends are well secured. Prefer cargo nets or dedicated motorcycle bags with proper attachments.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — CARRYING PASSENGERS / Transport de passagers — 469–471
+  // ============================================================
+
+  {
+    id: 469,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quel type de permis est requis pour transporter un passager sur une moto au Québec ?',
+    qEN: 'What type of licence is required to carry a passenger on a motorcycle in Quebec?',
+    options: [
+      'Un permis de classe 6A ou 6B — le permis d\'apprenti ne suffit pas',
+      'Un permis de classe 6 plein — le permis probatoire ne permet pas le transport de passager',
+      'Tout permis de classe 6 valide, y compris le permis d\'apprenti',
+      'Un permis de classe 6 avec au moins 2 ans d\'expérience',
+    ],
+    optionsEN: [
+      'A class 6A or 6B licence — the learner\'s licence is not enough',
+      'A full class 6 licence — the probationary licence does not allow passengers',
+      'Any valid class 6 licence, including the learner\'s',
+      'A class 6 licence with at least 2 years of experience',
+    ],
+    answer: 1,
+    explanation: 'Au Québec, le titulaire d\'un permis probatoire classe 6 ne peut pas transporter de passager. Il faut un permis de classe 6 plein. Le passager doit être assis à califourchon sur un siège conçu à cet effet. / In Quebec, the holder of a class 6 probationary licence cannot carry a passenger. A full class 6 licence is required. The passenger must be seated astride on a seat designed for that purpose.',
+  },
+  {
+    id: 470,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un passager sur une moto au Québec est-il obligé de porter un casque homologué ?',
+    qEN: 'Is a passenger on a motorcycle in Quebec required to wear an approved helmet?',
+    options: [
+      'Oui — le casque est obligatoire pour le conducteur et le passager',
+      'Non — seul le conducteur est obligé de porter un casque',
+      'Seulement si le passager a moins de 18 ans',
+      'Seulement sur les routes à plus de 70 km/h',
+    ],
+    optionsEN: [
+      'Yes — a helmet is mandatory for both the rider and the passenger',
+      'No — only the rider is required to wear a helmet',
+      'Only if the passenger is under 18',
+      'Only on roads above 70 km/h',
+    ],
+    answer: 0,
+    explanation: 'Au Québec, le Code de la sécurité routière exige que le conducteur ET le passager portent chacun un casque conforme aux normes. Le conducteur est responsable de s\'assurer que son passager porte un casque avant de partir. / In Quebec, the Highway Safety Code requires both the rider AND the passenger to each wear a conforming helmet. The rider is responsible for ensuring their passenger is wearing a helmet before leaving.',
+  },
+  {
+    id: 471,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous transportez un passager pour la première fois. Comment adaptez-vous votre conduite ?',
+    qEN: 'You are carrying a passenger for the first time. How do you adapt your riding?',
+    options: [
+      'Aucun changement — la moto est conçue pour deux personnes',
+      'Augmentez vos distances de freinage, réduisez votre vitesse en virage et avertissez le passager avant chaque manœuvre',
+      'Roulez plus vite pour compenser le poids supplémentaire sur l\'accélération',
+      'Utilisez principalement le frein arrière car l\'avant est moins stable avec un passager',
+    ],
+    optionsEN: [
+      'No change — the bike is designed for two people',
+      'Increase braking distances, reduce speed in curves and warn the passenger before each manoeuvre',
+      'Ride faster to compensate for the extra weight on acceleration',
+      'Use mainly the rear brake as the front is less stable with a passenger',
+    ],
+    answer: 1,
+    explanation: 'Un passager modifie la dynamique de la moto : le poids total augmente, la distance de freinage s\'allonge, et les virages demandent plus d\'ajustement. Prévenez votre passager avant de freiner ou de manœuvrer. Ajustez la pression des pneus et les amortisseurs si votre moto le permet. / A passenger changes the bike\'s dynamics: total weight increases, braking distance lengthens, and curves require more adjustment. Warn your passenger before braking or manoeuvring. Adjust tire pressure and suspension if your bike allows it.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — FIRST-AID REQUIREMENTS / Premiers secours — 472–474
+  // ============================================================
+
+  {
+    id: 472,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un conducteur de moto est-il légalement obligé de porter une trousse de premiers secours au Québec ?',
+    qEN: 'Is a motorcycle rider legally required to carry a first-aid kit in Quebec?',
+    options: [
+      'Oui — une trousse de premiers secours de base est obligatoire',
+      'Non — aucune loi n\'oblige un motocycliste à porter une trousse de premiers secours',
+      'Seulement pour les randonnées de plus de 200 km',
+      'Seulement si vous transportez un passager',
+    ],
+    optionsEN: [
+      'Yes — a basic first-aid kit is mandatory',
+      'No — no law requires a motorcyclist to carry a first-aid kit',
+      'Only for trips over 200 km',
+      'Only if you are carrying a passenger',
+    ],
+    answer: 1,
+    explanation: 'Aucune loi québécoise n\'oblige un motocycliste à transporter une trousse de premiers secours. Cependant, la SAAQ et les instructeurs en recommandent fortement une, surtout pour les randonnées en région éloignée. Une trousse légère peut sauver des vies en attendant les secours. / No Quebec law requires a motorcyclist to carry a first-aid kit. However, the SAAQ and instructors strongly recommend one, especially for rides in remote areas. A lightweight kit can save lives while waiting for help.',
+  },
+  {
+    id: 473,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Vous êtes témoin d\'un accident de la route au Québec. Quelles sont vos obligations légales ?',
+    qEN: 'You witness a road accident in Quebec. What are your legal obligations?',
+    options: [
+      'Vous devez appeler le 911 mais n\'êtes pas obligé de vous arrêter',
+      'Vous devez vous arrêter, porter assistance aux blessés si possible et appeler les secours',
+      'Vous devez seulement noter les informations et les transmettre à la police',
+      'Vous n\'avez aucune obligation légale — l\'aide est volontaire',
+    ],
+    optionsEN: [
+      'You must call 911 but are not required to stop',
+      'You must stop, provide assistance to the injured if possible and call for help',
+      'You must only note the information and pass it to police',
+      'You have no legal obligation — helping is voluntary',
+    ],
+    answer: 1,
+    explanation: 'Le Code criminel canadien et le Code de la sécurité routière du Québec obligent toute personne à porter secours à quiconque est en danger lors d\'un accident. Refuser de porter assistance est une infraction criminelle. Arrêtez, appelez le 911 et faites ce qui est raisonnablement possible. / The Canadian Criminal Code and Quebec\'s Highway Safety Code require every person to help anyone in danger at an accident. Refusing to assist is a criminal offence. Stop, call 911 and do what is reasonably possible.',
+  },
+  {
+    id: 474,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous arrivez premier sur les lieux d\'un accident de moto. Le blessé est inconscient. Quelle est votre première action ?',
+    qEN: 'You are first to arrive at a motorcycle accident. The injured person is unconscious. What is your first action?',
+    options: [
+      'Retirez immédiatement le casque pour faciliter la respiration',
+      'Appelez le 911, sécurisez la scène et ne retirez pas le casque sauf si la RCP l\'exige absolument',
+      'Déplacez la victime sur le côté de la route pour la protéger de la circulation',
+      'Attendez l\'arrivée des secours sans rien toucher',
+    ],
+    optionsEN: [
+      'Immediately remove the helmet to assist breathing',
+      'Call 911, secure the scene and do not remove the helmet unless CPR absolutely requires it',
+      'Move the victim to the side of the road to protect them from traffic',
+      'Wait for emergency services without touching anything',
+    ],
+    answer: 1,
+    explanation: 'Ne retirez pas le casque d\'un accidenté sauf si vous devez pratiquer la RCP. Une blessure à la colonne cervicale peut être aggravée par un mauvais retrait. Appelez le 911, sécurisez la zone, parlez à la victime pour évaluer sa conscience et suivez les instructions du 911. / Do not remove a crash victim\'s helmet unless you must perform CPR. A cervical spine injury can be worsened by improper removal. Call 911, secure the area, speak to the victim to assess consciousness and follow 911 instructions.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — RED LIGHT CAMERAS / Radars-photo — 475–477
+  // ============================================================
+
+  {
+    id: 475,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un radar-photo vous prend en photo alors que vous brûlez un feu rouge. Qui reçoit l\'infraction au Québec ?',
+    qEN: 'A red-light camera photographs you running a red. Who receives the offence in Quebec?',
+    options: [
+      'Le conducteur identifié par la photo',
+      'Le propriétaire enregistré du véhicule, peu importe qui conduisait',
+      'Personne — les infractions radar-photo ne s\'appliquent pas aux motos',
+      'Le conducteur et le propriétaire reçoivent chacun une amende',
+    ],
+    optionsEN: [
+      'The driver identified in the photo',
+      'The registered owner of the vehicle, regardless of who was driving',
+      'Nobody — radar-photo offences do not apply to motorcycles',
+      'Both the driver and owner each receive a fine',
+    ],
+    answer: 1,
+    explanation: 'Au Québec, les infractions radar-photo sont envoyées au propriétaire enregistré du véhicule. Aucun point d\'inaptitude n\'est attribué — car on ne peut pas confirmer qui conduisait — seulement l\'amende. Le propriétaire peut contester s\'il peut prouver qu\'il ne conduisait pas. / In Quebec, radar-photo offences are sent to the registered vehicle owner. No demerit points are assigned — since who was driving cannot be confirmed — only the fine. The owner can contest if they can prove they were not driving.',
+  },
+  {
+    id: 476,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Les appareils de contrôle automatisé au Québec capturent-ils seulement les feux rouges, ou aussi les excès de vitesse ?',
+    qEN: 'Do Quebec automated control devices capture only red lights, or also speeding?',
+    options: [
+      'Seulement les feux rouges brûlés — les radars de vitesse sont séparés',
+      'Les deux — les appareils modernes capturent les feux rouges et la vitesse',
+      'Seulement la vitesse — les feux rouges sont gérés par des caméras séparées',
+      'Aucun — le Québec n\'utilise que des radars mobiles tenus par des agents',
+    ],
+    optionsEN: [
+      'Only red lights run — speed radars are separate',
+      'Both — modern units capture red lights and speed',
+      'Only speed — red lights are handled by separate cameras',
+      'Neither — Quebec only uses mobile radars held by officers',
+    ],
+    answer: 1,
+    explanation: 'Le Québec utilise des systèmes de contrôle automatisé qui peuvent capter à la fois les feux rouges brûlés et les excès de vitesse aux intersections. Le programme a été élargi au fil des années pour inclure les deux types d\'infractions dans les zones à haut risque. / Quebec uses automated control systems that can capture both red lights run and speeding at intersections. The program has been expanded over the years to include both types of offences in high-risk zones.',
+  },
+  {
+    id: 477,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Vous êtes à une intersection. Le feu passe au jaune alors que vous pouvez encore vous arrêter en toute sécurité. Que faites-vous ?',
+    qEN: 'You are at an intersection. The light turns yellow and you can still stop safely. What do you do?',
+    options: [
+      'Accélérez pour passer avant le rouge — le jaune vous permet encore de passer',
+      'Arrêtez-vous — le feu jaune signifie que vous devez vous arrêter si c\'est sécuritaire',
+      'Ralentissez mais passez si personne n\'arrive en sens inverse',
+      'Klaxonnez pour avertir les piétons et passez rapidement',
+    ],
+    optionsEN: [
+      'Accelerate to pass before the red — yellow still allows you to pass',
+      'Stop — a yellow light means you must stop if it is safe to do so',
+      'Slow down but pass if no one is coming from the other direction',
+      'Honk to warn pedestrians and pass quickly',
+    ],
+    answer: 1,
+    explanation: 'Le feu jaune signifie : arrêtez-vous si vous pouvez le faire en toute sécurité. Ce n\'est pas un signal d\'accélération. Si vous êtes trop proche pour vous arrêter sans danger, vous pouvez poursuivre prudemment. Accélérer pour éviter le rouge est une infraction. / A yellow light means: stop if you can do so safely. It is not a signal to accelerate. If you are too close to stop safely, you may continue cautiously. Accelerating to avoid the red is an offence.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — FINES AND DEMERIT POINTS / Amendes et points — 478–480
+  // ============================================================
+
+  {
+    id: 478,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Au Québec, combien de points d\'inaptitude une infraction de conduite à 40 km/h au-dessus de la limite entraîne-t-elle ?',
+    qEN: 'In Quebec, how many demerit points does driving 40 km/h over the limit incur?',
+    options: [
+      '3 points',
+      '5 points',
+      '9 points',
+      '12 points',
+    ],
+    optionsEN: [
+      '3 points',
+      '5 points',
+      '9 points',
+      '12 points',
+    ],
+    answer: 1,
+    explanation: 'Au Québec : 1 à 20 km/h de dépassement = 1 point, 21 à 30 km/h = 2 points, 31 à 45 km/h = 3 points, 46 à 60 km/h = 5 points, 61 km/h et plus = 6 points. Un dépassement de 40 km/h donne 5 points. Accumuler 15 points entraîne la révocation du permis. / In Quebec: 1 to 20 km/h over = 1 point, 21 to 30 km/h = 2 points, 31 to 45 km/h = 3 points, 46 to 60 km/h = 5 points, 61 km/h and over = 6 points. 40 km/h over gives 5 points. Accumulating 15 points results in licence revocation.',
+  },
+  {
+    id: 479,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quelle est la conséquence d\'une conduite avec un taux d\'alcool de 0,08 pour un motocycliste au Québec ?',
+    qEN: 'What is the consequence of riding with a BAC of 0.08 for a motorcyclist in Quebec?',
+    options: [
+      'Amende de 500 dollars et 3 points d\'inaptitude',
+      'Accusation criminelle, suspension immédiate du permis et saisie du véhicule',
+      'Suspension du permis de 90 jours et amende administrative seulement',
+      'Avertissement et escorte à la maison si c\'est une première infraction',
+    ],
+    optionsEN: [
+      'Fine of $500 and 3 demerit points',
+      'Criminal charge, immediate licence suspension and vehicle seizure',
+      '90-day licence suspension and administrative fine only',
+      'Warning and escort home if it is a first offence',
+    ],
+    answer: 1,
+    explanation: 'Un taux d\'alcool de 0,08 % ou plus est une infraction criminelle au Canada. La police peut immédiatement suspendre le permis, saisir le véhicule et porter des accusations criminelles. Une condamnation entraîne un casier judiciaire, une amende minimale de 1 000 dollars et une suspension de permis. / A BAC of 0.08% or more is a criminal offence in Canada. Police can immediately suspend the licence, seize the vehicle and lay criminal charges. A conviction results in a criminal record, a minimum $1,000 fine and a licence suspension.',
+  },
+  {
+    id: 480,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quelle est la limite d\'alcool pour un conducteur de moto en période probatoire au Québec ?',
+    qEN: 'What is the alcohol limit for a motorcycle rider on probation in Quebec?',
+    options: [
+      '0,08 % — la même limite que pour les conducteurs réguliers',
+      '0,05 % — la limite administrative qui entraîne une suspension',
+      '0,00 % — tolérance zéro pour les conducteurs en période probatoire',
+      '0,02 % — une tolérance minimale est accordée',
+    ],
+    optionsEN: [
+      '0.08% — the same limit as regular drivers',
+      '0.05% — the administrative limit triggering suspension',
+      '0.00% — zero tolerance for probationary drivers',
+      '0.02% — a minimal tolerance is granted',
+    ],
+    answer: 2,
+    explanation: 'Au Québec, les conducteurs en période probatoire et ceux de moins de 22 ans sont soumis à tolérance zéro — BAC de 0,00 %. Tout alcool détecté entraîne une suspension immédiate du permis. / In Quebec, drivers on probation and those under 22 years of age are subject to zero tolerance — BAC of 0.00%. Any detected alcohol results in immediate licence suspension.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — POLICE ORDERS / Ordres de la police — 481–483
+  // ============================================================
+
+  {
+    id: 481,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un agent de police vous fait signe de vous arrêter sur la route. Que faites-vous ?',
+    qEN: 'A police officer signals you to stop on the road. What do you do?',
+    options: [
+      'Immobilisez-vous immédiatement là où vous êtes, même au milieu de la route',
+      'Ralentissez progressivement, signalez et immobilisez-vous en lieu sûr aussi vite que possible',
+      'Continuez jusqu\'au prochain stationnement — s\'arrêter brusquement est dangereux',
+      'Accélérez pour rejoindre un endroit éclairé avant de vous arrêter',
+    ],
+    optionsEN: [
+      'Stop immediately where you are, even in the middle of the road',
+      'Slow progressively, signal and stop in a safe place as quickly as possible',
+      'Continue to the next parking lot — stopping abruptly is dangerous',
+      'Accelerate to reach a lit area before stopping',
+    ],
+    answer: 1,
+    explanation: 'Vous devez vous arrêter dès que possible en lieu sûr — sur l\'accotement droit, loin de la circulation. Ralentissez progressivement, mettez votre clignotant droit, et immobilisez-vous dans les 500 mètres. Ne fuyez jamais — c\'est une infraction grave qui s\'ajoute aux autres. / You must stop as soon as possible in a safe location — on the right shoulder, away from traffic. Slow progressively, signal right, and stop within 500 metres. Never flee — this is a serious additional offence.',
+  },
+  {
+    id: 482,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Lors d\'un contrôle routier, que devez-vous présenter à l\'agent de police ?',
+    qEN: 'At a roadside check, what must you present to the police officer?',
+    options: [
+      'Votre permis de conduire seulement — le reste est optionnel',
+      'Votre permis de conduire, la carte d\'immatriculation et la preuve d\'assurance',
+      'Votre permis, la carte d\'immatriculation, la preuve d\'assurance et une pièce d\'identité',
+      'Seulement votre carte d\'assurance maladie comme pièce d\'identité',
+    ],
+    optionsEN: [
+      'Your driver\'s licence only — the rest is optional',
+      'Your driver\'s licence, registration certificate and proof of insurance',
+      'Your licence, registration, proof of insurance and a photo ID',
+      'Only your health insurance card as identification',
+    ],
+    answer: 1,
+    explanation: 'Le Code de la sécurité routière exige que vous présentiez sur demande : votre permis de conduire valide, le certificat d\'immatriculation du véhicule et la preuve d\'assurance responsabilité. Ne pas pouvoir les fournir est une infraction supplémentaire. / The Highway Safety Code requires you to present upon request: your valid driver\'s licence, the vehicle registration certificate and proof of liability insurance. Failure to provide them is an additional offence.',
+  },
+  {
+    id: 483,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un policier vous demande de vous soumettre à un alcootest. Avez-vous le droit de refuser ?',
+    qEN: 'A police officer asks you to submit to a breathalyzer. Do you have the right to refuse?',
+    options: [
+      'Oui — vous pouvez refuser et demander un avocat avant tout test',
+      'Non — le refus de se soumettre à un alcootest est lui-même une infraction criminelle',
+      'Oui — mais seulement si le policier n\'a pas de cause raisonnable',
+      'Non — mais vous pouvez exiger que le test soit fait au poste de police',
+    ],
+    optionsEN: [
+      'Yes — you can refuse and demand a lawyer before any test',
+      'No — refusal to submit to a breathalyzer is itself a criminal offence',
+      'Yes — but only if the officer has no reasonable grounds',
+      'No — but you can demand the test be done at the police station',
+    ],
+    answer: 1,
+    explanation: 'Refuser de se soumettre à un alcootest ordonné par un agent est une infraction criminelle au Canada — punissable au même titre qu\'une conduite avec facultés affaiblies. Un policier peut ordonner un test s\'il a des motifs raisonnables. / Refusing to submit to a breathalyzer ordered by an officer is a criminal offence in Canada — punishable the same as impaired driving. An officer can order a test if they have reasonable grounds.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — ACCIDENT REPORTING / Déclaration d\'accident — 484–487
+  // ============================================================
+
+  {
+    id: 484,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Vous êtes impliqué dans un accident avec dommage matériel seulement. Quand devez-vous le déclarer à la police ?',
+    qEN: 'You are in an accident with property damage only. When must you report it to police?',
+    options: [
+      'Toujours — tout accident doit être déclaré à la police',
+      'Seulement si les dommages dépassent 2 000 dollars ou si une partie ne coopère pas',
+      'Seulement si le conducteur adverse quitte les lieux',
+      'Jamais si les deux parties s\'entendent à l\'amiable',
+    ],
+    optionsEN: [
+      'Always — every accident must be reported to police',
+      'Only if damage exceeds $2,000 or if one party does not cooperate',
+      'Only if the other driver leaves the scene',
+      'Never if both parties agree amicably',
+    ],
+    answer: 1,
+    explanation: 'Au Québec, un rapport de police est obligatoire si les dommages dépassent 2 000 dollars, s\'il y a des blessés, ou si l\'une des parties ne coopère pas. En dessous de ce seuil, les conducteurs peuvent échanger leurs informations entre eux. Signalez toujours l\'accident à votre assureur dans les délais prescrits. / In Quebec, a police report is required if damage exceeds $2,000, if there are injuries, or if one party does not cooperate. Below this threshold, drivers can exchange information. Always report the accident to your insurer within the prescribed time.',
+  },
+  {
+    id: 485,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'En cas d\'accident avec blessés au Québec, quelle est votre première obligation légale ?',
+    qEN: 'In an accident with injuries in Quebec, what is your first legal obligation?',
+    options: [
+      'Prendre des photos et noter les informations du conducteur adverse',
+      'Appeler le 911 et porter assistance aux blessés si vous le pouvez sans danger',
+      'Déplacer votre moto hors de la route pour ne pas entraver la circulation',
+      'Appeler votre assureur pour signaler l\'accident immédiatement',
+    ],
+    optionsEN: [
+      'Take photos and note the other driver\'s information',
+      'Call 911 and assist the injured if you can safely do so',
+      'Move your bike off the road to not obstruct traffic',
+      'Call your insurer to report the accident immediately',
+    ],
+    answer: 1,
+    explanation: 'La priorité absolue est d\'appeler le 911 et de porter secours aux blessés. La documentation vient après que les secours sont en route. Ne déplacez pas les blessés sauf s\'il y a un danger immédiat comme un incendie. / The absolute priority is to call 911 and assist the injured. Documentation comes after help is on the way. Do not move the injured unless there is immediate danger such as fire.',
+  },
+  {
+    id: 486,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Après un accident, quelles informations échangez-vous obligatoirement avec l\'autre conducteur ?',
+    qEN: 'After an accident, what information are you required to exchange with the other driver?',
+    options: [
+      'Seulement votre numéro de téléphone et celui de votre assureur',
+      'Votre nom, adresse, numéro de permis, numéro de plaque et nom de votre assureur',
+      'Votre nom et numéro de permis seulement — le reste est confidentiel',
+      'Votre numéro d\'assurance maladie pour faciliter les réclamations',
+    ],
+    optionsEN: [
+      'Only your phone number and your insurer\'s number',
+      'Your name, address, licence number, plate number and your insurer\'s name',
+      'Your name and licence number only — the rest is confidential',
+      'Your health insurance number to facilitate claims',
+    ],
+    answer: 1,
+    explanation: 'Le Code de la sécurité routière exige que vous fournissiez à l\'autre partie : votre nom et adresse, votre numéro de permis, le numéro de plaque de votre véhicule et le nom de votre assureur. Refuser de fournir ces renseignements est une infraction. / The Highway Safety Code requires you to provide to the other party: your name and address, your licence number, your vehicle\'s plate number and your insurer\'s name. Refusing to provide this information is an offence.',
+  },
+  {
+    id: 487,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Après un accident mineur sans blessé, l\'autre conducteur propose de régler à l\'amiable sans assurances. Quelle est la meilleure approche ?',
+    qEN: 'After a minor accident with no injuries, the other driver offers to settle privately without insurance. What is the best approach?',
+    options: [
+      'Acceptez — c\'est plus rapide et vous évitez une hausse de prime',
+      'Échangez les informations obligatoires, prenez des photos et déclarez quand même à votre assureur',
+      'Refusez catégoriquement — tout accident doit passer par les assurances',
+      'Acceptez seulement s\'il vous paie en argent comptant sur place',
+    ],
+    optionsEN: [
+      'Accept — it is faster and you avoid a premium increase',
+      'Exchange required information, take photos and still report to your insurer',
+      'Refuse categorically — every accident must go through insurance',
+      'Accept only if he pays you cash on the spot',
+    ],
+    answer: 1,
+    explanation: 'Même si vous vous entendez à l\'amiable, échangez toujours les informations légales et prenez des photos des dommages. Déclarez l\'accident à votre assureur — certains dommages et blessures apparaissent plus tard. Une entente verbale n\'est pas protégée légalement si l\'autre partie change d\'avis. / Even if you agree privately, always exchange the legal information and take photos of the damage. Report the accident to your insurer — some damage and injuries appear later. A verbal agreement is not legally protected if the other party changes their mind.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — INSURANCE REQUIREMENTS / Assurance obligatoire — 488–490
+  // ============================================================
+
+  {
+    id: 488,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Quelle assurance est obligatoire pour circuler avec une moto au Québec ?',
+    qEN: 'What insurance is mandatory to ride a motorcycle in Quebec?',
+    options: [
+      'L\'assurance tous risques — l\'assurance responsabilité seule ne suffit pas',
+      'L\'assurance responsabilité civile envers les tiers avec un minimum de 50 000 dollars',
+      'Le régime public de la SAAQ couvre tout — aucune assurance privée n\'est requise',
+      'L\'assurance accident de la moto seulement — la responsabilité est optionnelle',
+    ],
+    optionsEN: [
+      'Comprehensive insurance — liability alone is not enough',
+      'Third-party liability insurance with a minimum of $50,000',
+      'The SAAQ public plan covers everything — no private insurance is required',
+      'Motorcycle accident insurance only — liability is optional',
+    ],
+    answer: 1,
+    explanation: 'Au Québec, l\'assurance responsabilité civile est obligatoire avec un minimum de 50 000 dollars (bien que 1 à 2 millions soient recommandés). La SAAQ gère le régime sans égard à la faute pour les dommages corporels, mais votre assureur privé couvre les dommages matériels causés à autrui. / In Quebec, liability insurance is mandatory with a minimum of $50,000 (although $1 to $2 million is recommended). The SAAQ manages the no-fault plan for bodily injury, but your private insurer covers property damage caused to others.',
+  },
+  {
+    id: 489,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un agent vous demande votre preuve d\'assurance lors d\'un contrôle. Vous ne l\'avez pas sur vous. Que se passe-t-il ?',
+    qEN: 'An officer asks for your proof of insurance at a check stop. You do not have it with you. What happens?',
+    options: [
+      'Rien — vous avez 24 heures pour la présenter au poste de police',
+      'Vous recevez une infraction pour défaut de produire la preuve d\'assurance',
+      'L\'agent vérifie votre assurance dans sa base de données — aucune amende si vous êtes assuré',
+      'Votre moto est immédiatement saisie jusqu\'à ce que vous produisiez le document',
+    ],
+    optionsEN: [
+      'Nothing — you have 24 hours to present it at the police station',
+      'You receive an offence for failure to produce proof of insurance',
+      'The officer checks your insurance in their database — no fine if you are insured',
+      'Your bike is immediately seized until you produce the document',
+    ],
+    answer: 1,
+    explanation: 'Vous devez être en mesure de présenter votre attestation d\'assurance sur demande lors d\'un contrôle routier. Ne pas pouvoir la fournir est une infraction au Code de la sécurité routière, même si vous êtes effectivement assuré. Conservez votre attestation dans vos documents de moto. / You must be able to present your insurance certificate on request at a roadside check. Failing to provide it is an offence under the Highway Safety Code, even if you are actually insured. Keep your certificate with your motorcycle documents.',
+  },
+  {
+    id: 490,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Vous prêtez votre moto à un ami. Qui est couvert par votre assurance responsabilité en cas d\'accident ?',
+    qEN: 'You lend your motorcycle to a friend. Who is covered by your liability insurance if an accident occurs?',
+    options: [
+      'Personne — votre assurance ne couvre que vous en tant que propriétaire',
+      'Votre ami, si vous avez autorisé le prêt — l\'assurance responsabilité suit le véhicule',
+      'Votre ami seulement s\'il a son propre permis de moto valide et sa propre assurance',
+      'Les deux — votre ami par votre police, vous par la sienne',
+    ],
+    optionsEN: [
+      'Nobody — your insurance only covers you as the owner',
+      'Your friend, if you authorized the loan — liability insurance follows the vehicle',
+      'Your friend only if they have their own valid motorcycle licence and insurance',
+      'Both — your friend under your policy, you under theirs',
+    ],
+    answer: 1,
+    explanation: 'En général, l\'assurance responsabilité couvre le véhicule, pas seulement le propriétaire. Un conducteur autorisé par le propriétaire est couvert. Cependant, certaines polices ont des restrictions — vérifiez avec votre assureur. Si l\'ami n\'a pas de permis valide, la couverture peut être refusée. / In general, liability insurance covers the vehicle, not just the owner. A driver authorized by the owner is covered. However, some policies have restrictions — check with your insurer. If the friend does not have a valid licence, coverage may be denied.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — VEHICLE DEFECT REPORTING / Défectuosités — 491–493
+  // ============================================================
+
+  {
+    id: 491,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Votre moto présente un défaut mécanique dangereux. Êtes-vous autorisé à la conduire jusqu\'au garage ?',
+    qEN: 'Your motorcycle has a dangerous mechanical defect. Are you allowed to ride it to the garage?',
+    options: [
+      'Oui — vous pouvez rouler si c\'est pour aller directement au garage et si vous faites attention',
+      'Non — une moto avec un défaut dangereux ne doit pas être conduite sur la voie publique',
+      'Oui — mais seulement si vous êtes accompagné d\'un autre véhicule',
+      'Oui — avec les feux de détresse allumés en tout temps',
+    ],
+    optionsEN: [
+      'Yes — you can ride if it is to go directly to the garage and you are careful',
+      'No — a motorcycle with a dangerous defect must not be ridden on public roads',
+      'Yes — but only if accompanied by another vehicle',
+      'Yes — with hazard lights on at all times',
+    ],
+    answer: 1,
+    explanation: 'Le Code de la sécurité routière interdit de conduire un véhicule présentant un défaut susceptible de nuire à la sécurité. Un défaut dangereux doit être réparé avant de reprendre la route. Utilisez un remorqueur pour amener la moto au garage. / The Highway Safety Code prohibits driving a vehicle with a defect likely to affect safety. A dangerous defect must be repaired before returning to the road. Use a tow truck to take the bike to the garage.',
+  },
+  {
+    id: 492,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Vous découvrez un défaut de fabrication sur votre moto neuve qui pourrait affecter la sécurité. Que faites-vous ?',
+    qEN: 'You discover a manufacturing defect on your new motorcycle that could affect safety. What should you do?',
+    options: [
+      'Signalez-le seulement si le défaut provoque un accident',
+      'Contactez le concessionnaire et Transports Canada pour signaler le défaut potentiel de rappel',
+      'Faites réparer le défaut à vos frais et demandez un remboursement plus tard',
+      'Attendez que le fabricant annonce lui-même un rappel',
+    ],
+    optionsEN: [
+      'Report it only if the defect causes an accident',
+      'Contact the dealer and Transport Canada to report the potential recall defect',
+      'Have the defect repaired at your own expense and request reimbursement later',
+      'Wait for the manufacturer to announce a recall themselves',
+    ],
+    answer: 1,
+    explanation: 'Transports Canada gère les rappels de véhicules au Canada. Si vous suspectez un défaut de fabrication dangereux, signalez-le à votre concessionnaire et à Transports Canada. Les fabricants sont légalement tenus de corriger les défauts de sécurité. Les rappels actifs peuvent être vérifiés en ligne avec le NIV de votre moto. / Transport Canada manages vehicle recalls in Canada. If you suspect a dangerous manufacturing defect, report it to your dealer and to Transport Canada. Manufacturers are legally required to correct safety defects. Active recalls can be checked online with your bike\'s VIN.',
+  },
+  {
+    id: 493,
+    province: 'qc',
+    category: 'Quebec Law',
+    q: 'Un agent constate un défaut dangereux sur votre moto lors d\'un contrôle. Qu\'est-ce que l\'agent peut faire ?',
+    qEN: 'An officer notices a dangerous defect on your motorcycle during a check. What can the officer do?',
+    options: [
+      'Seulement vous donner un avertissement verbal',
+      'Vous remettre un avis de mise hors route et interdire la circulation du véhicule jusqu\'à réparation',
+      'Confisquer votre permis jusqu\'à ce que vous fassiez réparer la moto',
+      'Vous escorter jusqu\'à un garage agréé',
+    ],
+    optionsEN: [
+      'Only give you a verbal warning',
+      'Issue a removal from service notice and prohibit the vehicle from being driven until repaired',
+      'Confiscate your licence until you have the bike repaired',
+      'Escort you to an approved garage',
+    ],
+    answer: 1,
+    explanation: 'Un agent de la paix ou un contrôleur routier peut remettre un avis de mise hors route à toute moto présentant un défaut dangereux. Le véhicule ne peut plus circuler sur la voie publique jusqu\'à ce que le défaut soit corrigé et certifié. / A peace officer or road transport inspector can issue a removal from service notice for any motorcycle with a dangerous defect. The vehicle cannot be driven on public roads until the defect is corrected and certified.',
+  },
+
+  // ============================================================
+  // QUEBEC SAAQ — MIXED ROAD RULES / Règles diverses — 494–500
+  // ============================================================
+
+  {
+    id: 494,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Vous roulez sur une route à deux voies. Un camion déborde légèrement sur votre voie dans un virage. Quelle est votre réaction ?',
+    qEN: 'You are on a two-way road. A truck slightly crosses into your lane in a curve. What is your reaction?',
+    options: [
+      'Tenez votre voie — vous avez la priorité et le camion doit se corriger',
+      'Ralentissez, serrez-vous à droite dans votre voie et laissez-lui de l\'espace',
+      'Klaxonnez et maintenez votre trajectoire pour l\'avertir',
+      'Freinez brusquement et arrêtez-vous sur votre côté de la route',
+    ],
+    optionsEN: [
+      'Hold your lane — you have priority and the truck must correct',
+      'Slow down, move right within your lane and give it space',
+      'Honk and maintain your trajectory to warn it',
+      'Brake hard and stop on your side of the road',
+    ],
+    answer: 1,
+    explanation: 'Sur une moto, avoir légalement raison ne vous protège pas d\'une collision. Ralentissez, serrez-vous à droite de votre voie et laissez passer le camion. La prudence défensive prime toujours sur la priorité légale. / On a motorcycle, being legally right does not protect you from a collision. Slow down, move to the right within your lane and let the truck pass. Defensive caution always takes priority over legal right-of-way.',
+  },
+  {
+    id: 495,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Quelle est la distance légale minimale à maintenir lorsque vous doublez un cycliste au Québec ?',
+    qEN: 'What is the minimum legal distance to maintain when overtaking a cyclist in Quebec?',
+    options: [
+      '0,5 mètre',
+      '1 mètre',
+      '1,5 mètre',
+      '2 mètres',
+    ],
+    optionsEN: [
+      '0.5 metres',
+      '1 metre',
+      '1.5 metres',
+      '2 metres',
+    ],
+    answer: 2,
+    explanation: 'Le Code de la sécurité routière du Québec exige une distance minimale de 1,5 mètre lors d\'un dépassement de cycliste sur une route à 50 km/h ou plus. Cette distance protège le cycliste contre les turbulences et les manœuvres imprévues. Si la route est trop étroite, attendez qu\'il soit sécuritaire de doubler. / Quebec\'s Highway Safety Code requires a minimum distance of 1.5 metres when passing a cyclist on a road at 50 km/h or more. This distance protects the cyclist from turbulence and unexpected manoeuvres. If the road is too narrow, wait until it is safe to pass.',
+  },
+  {
+    id: 496,
+    province: 'qc',
+    category: 'Road Signs',
+    q: 'Un panneau jaune en forme de diamant avec un X et deux lignes diagonales est placé au bord de la route. Que signifie-t-il ?',
+    qEN: 'A yellow diamond sign with an X and two diagonal lines is placed at the roadside. What does it mean?',
+    options: [
+      'Intersection de deux routes à grande vitesse — priorité à droite',
+      'Passage à niveau — un chemin de fer croise la route en avant',
+      'Zone de travaux — attention aux travailleurs',
+      'Route glissante en avant — ralentissez',
+    ],
+    optionsEN: [
+      'High-speed road intersection — priority to the right',
+      'Level crossing — a railway crosses the road ahead',
+      'Construction zone — watch for workers',
+      'Slippery road ahead — slow down',
+    ],
+    answer: 1,
+    explanation: 'Le panneau jaune avec un X est le panneau de passage à niveau. Il indique qu\'un chemin de fer croise la route à courte distance. Réduisez la vitesse, regardez des deux côtés et soyez prêt à vous arrêter. Ce panneau est placé avant le passage à niveau. / The yellow X sign is the railway crossing sign. It indicates that a railway crosses the road at a short distance. Reduce speed, look both ways and be ready to stop. This sign is placed before the level crossing.',
+  },
+  {
+    id: 497,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quelle est la meilleure façon d\'augmenter votre visibilité aux autres conducteurs en conduite urbaine ?',
+    qEN: 'What is the best way to increase your visibility to other drivers in urban riding?',
+    options: [
+      'Roulez toujours en file derrière un camion pour profiter de son espace',
+      'Positionnez-vous dans la partie de la voie la plus visible dans les rétroviseurs des autres',
+      'Klaxonnez à chaque intersection pour signaler votre présence',
+      'Roulez sur la ligne centrale entre deux voies',
+    ],
+    optionsEN: [
+      'Always ride behind a truck to use its space',
+      'Position yourself in the part of the lane most visible in others\' mirrors',
+      'Honk at every intersection to signal your presence',
+      'Ride on the centre line between two lanes',
+    ],
+    answer: 1,
+    explanation: 'La position dans la voie est votre premier outil de visibilité. Positionnez-vous pour être le plus visible dans les rétroviseurs des conducteurs devant et à côté de vous — généralement à gauche de la voie en trafic dense. Évitez les angles morts. Un motocycliste visible est plus en sécurité. / Lane position is your primary visibility tool. Position yourself to be most visible in the mirrors of drivers ahead of and beside you — typically on the left side of the lane in dense traffic. Avoid blind spots. A visible motorcyclist is safer.',
+  },
+  {
+    id: 498,
+    province: 'qc',
+    category: 'Riding Scenarios',
+    q: 'Vous roulez derrière un grand VUS sur l\'autoroute. Quel est le principal problème de cette position ?',
+    qEN: 'You are riding behind a large SUV on the highway. What is the main problem with this position?',
+    options: [
+      'Le VUS bloque le vent et rend la conduite moins stable',
+      'Le VUS bloque votre vision en avant — vous ne voyez pas les dangers au-delà de lui',
+      'Votre consommation d\'essence augmente dans le sillage du VUS',
+      'Les conducteurs derrière vous ne peuvent pas vous voir derrière le VUS',
+    ],
+    optionsEN: [
+      'The SUV blocks the wind and makes riding less stable',
+      'The SUV blocks your forward vision — you cannot see hazards beyond it',
+      'Your fuel consumption increases in the SUV\'s slipstream',
+      'Drivers behind cannot see you behind the SUV',
+    ],
+    answer: 1,
+    explanation: 'Rouler directement derrière un grand véhicule supprime votre vue en avant — vous ne pouvez pas voir les accidents ou les ralentissements jusqu\'à ce qu\'il soit trop tard. Augmentez votre distance de suivi à 4 secondes pour avoir le temps de voir et réagir à ce qui se passe devant le VUS. / Riding directly behind a large vehicle eliminates your forward view — you cannot see accidents or slowdowns until it is too late. Increase your following distance to 4 seconds to have time to see and react to what is happening ahead of the SUV.',
+  },
+  {
+    id: 499,
+    province: 'qc',
+    category: 'Road Rules',
+    q: 'Sur une route à deux voies sans ligne médiane, vous croisez un véhicule venant en sens inverse. Quelle règle s\'applique ?',
+    qEN: 'On a two-lane road with no centre line, you meet a vehicle coming the other way. What rule applies?',
+    options: [
+      'Le conducteur en montée a priorité',
+      'Chaque conducteur reste à droite de la chaussée — la règle générale de la circulation s\'applique',
+      'Klaxonnez et celui qui est le plus proche du centre cède le passage',
+      'Aucune règle spéciale — négociez visuellement avec l\'autre conducteur',
+    ],
+    optionsEN: [
+      'The uphill driver has priority',
+      'Each driver keeps to the right of the road — the general traffic rule applies',
+      'Honk and whoever is closest to the centre yields',
+      'No special rule — negotiate visually with the other driver',
+    ],
+    answer: 1,
+    explanation: 'La règle de base est de circuler à droite de la chaussée, même sans ligne peinte. En l\'absence de marquage, gardez votre droite et laissez de l\'espace pour le véhicule venant en sens inverse. Sur une route étroite, ralentissez pour permettre le croisement en toute sécurité. / The basic rule is to drive on the right side of the road, even without painted lines. In the absence of markings, keep right and leave space for the oncoming vehicle. On a narrow road, slow down to allow safe passing.',
+  },
+  {
+    id: 500,
+    province: 'qc',
+    category: 'Motorcycle Safety',
+    q: 'Quelle est la règle de base pour déterminer si votre vitesse est appropriée dans des conditions données ?',
+    qEN: 'What is the basic rule for determining if your speed is appropriate in given conditions?',
+    options: [
+      'Respectez la limite affichée — elle est calculée pour toutes les conditions',
+      'Roulez à une vitesse qui vous permet de vous arrêter dans la distance que vous pouvez voir devant vous',
+      'Adaptez votre vitesse à celle des voitures qui vous entourent',
+      'Réduisez de 20 km/h par rapport à la limite affichée quand il pleut',
+    ],
+    optionsEN: [
+      'Respect the posted limit — it is calculated for all conditions',
+      'Ride at a speed that allows you to stop within the distance you can see ahead',
+      'Adapt your speed to that of the cars around you',
+      'Reduce by 20 km/h from the posted limit when it rains',
+    ],
+    answer: 1,
+    explanation: 'La règle fondamentale : vous devez toujours pouvoir vous arrêter dans la distance visible devant vous. La limite affichée est le maximum légal dans des conditions idéales — pluie, nuit, courbes et travaux peuvent exiger moins. Conduire trop vite pour les conditions est une infraction même sous la limite. / The fundamental rule: you must always be able to stop within the visible distance ahead. The posted limit is the legal maximum in ideal conditions — rain, night, curves and construction may require less. Driving too fast for conditions is an offence even below the posted limit.',
+  },
+
 ];
 
 // ============================================================
