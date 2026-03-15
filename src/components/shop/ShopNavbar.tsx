@@ -28,10 +28,10 @@ export default function ShopNavbar({ shop, lang, onToggleLang }: ShopNavbarProps
         left: 0,
         right: 0,
         zIndex: 200,
-        background: '#0a0a12e0',
+        background: 'rgba(255,255,255,0.92)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
-        borderBottom: '1px solid #1e1e35',
+        borderBottom: '1px solid #e8e3d8',
       }}
     >
       <div
@@ -60,14 +60,9 @@ export default function ShopNavbar({ shop, lang, onToggleLang }: ShopNavbarProps
           {name}
         </a>
 
-        {/* Nav links — center (hidden on mobile < 600px via inline media trick) */}
+        {/* Nav links — center */}
         <div
-          style={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 0,
-          }}
+          style={{ flex: 1, display: 'flex', justifyContent: 'center', gap: 0 }}
           className="shop-nav-links"
         >
           {navLinks.map((link) => (
@@ -77,7 +72,7 @@ export default function ShopNavbar({ shop, lang, onToggleLang }: ShopNavbarProps
               style={{
                 fontSize: 13,
                 fontWeight: 600,
-                color: '#a0a0b8',
+                color: '#555',
                 textDecoration: 'none',
                 padding: '8px 12px',
                 borderRadius: 6,
@@ -97,7 +92,7 @@ export default function ShopNavbar({ shop, lang, onToggleLang }: ShopNavbarProps
               fontWeight: 700,
               color: shop.accentColor,
               textDecoration: 'none',
-              background: `${shop.accentColor}15`,
+              background: `${shop.accentColor}12`,
               border: `1px solid ${shop.accentColor}35`,
               borderRadius: 6,
               padding: '5px 10px',
@@ -116,7 +111,7 @@ export default function ShopNavbar({ shop, lang, onToggleLang }: ShopNavbarProps
           display: 'flex',
           gap: 0,
           justifyContent: 'center',
-          borderTop: '1px solid #1e1e3560',
+          borderTop: '1px solid #e8e3d860',
           padding: '4px 0',
         }}
         className="shop-nav-mobile"
@@ -128,7 +123,7 @@ export default function ShopNavbar({ shop, lang, onToggleLang }: ShopNavbarProps
             style={{
               fontSize: 11,
               fontWeight: 600,
-              color: '#6b6b80',
+              color: '#888',
               textDecoration: 'none',
               padding: '4px 10px',
             }}
