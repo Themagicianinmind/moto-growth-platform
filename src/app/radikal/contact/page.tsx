@@ -115,7 +115,7 @@ export default function RadikalContactPage() {
               </p>
               <a
                 href="/radikal#booking"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: ACCENT, color: '#fff', padding: '9px 18px', borderRadius: 100, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: ACCENT, color: '#fff', padding: '12px 20px', borderRadius: 100, fontSize: 13, fontWeight: 700, textDecoration: 'none', minHeight: 44 }}
               >
                 {lang === 'fr' ? 'R\u00e9server' : 'Book'} →
               </a>
