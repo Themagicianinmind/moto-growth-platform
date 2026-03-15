@@ -271,3 +271,49 @@
 - All 13 service pages ✅ — bilingual, JSON-LD schema, MegaNav, FAQ accordion
 - `/api/financing` ✅ — Supabase insert, validated, live in production
 - Booking and lead APIs were already wired from earlier sessions
+
+---
+
+## March 15, 2026 — Day 6-7 Sprint
+
+### Env Vars → Email Notifications
+- `RESEND_API_KEY` was already in Vercel but `DYNAMIK_NOTIFY_EMAIL` and `RADIKAL_NOTIFY_EMAIL` were missing — silent fail (graceful degradation by design in `/api/booking`).
+- Added `DYNAMIK_NOTIFY_EMAIL`, `RADIKAL_NOTIFY_EMAIL`, `RESEND_FROM_EMAIL` via `npx vercel env add ... production`.
+- **LESSON:** Always verify ALL required env vars at session start. `vercel env ls` takes 3 seconds and prevents head-scratching over silent failures.
+- Added Resend notification to `/api/financing` — same graceful pattern: try/catch wraps email, failure is non-fatal, Supabase insert always succeeds regardless.
+
+### LocalBusiness JSON-LD on Layouts
+- JSON-LD injected via `<script type="application/ld+json" dangerouslySetInnerHTML>` in server-side layout files (`/dynamik/layout.tsx`, `/radikal/layout.tsx`).
+- Dynamik → `@type: MotorcycleDealer` (sells Vespa/Piaggio). Radikal → `@type: MotorcycleRepair` (repair + parts focus).
+- areaServed GeoCircle: Dynamik 50km radius, Radikal 75km (broader powersports clientele).
+- **LESSON:** Never put JSON-LD in `'use client'` page files — they can't export `metadata`. Put it in server-side layout.tsx via dangerouslySetInnerHTML. This propagates to every route under that layout automatically.
+
+### About + Contact Pages (4 pages)
+- All MegaNav links resolved — no more 404s on About/Contact.
+- Radikal About includes the Police Harley-Davidson callout (dark navy section, same restraint as PoliceTrust strip on homepage).
+- Both Contact pages include iframe Google Maps embed (no API key needed for basic embed).
+- **LESSON:** Google Maps embed URL is `https://maps.google.com/maps?q=ADDRESS&output=embed` — always add `output=embed` to get the iframe version.
+
+### Marketplace MVP Architecture
+- Table: `marketplace_listings` with status='pending' on insert. Listings are admin-approved before going 'active'. Public RLS only shows `status = 'active'`.
+- API routes: `GET /api/marketplace` (browse with filters), `POST /api/marketplace` (create), `GET /api/marketplace/[id]` (single).
+- Pages: `/marketplace` (browse + filters), `/marketplace/[id]` (detail with sticky price card), `/marketplace/sell` (form: tier selection → vehicle details → seller info).
+- **Payment model:** No online payment yet — payment collected during phone confirmation. User sees success state with note about 24-hour review.
+- **Photo upload:** Phase 1 = optional URL field (Imgur/Google Photos link). Direct upload = Phase 2 (requires Supabase Storage + CORS config).
+- **LESSON:** Supabase RLS on marketplace: anon INSERT must have `WITH CHECK (true)` to allow unauthenticated submissions. SELECT policy uses `USING (status = 'active')` to filter out pending/sold listings.
+
+### i18n Audit Result
+- All 11 pages audited: **100% pass** — every page has `useState<Lang>('fr')` default, localStorage read on mount, language toggle, no hardcoded strings.
+- **LESSON:** The bilingual pattern (fr default → check localStorage → toggle updates both state + localStorage) was implemented consistently from Day 1 and maintained throughout. Document the pattern once, enforce it in CLAUDE.md rules, never deviate.
+
+### Mobile Audit (23 issues found)
+- Critical fix: `marketplace/[id]` sidebar grid used `1fr 360px` with `max-width: 640px` breakpoint — at 375px viewport, the 360px sidebar would consume 98% of width. Changed breakpoint to 760px.
+- Image heights: Use `clamp(220px, 55vw, 360px)` pattern instead of fixed pixels for listing images.
+- Prices: Use `clamp(24px, 5vw, 32px)` for large price displays.
+- `flexWrap: 'wrap'` already present on most horizontal layouts — this was the right call from Day 1.
+- Fox Racing category grid already had 720px + 480px dual breakpoints — no fix needed.
+- **LESSON:** The "audit then fix" pattern works: run a single agent to audit all 11 pages in one pass, get structured list of issues, then apply targeted fixes. Faster than inspecting each file manually.
+
+### Vercel Chrome Extension Timeout
+- Chrome extension tool (screenshot, click) repeatedly timed out during Vercel dashboard interaction.
+- **LESSON:** When Chrome extension times out, fall back to CLI immediately: `npx vercel env add VAR_NAME production`. CLI is faster, more reliable, and scriptable. Don't retry Chrome extension more than 2× before switching to CLI.

@@ -20,27 +20,27 @@
 # Email (Phase 2): Resend
 
 # ============================================================
-# DEPLOYMENT STATUS — WHAT'S LIVE (Updated March 15, 2026 — Day 3)
+# DEPLOYMENT STATUS — WHAT'S LIVE (Updated March 15, 2026 — Day 6-7)
 # ============================================================
-# ✅ Dynamik homepage — hero with Vespa photos, stats, services, Vespa showcase,
-#    model cards, about Steve, financing section (OPC-compliant), booking CTA, reviews, footer
-# ✅ Dynamik /vespa page — Sprint, Primavera, GTS model cards with specs + dual CTA
-#    ("Explorer ce modèle" + "Demander l'info") + "Why buy from us" section
-# ✅ Radikal homepage — full 13-section build:
-#    dark cinematic hero (hero.jpg), PoliceTrust strip, StatsStrip, ServiceGrid,
-#    VehicleCategories (6 cards with images), FoxRacingShowcase, PartsCategories (8 tiles),
-#    BrandsBar (11 brands), ReviewCards, AboutOwner (Eric), BookingForm, DarkBookingCTA, ShopFooter
-# ✅ Exam app — 50 QC SAAQ questions, bilingual, TTS working
-# ✅ Shared components — ShopNavbar, ShopFooter, StatsStrip, ServiceGrid, ServiceCard,
-#    SectionHeader, LanguageToggle, ReviewCards, AboutOwner, BookingForm, FinancingSection
-# ✅ New components (Day 3) — RadikalHeroSection, VehicleCategories, FoxRacingShowcase,
-#    PartsCategories, BrandsBar, DarkBookingCTA
-# ✅ Vespa/Piaggio product images — 8 images self-hosted in /public/images/vespa/
-# ✅ Radikal Unsplash images — 6 images self-hosted in /public/images/radikal/
+# ✅ Dynamik homepage + /vespa page
+# ✅ Radikal homepage + /fox-racing page
+# ✅ Exam app — 50 QC SAAQ questions, bilingual, TTS
+# ✅ 13 service pages — all routes + shared ServicePage template (bilingual)
+# ✅ About + Contact pages — both shops (4 pages, 0 404s)
+# ✅ Supabase backend — bookings, leads, financing_leads, marketplace_listings tables
+# ✅ API routes — /api/booking, /api/financing, /api/lead, /api/marketplace, /api/marketplace/[id]
+# ✅ Resend email notifications — booking + financing (all 4 env vars set in Vercel)
+# ✅ LocalBusiness JSON-LD — MotorcycleDealer (Dynamik) + MotorcycleRepair (Radikal) on all pages
+# ✅ Marketplace MVP — /marketplace browse, /marketplace/[id] detail, /marketplace/sell form
+# ✅ i18n audit complete — all pages: French default, localStorage persist, toggle present
+# ✅ Mobile audit — 23 issues found, critical layout-breaking ones fixed
+# ✅ 33 routes total — all compiling clean
 #
-# 🔄 NEXT (Day 4): Individual service pages for SEO + Supabase booking forms
-# 🔄 NEXT (Day 5): Fox Racing showcase page for Radikal
-# ⬜ UPCOMING: Marketplace MVP, Schema markup, DNS migration
+# ⬜ NEXT: DNS cutover (dynamikperformance.com + radikalmotosport.com → 76.76.21.21)
+# ⬜ NEXT: 450-question exam expansion (Phase 2)
+# ⬜ NEXT: Marketplace listing activation flow (admin approval → status=active)
+# ⬜ NEXT: Resend welcome email for marketplace sellers
+# ⬜ NEXT: Google Business Profile optimization + review links
 
 # ============================================================
 # BUSINESSES SERVED — STRICT SEPARATION
