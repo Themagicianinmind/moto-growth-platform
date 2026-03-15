@@ -175,102 +175,86 @@ export default function DynamikPage() {
           </div>
         </div>
 
-        {/* Right panel — Vespa visual */}
+        {/* Right panel — Official Vespa Sprint imagery */}
         <div
           style={{
-            background: 'linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 60%, #0f1a2e 100%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '40px 32px',
             position: 'relative',
             overflow: 'hidden',
             minHeight: 400,
           }}
         >
-          {/* Background pattern */}
+          {/* Official Vespa Sprint photo — authorized dealer use */}
+          <img
+            src="/images/vespa/sprint-gallery.jpg"
+            alt={lang === 'fr' ? 'Vespa Sprint — Dynamik Performance Gatineau' : 'Vespa Sprint — Dynamik Performance Gatineau'}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              position: 'absolute',
+              inset: 0,
+            }}
+          />
+          {/* Dark gradient overlay for text legibility */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              backgroundImage: 'radial-gradient(circle at 60% 40%, rgba(37,99,235,0.12) 0%, transparent 60%)',
-              pointerEvents: 'none',
+              background: 'linear-gradient(135deg, rgba(10,10,10,0.55) 0%, rgba(15,26,46,0.40) 100%)',
             }}
           />
 
-          {/* Official imagery placeholder — replace with real vespa.com image */}
+          {/* Overlay content */}
           <div
             style={{
-              fontSize: 120,
-              lineHeight: 1,
-              marginBottom: 24,
               position: 'relative',
-              filter: 'drop-shadow(0 20px 40px rgba(37,99,235,0.3))',
+              zIndex: 2,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+              height: '100%',
+              padding: '40px 32px',
             }}
           >
-            🛵
-          </div>
-
-          {/* Serif overlay text */}
-          <p
-            style={{
-              fontSize: 'clamp(28px, 3.5vw, 42px)',
-              fontWeight: 300,
-              color: '#f0ede6',
-              fontFamily: SERIF,
-              textAlign: 'center',
-              lineHeight: 1.1,
-              letterSpacing: '-0.01em',
-              position: 'relative',
-            }}
-          >
-            {lang === 'fr' ? 'La gamme Vespa' : 'The Vespa Range'}
-            <br />
-            <span
+            {/* Serif overlay text */}
+            <p
               style={{
-                color: ACCENT,
-                fontSize: '0.7em',
-                fontWeight: 400,
-                letterSpacing: '0.05em',
+                fontSize: 'clamp(28px, 3.5vw, 42px)',
+                fontWeight: 300,
+                color: '#f0ede6',
+                fontFamily: SERIF,
+                textAlign: 'center',
+                lineHeight: 1.1,
+                letterSpacing: '-0.01em',
+                marginBottom: 20,
               }}
             >
-              {lang === 'fr' ? 'à Gatineau' : 'in Gatineau'}
-            </span>
-          </p>
-
-          {/* Official dealer badge */}
-          <div
-            style={{
-              marginTop: 24,
-              padding: '8px 20px',
-              background: 'rgba(255,255,255,0.07)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 100,
-              fontSize: 11,
-              color: 'rgba(255,255,255,0.6)',
-              fontWeight: 600,
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              position: 'relative',
-            }}
-          >
-            {lang === 'fr' ? '★ Concessionnaire officiel Outaouais' : '★ Official Dealer Outaouais'}
+              {lang === 'fr' ? 'La gamme Vespa' : 'The Vespa Range'}
+              <br />
+              <span style={{ color: ACCENT, fontSize: '0.7em', fontWeight: 400, letterSpacing: '0.05em' }}>
+                {lang === 'fr' ? 'à Gatineau' : 'in Gatineau'}
+              </span>
+            </p>
+            {/* Official dealer badge */}
+            <div
+              style={{
+                padding: '8px 20px',
+                background: 'rgba(255,255,255,0.12)',
+                border: '1px solid rgba(255,255,255,0.25)',
+                borderRadius: 100,
+                fontSize: 11,
+                color: 'rgba(255,255,255,0.85)',
+                fontWeight: 600,
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
+              {lang === 'fr' ? '★ Concessionnaire officiel Outaouais' : '★ Official Dealer Outaouais'}
+            </div>
           </div>
-
-          {/* Replace photo note — visible only in dev, remove before launch */}
-          <p
-            style={{
-              position: 'absolute',
-              bottom: 12,
-              right: 12,
-              fontSize: 10,
-              color: 'rgba(255,255,255,0.2)',
-              fontStyle: 'italic',
-            }}
-          >
-            {lang === 'fr' ? '[ Photo Vespa officielle à intégrer ]' : '[ Official Vespa photo to add ]'}
-          </p>
         </div>
       </section>
 
@@ -317,13 +301,32 @@ export default function DynamikPage() {
       <section
         id="vespa-showcase"
         style={{
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a2234 100%)',
-          padding: 'clamp(72px, 10vw, 120px) 24px',
           position: 'relative',
           overflow: 'hidden',
           textAlign: 'center',
         }}
       >
+        {/* Official Vespa GTS background image */}
+        <img
+          src="/images/vespa/gts-hero.jpg"
+          alt="Vespa GTS — Dynamik Performance Gatineau"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 40%',
+          }}
+        />
+        {/* Dark overlay — keeps text readable */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(135deg, rgba(10,10,10,0.82) 0%, rgba(15,26,46,0.75) 100%)',
+          }}
+        />
         {/* Decorative radial glow */}
         <div
           style={{
@@ -337,6 +340,7 @@ export default function DynamikPage() {
             pointerEvents: 'none',
           }}
         />
+        <div style={{ position: 'relative', zIndex: 1, padding: 'clamp(72px, 10vw, 120px) 24px' }}>
 
         <div style={{ maxWidth: 800, margin: '0 auto', position: 'relative' }}>
           {/* Eyebrow */}
@@ -402,6 +406,7 @@ export default function DynamikPage() {
             {tr('vespaShowcaseCTA', lang)} →
           </a>
         </div>
+        </div>
       </section>
 
       {/* ── VESPA MODELS — 3 CARDS ── */}
@@ -443,32 +448,27 @@ export default function DynamikPage() {
                   cursor: 'pointer',
                 }}
               >
-                {/* Image placeholder — replace with official vespa.com imagery */}
+                {/* Official Vespa imagery — authorized dealer */}
                 <div
                   style={{
                     height: 220,
-                    background: `linear-gradient(135deg, #f5f4f0 0%, #e8e3d8 100%)`,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
                     position: 'relative',
                     overflow: 'hidden',
+                    background: '#f5f4f0',
                   }}
                 >
-                  <span style={{ fontSize: 72, filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))', transition: 'transform 0.3s', transform: hoveredModel === model.id ? 'scale(1.08)' : 'scale(1)' }}>🛵</span>
-                  <span
+                  <img
+                    src={`/images/vespa/${model.id}-hero.jpg`}
+                    alt={lang === 'fr' ? model.nameFr : model.nameEn}
                     style={{
-                      position: 'absolute',
-                      bottom: 10,
-                      right: 10,
-                      fontSize: 9,
-                      color: '#aaa',
-                      fontStyle: 'italic',
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      transition: 'transform 0.4s ease',
+                      transform: hoveredModel === model.id ? 'scale(1.06)' : 'scale(1)',
                     }}
-                  >
-                    {lang === 'fr' ? 'Photo officielle à venir' : 'Official photo coming'}
-                  </span>
+                  />
                 </div>
 
                 {/* Content */}
