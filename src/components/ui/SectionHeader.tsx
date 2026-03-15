@@ -2,9 +2,11 @@ interface SectionHeaderProps {
   label: string;
   heading: string;
   accentColor?: string;
+  textColor?: string;
+  headingStyle?: React.CSSProperties;
 }
 
-export default function SectionHeader({ label, heading, accentColor }: SectionHeaderProps) {
+export default function SectionHeader({ label, heading, accentColor, textColor, headingStyle }: SectionHeaderProps) {
   return (
     <div style={{ marginBottom: 24 }}>
       <p
@@ -23,8 +25,9 @@ export default function SectionHeader({ label, heading, accentColor }: SectionHe
         style={{
           fontSize: 28,
           fontWeight: 800,
-          color: '#e8e8f0',
+          color: textColor ?? '#e8e8f0',
           lineHeight: 1.2,
+          ...headingStyle,
         }}
       >
         {heading}
