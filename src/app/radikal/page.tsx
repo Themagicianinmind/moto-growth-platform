@@ -28,7 +28,7 @@ export default function RadikalPage() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#0f0f1a' }}>
+    <div style={{ minHeight: '100vh', background: '#ffffff' }}>
       <ShopNavbar shop={shop} lang={lang} onToggleLang={handleLangToggle} />
       <HeroSection shop={shop} lang={lang} />
       <ServiceGrid shop={shop} lang={lang} />
