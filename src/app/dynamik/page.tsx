@@ -10,6 +10,7 @@ import ServiceCard from '@/components/shared/ServiceCard';
 import SectionHeader from '@/components/ui/SectionHeader';
 import BookingForm from '@/components/shop/BookingForm';
 import ReviewCards from '@/components/shop/ReviewCards';
+import FinancingSection from '@/components/shop/FinancingSection';
 
 const shop = shops.dynamik;
 
@@ -783,6 +784,7 @@ export default function DynamikPage() {
       </section>
 
       {/* ── REVIEWS ── */}
+      <FinancingSection shop={shop} lang={lang} />
       <ReviewCards shop={shop} lang={lang} />
 
       {/* ── BOOKING FORM ── */}

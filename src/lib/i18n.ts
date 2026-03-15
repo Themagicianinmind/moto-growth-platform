@@ -207,6 +207,48 @@ export const t = {
   reviewOnGoogle: { fr: 'Laisser un avis →', en: 'Leave a Review →' },
 
   // ============================
+  // FINANCING SECTION (Dynamik)
+  // ============================
+  financingLabel: { fr: 'FINANCEMENT', en: 'FINANCING' },
+  financingHeading: { fr: 'Roulez maintenant, payez à votre rythme', en: 'Ride Now, Pay Your Way' },
+  financingSubtitle: {
+    fr: 'Dynamik Performance offre des options de financement flexibles pour votre nouvelle Vespa ou Piaggio. Taux promotionnels disponibles.',
+    en: 'Dynamik Performance offers flexible financing options for your new Vespa or Piaggio. Promotional rates available.',
+  },
+  financingRate: { fr: 'À partir de', en: 'From' },
+  financingRateValue: { fr: '0 %', en: '0%' },
+  financingRateNote: { fr: 'sur 24 mois — taux promotionnel Piaggio*', en: 'for 24 months — Piaggio promotional rate*' },
+  financingPartners: { fr: 'Nos partenaires financiers', en: 'Our Financing Partners' },
+  financingTD: { fr: 'TD Financement Auto', en: 'TD Auto Finance' },
+  financingTDDesc: { fr: 'Partenaire officiel Piaggio Canada. Taux promotionnels 0 %–0,99 % sur modèles sélectionnés', en: 'Official Piaggio Canada partner. 0%–0.99% promotional rates on selected models' },
+  financingTDBadge: { fr: 'Partenaire officiel', en: 'Official Partner' },
+  financingDesjardins: { fr: 'Desjardins', en: 'Desjardins' },
+  financingDesjardinsDesc: { fr: 'Prêt véhicule de loisirs. La coopérative de confiance au Québec', en: 'Recreational vehicle loan. Quebec\'s trusted cooperative' },
+  financingLendCare: { fr: 'LendCare', en: 'LendCare' },
+  financingLendCareDesc: { fr: 'Options flexibles pour tous les profils de crédit', en: 'Flexible options for all credit profiles' },
+  financingFormLabel: { fr: 'PRÉQUALIFICATION', en: 'PRE-QUALIFICATION' },
+  financingFormHeading: { fr: 'Vérifiez votre admissibilité', en: 'Check Your Eligibility' },
+  financingFormSubtitle: { fr: 'Formulaire sans engagement. Nous vous contactons sous 24h.', en: 'No-commitment form. We contact you within 24h.' },
+  financingName: { fr: 'Votre nom complet', en: 'Full name' },
+  financingPhone: { fr: 'Téléphone', en: 'Phone' },
+  financingEmail: { fr: 'Courriel', en: 'Email' },
+  financingVehicle: { fr: 'Véhicule souhaité', en: 'Vehicle of interest' },
+  financingSelectVehicle: { fr: '— Choisir un modèle —', en: '— Select a model —' },
+  financingDownPayment: { fr: 'Mise de fonds estimée', en: 'Estimated down payment' },
+  financingEmployment: { fr: 'Situation d\'emploi', en: 'Employment status' },
+  financingSelectEmployment: { fr: '— Sélectionner —', en: '— Select —' },
+  financingEmployed: { fr: 'Employé(e) à temps plein', en: 'Full-time employed' },
+  financingPartTime: { fr: 'Employé(e) à temps partiel', en: 'Part-time employed' },
+  financingSelfEmployed: { fr: 'Travailleur(se) autonome', en: 'Self-employed' },
+  financingRetired: { fr: 'Retraité(e)', en: 'Retired' },
+  financingOther: { fr: 'Autre', en: 'Other' },
+  financingSubmit: { fr: 'Soumettre ma demande', en: 'Submit My Request' },
+  financingSuccess: { fr: 'Demande reçue ! Steve vous contactera sous 24h pour discuter des options.', en: 'Request received! Steve will contact you within 24h to discuss options.' },
+  financingError: { fr: 'Veuillez remplir tous les champs obligatoires.', en: 'Please fill in all required fields.' },
+  financingDisclaimer: { fr: '* Taux promotionnels sous réserve d\'approbation de crédit. Offre valable sur les modèles sélectionnés. Contactez-nous pour les détails.', en: '* Promotional rates subject to credit approval. Offer valid on selected models. Contact us for details.' },
+  financingConsent: { fr: 'En soumettant ce formulaire, j\'accepte d\'être contacté par Dynamik Performance.', en: 'By submitting this form, I agree to be contacted by Dynamik Performance.' },
+
+  // ============================
   // POLICE TRUST (Radikal only)
   // ============================
   policeTrustLabel: { fr: 'CONFIANCE INSTITUTIONNELLE', en: 'INSTITUTIONAL TRUST' },
