@@ -37,10 +37,12 @@ export default function FinancingSection({ shop, lang }: FinancingSectionProps) 
       return;
     }
     try {
-      // Phase 1: save to localStorage
-      const existing = JSON.parse(localStorage.getItem('moto-financing') || '[]');
-      existing.push({ ...form, shopId: shop.id, submittedAt: new Date().toISOString() });
-      localStorage.setItem('moto-financing', JSON.stringify(existing));
+      const res = await fetch('/api/financing', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, shopId: shop.id, lang }),
+      });
+      if (!res.ok) throw new Error('API error');
       setSubmitted(true);
       setError(false);
     } catch {
