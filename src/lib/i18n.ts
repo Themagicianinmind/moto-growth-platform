@@ -5,8 +5,9 @@
 export type Lang = 'fr' | 'en';
 
 export const t = {
+
   // ============================
-  // NAVIGATION / GLOBAL
+  // GLOBAL / NAV
   // ============================
   langToggle: { fr: 'EN', en: 'FR' },
   listen: { fr: 'Écouter', en: 'Listen' },
@@ -14,6 +15,54 @@ export const t = {
   audioOn: { fr: '🔊 Audio', en: '🔊 Audio' },
   audioOff: { fr: '🔇 Muet', en: '🔇 Muted' },
   backToHome: { fr: '← Retour', en: '← Back' },
+
+  // ============================
+  // MEGA-NAV
+  // ============================
+  navServices: { fr: 'Services', en: 'Services' },
+  navVespa: { fr: 'Vespa & Piaggio', en: 'Vespa & Piaggio' },
+  navParts: { fr: 'Pièces & Accessoires', en: 'Parts & Accessories' },
+  navFoxRacing: { fr: 'Fox Racing', en: 'Fox Racing' },
+  navMarketplace: { fr: 'Marketplace', en: 'Marketplace' },
+  navAbout: { fr: 'À propos', en: 'About' },
+  navContact: { fr: 'Contact', en: 'Contact' },
+  navExam: { fr: 'Examen moto', en: 'Moto Exam' },
+  navPromotions: { fr: 'Promotions', en: 'Promotions' },
+  navBookNow: { fr: 'Réserver', en: 'Book Now' },
+  navGetQuote: { fr: 'Soumission', en: 'Get a Quote' },
+
+  // Nav dropdown — Services (Dynamik)
+  navRepair: { fr: 'Réparation moto', en: 'Motorcycle Repair' },
+  navRepairDesc: { fr: 'Diagnostic, électronique, mécanique', en: 'Diagnostics, electronics, mechanics' },
+  navMaintenance: { fr: 'Entretien & révision', en: 'Maintenance & Service' },
+  navMaintenanceDesc: { fr: 'Vidange, freins, pneus, chaîne', en: 'Oil change, brakes, tires, chain' },
+  navModifications: { fr: 'Modifications', en: 'Modifications' },
+  navModificationsDesc: { fr: 'Personnalisation experte', en: 'Expert customization' },
+  navTowing: { fr: 'Remorquage', en: 'Towing' },
+  navTowingDesc: { fr: 'Service disponible rapidement', en: 'Fast response service' },
+  navStorage: { fr: 'Entreposage hivernal', en: 'Winter Storage' },
+  navStorageDesc: { fr: "Stockage sécurisé tout l'hiver", en: 'Secure storage all winter' },
+  navVespaSales: { fr: 'Vente Vespa & Piaggio', en: 'Vespa & Piaggio Sales' },
+  navVespaSalesDesc: { fr: 'Concessionnaire officiel Outaouais', en: 'Official dealer Outaouais' },
+
+  // Nav dropdown — Vespa (Dynamik)
+  navVespaModels: { fr: 'Modèles Vespa', en: 'Vespa Models' },
+  navPiaggioModels: { fr: 'Modèles Piaggio', en: 'Piaggio Models' },
+  navAccessories: { fr: 'Accessoires', en: 'Accessories' },
+  navOEMParts: { fr: 'Pièces OEM', en: 'OEM Parts' },
+  navSeeAll: { fr: 'Voir tout →', en: 'See all →' },
+
+  // Nav dropdown — Services (Radikal)
+  navMotoRepair: { fr: 'Motos & Harley-Davidson', en: 'Motorcycles & Harley-Davidson' },
+  navATV: { fr: 'VTT & UTV', en: 'ATV & UTV' },
+  navMotocross: { fr: 'Motocross', en: 'Motocross' },
+  navSnowmobile: { fr: 'Motoneige', en: 'Snowmobile' },
+  navBoat: { fr: 'Marine', en: 'Marine' },
+  navInspection: { fr: 'Inspection gratuite', en: 'Free Inspection' },
+  navInspectionDesc: { fr: 'Diagnostic complet offert', en: 'Free full diagnostic' },
+
+  // Utility bar
+  navPromoSpring: { fr: '★ Inspection printanière offerte', en: '★ Free spring inspection' },
 
   // ============================
   // LANDING PAGE
@@ -39,32 +88,97 @@ export const t = {
   },
 
   // ============================
-  // SHOP HERO
+  // HERO
   // ============================
+  heroEyebrow: { fr: 'DEPUIS 1999', en: 'SINCE 1999' },
+  heroBadgeDealer: { fr: 'Concessionnaire officiel', en: 'Official Dealer' },
+  heroBadgeAMO: { fr: 'Membre AMO Moto', en: 'AMO Moto Member' },
+  heroBookNow: { fr: 'Réserver maintenant', en: 'Book Now' },
+  heroExploreVespa: { fr: 'Explorer nos Vespa', en: 'Explore Our Vespa' },
+  heroGetQuote: { fr: 'Obtenir une soumission', en: 'Get a Quote' },
+  heroExploreServices: { fr: 'Nos services', en: 'Our Services' },
   callNow: { fr: 'Appeler maintenant', en: 'Call Now' },
   bookService: { fr: 'Réserver un service', en: 'Book a Service' },
   getDirections: { fr: 'Itinéraire', en: 'Get Directions' },
   since: { fr: 'Depuis', en: 'Since' },
-  yearsOfService: { fr: "ans de service de confiance", en: "years of trusted service" },
+  yearsOfService: { fr: 'ans de service de confiance', en: 'years of trusted service' },
 
   // ============================
-  // SERVICE GRID
+  // STATS STRIP
+  // ============================
+  statsTitle: { fr: 'En chiffres', en: 'By the Numbers' },
+
+  // ============================
+  // SERVICE SECTION
   // ============================
   ourServices: { fr: 'NOS SERVICES', en: 'OUR SERVICES' },
   whatWeOffer: { fr: 'Ce que nous offrons', en: 'What We Offer' },
+  serviceSubtitle: {
+    fr: 'Réparation experte, entretien préventif et plus — pour toutes les marques.',
+    en: 'Expert repair, preventive maintenance and more — for all brands.',
+  },
+  learnMore: { fr: 'En savoir plus', en: 'Learn More' },
+  bookThisService: { fr: 'Réserver', en: 'Book' },
+
+  // Service descriptions — Dynamik
+  svcRepairDesc: { fr: 'Diagnostic complet, électronique, mécanique — toutes marques', en: 'Full diagnostic, electronics, mechanics — all brands' },
+  svcMaintenanceDesc: { fr: 'Vidange, freins, pneus, chaîne, révision complète', en: 'Oil change, brakes, tires, chain, full tune-up' },
+  svcVespaSalesDesc: { fr: 'Concessionnaire officiel Vespa & Piaggio en Outaouais', en: 'Official Vespa & Piaggio dealer in Outaouais' },
+  svcModDesc: { fr: 'Personnalisation et performance sur mesure', en: 'Custom builds and performance upgrades' },
+  svcTowingDesc: { fr: 'Remorquage rapide et sécuritaire en Outaouais', en: 'Fast and safe towing in the Outaouais' },
+  svcStorageDesc: { fr: "Entreposage climatisé et sécurisé tout l'hiver", en: 'Climate-controlled, secure storage all winter' },
+
+  // Service descriptions — Radikal
+  svcMotoRepairDesc: { fr: 'Toutes marques, spécialiste Harley-Davidson', en: 'All brands, Harley-Davidson specialist' },
+  svcATVDesc: { fr: 'VTT, UTV, tous terrains, toutes marques', en: 'ATV, UTV, all terrains, all brands' },
+  svcMotocrossDesc: { fr: 'Pièces, service et préparation circuit', en: 'Parts, service and track prep' },
+  svcSnowmobileDesc: { fr: 'Révision, réparation et entreposage motoneige', en: 'Tune-up, repair and snowmobile storage' },
+  svcFoxDesc: { fr: 'Équipement, vêtements et accessoires Fox Racing', en: 'Fox Racing gear, apparel and accessories' },
+  svcInspectionDesc: { fr: 'Inspection complète gratuite — 30 points de contrôle', en: 'Free full inspection — 30 check points' },
 
   // ============================
-  // REVIEWS
+  // VESPA SECTION
   // ============================
-  reviewsLabel: { fr: 'TÉMOIGNAGES', en: 'TESTIMONIALS' },
-  reviewsHeading: { fr: 'Ce que disent nos clients', en: 'What Our Customers Say' },
-  verifiedCustomer: { fr: 'Client vérifié', en: 'Verified Customer' },
+  vespaSectionLabel: { fr: 'VESPA & PIAGGIO', en: 'VESPA & PIAGGIO' },
+  vespaSectionHeading: { fr: 'La beauté italienne, à Gatineau', en: 'Italian Beauty, in Gatineau' },
+  vespaSectionSubtitle: {
+    fr: 'Concessionnaire officiel Vespa & Piaggio en Outaouais depuis 1999. Modèles neufs, pièces OEM et service complet.',
+    en: 'Official Vespa & Piaggio dealer in Outaouais since 1999. New models, OEM parts and full service.',
+  },
+  vespaDiscover: { fr: 'Explorer ce modèle', en: 'Explore Model' },
+  vespaRequestInfo: { fr: "Demander l'info", en: 'Request Info' },
+  vespaSeeAll: { fr: 'Voir toute la gamme →', en: 'See All Models →' },
+  vespaShowcaseLabel: { fr: 'ICÔNE ITALIENNE', en: 'ITALIAN ICON' },
+  vespaShowcaseHeading: { fr: 'La gamme Vespa\nà Gatineau', en: 'The Vespa Range\nin Gatineau' },
+  vespaShowcaseSubtitle: {
+    fr: 'Style intemporel, fiabilité légendaire. Découvrez les modèles Sprint, Primavera et GTS.',
+    en: 'Timeless style, legendary reliability. Discover the Sprint, Primavera and GTS models.',
+  },
+  vespaShowcaseCTA: { fr: 'Explorer la gamme', en: 'Explore the Range' },
+  vespaOfficialDealer: { fr: '★ Concessionnaire officiel Outaouais', en: '★ Official Dealer Outaouais' },
 
   // ============================
   // ABOUT OWNER
   // ============================
   aboutLabel: { fr: 'À PROPOS', en: 'ABOUT' },
   aboutHeading: { fr: 'Rencontrez le propriétaire', en: 'Meet the Owner' },
+  aboutSubtitle: {
+    fr: 'Une passion qui dure depuis des décennies.',
+    en: 'A passion that has lasted decades.',
+  },
+  aboutTrustTitle: { fr: 'Certifications & appartenance', en: 'Certifications & Memberships' },
+
+  // ============================
+  // BOOKING CTA SECTION
+  // ============================
+  bookingCTALabel: { fr: 'PRENDRE RENDEZ-VOUS', en: 'BOOK AN APPOINTMENT' },
+  bookingCTAHeading: { fr: 'Prêt à rouler ?', en: 'Ready to Ride?' },
+  bookingCTASubtitle: {
+    fr: "Réservez votre service dès aujourd'hui. Réponse sous 24h, garantie.",
+    en: 'Book your service today. Response within 24h, guaranteed.',
+  },
+  bookingCTAPhone: { fr: 'Appeler maintenant', en: 'Call Now' },
+  bookingCTAForm: { fr: 'Formulaire en ligne', en: 'Online Form' },
 
   // ============================
   // BOOKING FORM
@@ -81,6 +195,18 @@ export const t = {
   selectService: { fr: '— Choisir un service —', en: '— Select a service —' },
 
   // ============================
+  // REVIEWS
+  // ============================
+  reviewsLabel: { fr: 'TÉMOIGNAGES', en: 'TESTIMONIALS' },
+  reviewsHeading: { fr: 'Ce que disent nos clients', en: 'What Our Customers Say' },
+  reviewsSubtitle: {
+    fr: 'Des centaines de clients satisfaits à Gatineau et en Outaouais.',
+    en: 'Hundreds of satisfied customers in Gatineau and Outaouais.',
+  },
+  verifiedCustomer: { fr: 'Client vérifié', en: 'Verified Customer' },
+  reviewOnGoogle: { fr: 'Laisser un avis →', en: 'Leave a Review →' },
+
+  // ============================
   // POLICE TRUST (Radikal only)
   // ============================
   policeTrustLabel: { fr: 'CONFIANCE INSTITUTIONNELLE', en: 'INSTITUTIONAL TRUST' },
@@ -95,14 +221,30 @@ export const t = {
   // ============================
   address: { fr: 'Adresse', en: 'Address' },
   phone: { fr: 'Téléphone', en: 'Phone' },
-  hours: { fr: 'Heures d\'ouverture', en: 'Hours' },
+  hours: { fr: "Heures d'ouverture", en: 'Hours' },
   hoursValue: { fr: 'Lun–Ven 8h–17h · Sam 9h–14h', en: 'Mon–Fri 8am–5pm · Sat 9am–2pm' },
   copyright: { fr: '© 2026 Possibilities IN MIND™', en: '© 2026 Possibilities IN MIND™' },
+  footerTagline: {
+    fr: 'Votre partenaire moto de confiance en Outaouais.',
+    en: 'Your trusted motorcycle partner in Outaouais.',
+  },
+  footerServicesCol: { fr: 'Services', en: 'Services' },
+  footerProductsCol: { fr: 'Vespa & Piaggio', en: 'Vespa & Piaggio' },
+  footerRadikalProductsCol: { fr: 'Pièces & Boutique', en: 'Parts & Boutique' },
+  footerCompanyCol: { fr: 'Entreprise', en: 'Company' },
+  footerAbout: { fr: 'À propos', en: 'About Us' },
+  footerContact: { fr: 'Contact', en: 'Contact' },
+  footerPromotions: { fr: 'Promotions', en: 'Promotions' },
+  footerMarketplace: { fr: 'Marketplace', en: 'Marketplace' },
+  footerExam: { fr: 'Préparation examen', en: 'Exam Prep' },
+  footerPoweredBy: { fr: 'Conçu par Possibilities IN MIND™', en: 'Built by Possibilities IN MIND™' },
+  footerDealerBadge: { fr: 'Concessionnaire officiel Vespa & Piaggio', en: 'Official Vespa & Piaggio Dealer' },
+  footerMemberBadge: { fr: 'Membre AMO Moto', en: 'AMO Moto Member' },
 
   // ============================
   // EXAM APP
   // ============================
-  examTitle: { fr: 'Préparation à l\'examen moto', en: 'Motorcycle Exam Prep' },
+  examTitle: { fr: "Préparation à l'examen moto", en: 'Motorcycle Exam Prep' },
   examSubtitle: {
     fr: 'Questions officielles · QC (SAAQ) · ON (M1/M2/M)',
     en: 'Official questions · QC (SAAQ) · ON (M1/M2/M)',
@@ -127,26 +269,22 @@ export const t = {
   startQuiz: { fr: 'Commencer le quiz', en: 'Start Quiz' },
   restartQuiz: { fr: 'Recommencer', en: 'Restart Quiz' },
 
-  // Score
   scoreLabel: { fr: 'RÉSULTAT', en: 'RESULTS' },
   yourScore: { fr: 'Votre score', en: 'Your Score' },
-  passed: { fr: 'Réussi ! Vous êtes prêt pour l\'examen.', en: 'Passed! You are ready for the exam.' },
+  passed: { fr: "Réussi ! Vous êtes prêt pour l'examen.", en: 'Passed! You are ready for the exam.' },
   failed: { fr: 'À réviser. Continuez à pratiquer.', en: 'Keep practicing. Review weak areas.' },
   weakAreas: { fr: 'Points à améliorer', en: 'Areas to Improve' },
   passThreshold: { fr: 'Seuil de réussite : 80%', en: 'Pass threshold: 80%' },
 
-  // Gear checklist
   gearLabel: { fr: 'ÉQUIPEMENT', en: 'GEAR' },
   gearHeading: { fr: 'Équipement essentiel', en: 'Essential Riding Gear' },
   critical: { fr: 'Obligatoire', en: 'Required' },
   optional: { fr: 'Recommandé', en: 'Recommended' },
 
-  // Licensing steps
   licensingLabel: { fr: 'PERMIS', en: 'LICENSING' },
   licensingHeading: { fr: 'Étapes pour votre permis moto', en: 'Steps to Get Your Motorcycle License' },
   step: { fr: 'Étape', en: 'Step' },
 
-  // Lead capture
   leadLabel: { fr: 'OFFRE EXCLUSIVE', en: 'EXCLUSIVE OFFER' },
   leadHeading: { fr: '15% de rabais sur votre premier casque', en: '15% Off Your First Helmet' },
   leadBody: {
