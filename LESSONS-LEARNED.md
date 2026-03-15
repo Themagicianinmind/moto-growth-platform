@@ -382,3 +382,48 @@ There are two reliable direct-to-review-form URL formats:
 - Dynamik Performance CID: `11036265702185342305` (hex: `0x9928b12ef9959561`)
 - Dynamik Maps URL: `https://maps.google.com/?cid=11036265702185342305`
 - Radikal Motosport CID: **UNKNOWN** — needs GBP claim to determine
+
+---
+
+## March 15, 2026 — Day 8 Sprint: Promotions, Sitemap, Mobile, OG
+
+### Promotions Pages Architecture
+- **Data-array pattern works for seasonal content.** Each promo is an object with `active: boolean` flag — toggle off-season promos without deleting data.
+- **Highlight flag for featured promo.** `highlight: true` adds a colored ribbon + elevated border + shadow. One featured promo per page (visual hierarchy).
+- **Included items grid collapses at 600px** with `@media (max-width: 600px) { .promo-included-grid { grid-template-columns: 1fr !important; } }`.
+- **Police trust mini-strip on Radikal promotions.** Dark navy, single sentence, gold icon — consistent with site-wide police Harley signal. Radikal-only, never on Dynamik.
+- **Seasonal update instructions:** Edit the `promos` data array at the top of each promotions page. Set `active: false` for expired promos. Update dates. No component changes needed.
+
+### Sitemap.xml + robots.txt
+- **Next.js App Router native approach:** `src/app/sitemap.ts` exports `MetadataRoute.Sitemap`. No package needed. Served statically at `/sitemap.xml`.
+- **robots.ts for robots.txt:** `src/app/robots.ts` exports `MetadataRoute.Robots`. Disallowed `/api/` and `/qr` (internal utility pages). Allowed everything else.
+- **Priority scale:** 1.0 for homepages, 0.9 for key SEO pages (vespa-sales, inspection, fox-racing), 0.8 for standard pages, 0.7 for utility pages.
+- **changeFrequency:** `'weekly'` for promotions (seasonal updates), `'daily'` for marketplace (new listings), `'monthly'` for service pages.
+- **41 total pages (including OG images).** Both `/robots.txt` and `/sitemap.xml` appear in build output as static routes.
+
+### Mobile Final Pass — What Was Actually Broken vs. Fine
+- **`auto-fill minmax(N, 1fr)` grids handle themselves.** At 375px−48px padding = 327px, a `minmax(280px, 1fr)` grid auto-collapses to 1 column. No breakpoint needed. The audit warned about these but they work fine.
+- **Fixed 2-column grids need explicit breakpoints.** Any `gridTemplateColumns: '1fr 1fr'` or `repeat(3, 1fr)` needs `@media (max-width: NNNpx) { grid-template-columns: 1fr !important; }`.
+- **`flexWrap: 'wrap'` on flex containers handles most horizontal overflow** without needing breakpoints. Use this by default on any horizontal layout.
+- **Touch target calculation:** `padding: '14px 24px'` → full height = 14×2 + ~22px line-height = 50px. Meets 44px. Don't flag 14px vertical padding as too small.
+- **The only actual touch target fix:** Contact page "Book" button was `padding: '9px 18px'` (full height ≈ 36px). Fixed to `padding: '12px 20px', minHeight: 44`.
+- **Marketplace [id] sidebar fix was already done in Day 6-7** — `gridTemplateColumns: '1fr 360px'` with `@media (max-width: 760px)` breakpoint was already in place.
+
+### OG Images — Next.js ImageResponse
+- **`opengraph-image.tsx` at route segment level** is the App Router convention. File in `src/app/dynamik/opengraph-image.tsx` auto-serves at `/dynamik/opengraph-image.png`.
+- **All divs in ImageResponse must have `display: 'flex'`** — including decorative divs. Missing display:flex causes layout failures. ALWAYS add `display: 'flex'` to every div, including decorative circles and stripes.
+- **ImageResponse uses JSX but not full React.** No hooks, no imports other than from 'next/og'. Keep it purely static markup.
+- **Export `alt`, `size`, `contentType`** alongside the default function. Required by Next.js spec.
+- **Build output confirms:** Both OG image routes appear as `○ /dynamik/opengraph-image` in build output (static pre-rendered).
+
+### Metadata Hierarchy in Next.js App Router
+- **`title.template: '%s · Shop Name'`** in parent layout auto-applies to child pages that export a string title. If child exports `title: 'Vespa Sprint 150'`, the rendered title becomes `Vespa Sprint 150 · Dynamik Performance`.
+- **`metadataBase: new URL(BASE_URL)`** in layout.tsx is required for og:image relative URLs to resolve correctly. Without it, images are relative to the current route and may 404.
+- **Server components can render client components.** Removing `'use client'` from a thin wrapper page (e.g., service pages that just return `<ServicePage data={x} />`) makes them server components eligible for `export const metadata`. The child `ServicePage` component stays `'use client'` — no issue.
+- **All 13 service pages converted to server components.** This unlocks per-page meta title + OG description derived from `ServicePageData.meta.titleFr` / `descriptionFr`. Zero changes to ServicePage component itself.
+- **Canonical URLs + language alternates** added to both shop layouts. `alternates.languages` with `fr-CA` and `en-CA` signals bilingual content to Google without requiring separate URL prefixes.
+
+### Day 8 Build Count
+- 41 static pages (up from 39) — new: dynamik/opengraph-image, radikal/opengraph-image
+- 4 commits: promotions, sitemap/robots, mobile fix, OG/meta
+- 0 TypeScript errors, 0 build failures
