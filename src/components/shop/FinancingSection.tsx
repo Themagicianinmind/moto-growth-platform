@@ -122,11 +122,11 @@ export default function FinancingSection({ shop, lang }: FinancingSectionProps) 
           headingStyle={{ fontFamily: SERIF, fontWeight: 300, fontSize: 36 }}
         />
 
-        {/* Promo rate callout */}
+        {/* OPC-compliant availability notice — no specific rate advertised (LPC art. 244 / Règlement s. 80) */}
         <div
           style={{
-            background: `${ACCENT}08`,
-            border: `1px solid ${ACCENT}30`,
+            background: `${ACCENT}07`,
+            border: `1px solid ${ACCENT}28`,
             borderLeft: `4px solid ${ACCENT}`,
             borderRadius: 10,
             padding: '18px 24px',
@@ -137,28 +137,32 @@ export default function FinancingSection({ shop, lang }: FinancingSectionProps) 
             flexWrap: 'wrap',
           }}
         >
-          <div>
-            <span style={{ fontFamily: SERIF, fontSize: 42, fontWeight: 300, color: ACCENT }}>
-              {tr('financingRateValue', lang)}
-            </span>
-            <span style={{ fontSize: 14, color: '#555', marginLeft: 10 }}>
-              {tr('financingRateNote', lang)}
-            </span>
+          <div style={{ flex: 1 }}>
+            <p style={{ fontSize: 15, fontWeight: 600, color: '#1a1a1a', marginBottom: 4 }}>
+              {lang === 'fr'
+                ? 'Financement disponible — sous réserve d\'approbation de crédit'
+                : 'Financing available — on approved credit (OAC)'}
+            </p>
+            <p style={{ fontSize: 13, color: '#555' }}>
+              {lang === 'fr'
+                ? 'Taux promotionnels offerts sur modèles sélectionnés via Financement auto TD. Contactez-nous pour les détails et le calcul complet du coût du crédit.'
+                : 'Promotional rates available on selected models via TD Auto Finance. Contact us for details and full cost of borrowing disclosure.'}
+            </p>
           </div>
           <div
             style={{
-              marginLeft: 'auto',
               background: ACCENT,
               color: '#fff',
               borderRadius: 100,
-              padding: '8px 22px',
-              fontSize: 13,
+              padding: '8px 20px',
+              fontSize: 12,
               fontWeight: 700,
               letterSpacing: '0.04em',
               whiteSpace: 'nowrap',
+              flexShrink: 0,
             }}
           >
-            TD Auto Finance
+            {lang === 'fr' ? 'Financement auto TD' : 'TD Auto Finance'}
           </div>
         </div>
 
@@ -232,10 +236,19 @@ export default function FinancingSection({ shop, lang }: FinancingSectionProps) 
               ))}
             </div>
 
-            {/* Disclaimer */}
-            <p style={{ fontSize: 11, color: '#aaa', lineHeight: 1.6, marginTop: 20 }}>
-              {tr('financingDisclaimer', lang)}
-            </p>
+            {/* OPC / CPA-compliant disclaimer (Loi sur la protection du consommateur, RLRQ c P-40.1) */}
+            <div style={{ fontSize: 11, color: '#999', lineHeight: 1.7, marginTop: 20, borderTop: '1px solid #f0ece4', paddingTop: 16 }}>
+              <p style={{ marginBottom: 6 }}>
+                {lang === 'fr'
+                  ? '★ Financement offert sous réserve d\'approbation de crédit par Financement auto TD (Canada) Inc. Le taux de crédit, le montant total du crédit, les frais de crédit (incluant les frais d\'inscription au RDPRM) et l\'obligation totale du consommateur seront divulgués conformément à la Loi sur la protection du consommateur (RLRQ c P-40.1) lors de la signature du contrat.'
+                  : '★ Financing offered on approved credit (OAC) by TD Auto Finance (Canada) Inc. The credit rate, total amount of credit, credit charges (including PPSR registration fees) and total consumer obligation will be disclosed in accordance with the Consumer Protection Act (CQLR c P-40.1) at time of contract signing.'}
+              </p>
+              <p>
+                {lang === 'fr'
+                  ? 'Les taux promotionnels sont valides sur les modèles désignés, sous réserve de modification ou de retrait sans préavis. Renseignements : Office de la protection du consommateur — opc.gouv.qc.ca'
+                  : 'Promotional rates apply to designated models only, subject to change or withdrawal without notice. Information: Office de la protection du consommateur — opc.gouv.qc.ca'}
+              </p>
+            </div>
           </div>
 
           {/* RIGHT — Pre-qualification form */}
