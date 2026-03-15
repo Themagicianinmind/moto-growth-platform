@@ -91,11 +91,11 @@ export const shops: Record<ShopId, Shop> = {
     phone: '819-561-6686',
     address: '156 De Varennes, Gatineau, QC J8T 8G4',
     mapsUrl: 'https://maps.google.com/?q=156+De+Varennes+Gatineau+QC+J8T+8G4',
-    accentColor: '#D4AF37',
+    accentColor: '#9e8a5a',
     services: [
       { nameFr: 'Motos & Harley-Davidson', nameEn: 'Motorcycles & Harley-Davidson', color: '#2563eb15', icon: '🏍️' },
       { nameFr: 'VTT & UTV', nameEn: 'ATV & UTV', color: '#16a34a15', icon: '🚵' },
-      { nameFr: 'Motocross', nameEn: 'Motocross', color: '#D4AF3715', icon: '🏁' },
+      { nameFr: 'Motocross', nameEn: 'Motocross', color: '#9e8a5a18', icon: '🏁' },
       { nameFr: 'Motoneige', nameEn: 'Snowmobile', color: '#0d948815', icon: '🌨️' },
       { nameFr: 'Fox Racing & boutique', nameEn: 'Fox Racing & Boutique', color: '#c2410c12', icon: '🦊' },
       { nameFr: 'Inspection gratuite', nameEn: 'Free Inspection', color: '#64748b15', icon: '✅' },
